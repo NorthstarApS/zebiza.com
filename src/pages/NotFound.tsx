@@ -1,24 +1,23 @@
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useLanguage } from "@/context/LanguageContext";
+import Seo from "@/components/layout/Seo";
 
-const NotFound = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    console.error("404 Error: User attempted to access non-existent route:", location.pathname);
-  }, [location.pathname]);
-
+export default function NotFound() {
+  const { t, localizedPath } = useLanguage();
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">404</h1>
-        <p className="mb-4 text-xl text-gray-600">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 underline hover:text-blue-700">
-          Return to Home
-        </a>
+    <>
+      <Seo title={`${t.notFound.title} · Zebiza.com`} path="/404" />
+      <div className="container-z flex flex-col items-center py-24 text-center">
+        <span className="text-6xl font-bold text-trend">404</span>
+        <h1 className="mt-4 text-2xl font-bold">{t.notFound.title}</h1>
+        <p className="mt-2 max-w-sm text-muted-foreground">{t.notFound.sub}</p>
+        <Link
+          to={localizedPath("/")}
+          className="mt-8 bg-foreground px-6 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary-hover"
+        >
+          {t.notFound.cta}
+        </Link>
       </div>
-    </div>
+    </>
   );
-};
-
-export default NotFound;
+}
