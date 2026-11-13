@@ -1,73 +1,73 @@
-# Welcome to your Lovable project
+# Zebiza.com
 
-## Project info
+Dansk headless beauty-webshop: Vite + React frontend, WooCommerce Store API, Cloudflare edge, Reepay-betalinger.
 
-**URL**: https://lovable.dev/projects/a8e59680-e4fc-4735-a797-36af2f7e2875
+## Arkitektur
 
-## How can I edit this code?
+| Lag | Rolle |
+|---|---|
+| **Frontend** (dette repo) | React/Vite SPA med build-time prerender, sitemap, Merchant feed |
+| **WordPress / WooCommerce** | Produkter, lager, kurv (Store API), ordrer — samme domæne via Cloudflare |
+| **ZAC / CJ** | Server-side leveringsvalidering (`zac_delivery`) — WordPress-plugin |
+| **Reepay** | Kort + MobilePay |
+| **Cloudflare** | DNS + CDN/edge foran frontend og WP |
 
-There are several ways of editing your application.
+Produktion (`zebiza.com`) proxyes via Cloudflare. Frontend-assets ligger under `/assets/`; WooCommerce under `/wp-json`, `/wp-content`, `/wp-includes`.
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/a8e59680-e4fc-4735-a797-36af2f7e2875) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## Lokal udvikling
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+npm ci
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Dev-serveren proxyer `/wp-json` og `/wp-content` til `https://zebiza.com`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Build
 
-**Use GitHub Codespaces**
+```sh
+npm run build        # seo:assets → vite build → prerender
+npm run typecheck
+npm run qa:ssr       # crawl-signaler i dist/ uden JS
+npm run qa:products  # PASS/REVIEW/BLOCKED mod Store API
+npm run qa:prod      # HTTP-audit af produktion
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+`npm run build` genererer bl.a.:
 
-## What technologies are used for this project?
+- `dist/da/**/index.html` — prerenderet HTML
+- `dist/sitemap.xml`, `dist/merchant-feed.xml`, `dist/robots.txt`
 
-This project is built with:
+## Deployment (uden tredjeparts app-builders)
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Anbefalet: **Cloudflare Pages** knyttet til dette GitHub-repo.
 
-## How can I deploy this project?
+1. Opret Pages-projekt med build command `npm run build` og output `dist`.
+2. Tilknyt custom domain `zebiza.com` (eller hold DNS i Cloudflare og peg Pages).
+3. Sørg for at WP-stier (`/wp-json/*`, `/wp-admin/*`, `/wp-content/*`, `/wp-includes/*`) fortsat går til WordPress-origin (Cloudflare Worker/Route eller origin-rules).
+4. GitHub Actions workflow `.github/workflows/deploy-cloudflare.yml` kan deploye ved push til `main` når secrets er sat:
+   - `CLOUDFLARE_API_TOKEN`
+   - `CLOUDFLARE_ACCOUNT_ID`
+   - valgfrit `CLOUDFLARE_PROJECT_NAME` (default `zebiza-com`)
 
-Simply open [Lovable](https://lovable.dev/projects/a8e59680-e4fc-4735-a797-36af2f7e2875) and click on Share -> Publish.
+### Rollback
 
-## Can I connect a custom domain to my Lovable project?
+- Cloudflare Pages → tidligere deployment → Retry/Rollback, **eller**
+- `git revert` på `main` og lad CI redeploye.
 
-Yes, you can!
+### Health checks efter deploy
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```sh
+npm run qa:prod
+# Forvent: merchant-feed.xml = application/xml, /da/ har H1 uden Linea-branding
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## Checkout / ZAC
+
+Se `reports/zac-delivery-root-cause.md`. Store API checkout kan blokeres af WordPress-pluginet med kode `zac_delivery` før Reepay nås. Rettes i WP — ikke ved at fjerne validering i frontend.
+
+## Rapporter
+
+- `reports/PHASE2_REVENUE_RECOVERY.md`
+- `reports/PHASE3_PRODUCTION_LAUNCH.md`
+- `reports/PHASE4_INFRASTRUCTURE_COMMERCE.md`

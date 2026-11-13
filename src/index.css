@@ -2,111 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Linea E-commerce Design System - Minimalist & Modern */
+/* Zebiza design system — neutral beauty shop, trust-first */
 
 @layer base {
   :root {
-    /* Core neutral palette */
     --background: 0 0% 100%;
     --foreground: 0 0% 9%;
-    
-    /* Status bar */
+
     --status-bar: 0 0% 0%;
     --status-bar-foreground: 0 0% 100%;
-    
-    /* Navigation */
+
     --nav-background: 0 0% 100%;
     --nav-foreground: 0 0% 20%;
     --nav-hover: 0 0% 5%;
-    
-    /* Interactive elements */
+
     --primary: 0 0% 9%;
     --primary-foreground: 0 0% 98%;
     --primary-hover: 0 0% 15%;
-    
-    /* Subtle elements */
+
     --secondary: 0 0% 96%;
     --secondary-foreground: 0 0% 20%;
-    
+
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
-    
+
     --accent: 0 0% 96%;
     --accent-foreground: 0 0% 9%;
-    
+
     --border: 0 0% 90%;
     --input: 0 0% 90%;
     --ring: 0 0% 9%;
-    
-    /* Cards and surfaces */
+
     --card: 0 0% 100%;
     --card-foreground: 0 0% 9%;
-    
+
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 9%;
-    
+
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    
-    --radius: 0.375rem;
-    
-    /* Transitions */
+
+    /* Atmosphere + accents (not purple/neon) */
+    --section: 30 20% 97%;
+    --trend: 350 55% 42%;
+    --trend-foreground: 0 0% 100%;
+    --beauty: 340 28% 36%;
+    --beauty-foreground: 0 0% 100%;
+    --deal: 12 78% 46%;
+    --deal-foreground: 0 0% 100%;
+    --campaign: 28 70% 48%;
+    --campaign-foreground: 0 0% 100%;
+    --price: 152 40% 32%;
+    --purple: 220 18% 38%;
+
+    --radius: 0.25rem;
+
     --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 0 0% 9%;
-    --foreground: 0 0% 98%;
-    
-    --status-bar: 0 0% 0%;
-    --status-bar-foreground: 0 0% 100%;
-    
-    --nav-background: 0 0% 9%;
-    --nav-foreground: 0 0% 80%;
-    --nav-hover: 0 0% 95%;
-    
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --primary-hover: 0 0% 90%;
-    
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 80%;
-    
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
-    
-    --accent: 0 0% 15%;
-    --accent-foreground: 0 0% 98%;
-    
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 0 0% 98%;
-    
-    --card: 0 0% 9%;
-    --card-foreground: 0 0% 98%;
-    
-    --popover: 0 0% 9%;
-    --popover-foreground: 0 0% 98%;
-    
-    --destructive: 0 62% 50%;
-    --destructive-foreground: 0 0% 98%;
   }
 }
 
@@ -115,7 +76,107 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
   body {
-    @apply bg-background text-foreground font-light;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-weight: 400;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-foreground;
+  }
+}
+
+@layer components {
+  .container-z {
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-z {
+      padding-left: 1.75rem;
+      padding-right: 1.75rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-z {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+
+  .skeleton {
+    @apply animate-pulse bg-muted;
+  }
+
+  .prose-zebiza a {
+    @apply underline underline-offset-2 hover:text-trend;
+  }
+}
+
+@layer utilities {
+  .bg-section {
+    background-color: hsl(var(--section));
+  }
+  .bg-trend {
+    background-color: hsl(var(--trend));
+  }
+  .text-trend {
+    color: hsl(var(--trend));
+  }
+  .text-trend-foreground {
+    color: hsl(var(--trend-foreground));
+  }
+  .bg-beauty {
+    background-color: hsl(var(--beauty));
+  }
+  .text-beauty {
+    color: hsl(var(--beauty));
+  }
+  .bg-deal {
+    background-color: hsl(var(--deal));
+  }
+  .text-deal-foreground {
+    color: hsl(var(--deal-foreground));
+  }
+  .bg-campaign {
+    background-color: hsl(var(--campaign));
+  }
+  .text-campaign {
+    color: hsl(var(--campaign));
+  }
+  .text-campaign-foreground {
+    color: hsl(var(--campaign-foreground));
+  }
+  .text-price {
+    color: hsl(var(--price));
+  }
+  .text-purple {
+    color: hsl(var(--purple));
+  }
+  .bg-purple {
+    background-color: hsl(var(--purple));
   }
 }

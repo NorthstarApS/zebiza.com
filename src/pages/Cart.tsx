@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Minus, Plus, X, Truck } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { useCart } from "@/context/CartContext";
@@ -7,16 +7,35 @@ import { useProducts } from "@/hooks/useProducts";
 import { formatPrice } from "@/lib/format";
 import ProductGrid from "@/components/product/ProductGrid";
 import Seo from "@/components/layout/Seo";
+import { analytics } from "@/lib/analytics";
 
 export default function Cart() {
   const { t, lang, localizedPath } = useLanguage();
   const { items, updateItem, removeItem, subtotal, discount, total, applyCoupon } = useCart();
-  const { data: impulse } = useProducts({ orderby: "popularity", perPage: 4 });
+  const { data: impulse } = useProducts({
+    category: "hudpleje-ansigt",
+    beautyOnly: true,
+    perPage: 4,
+  });
   const [code, setCode] = useState("");
+
+  useEffect(() => {
+    if (items.length) {
+      analytics.viewCart(
+        total,
+        items.map((i) => ({
+          id: i.productId,
+          name: i.name,
+          price: i.price,
+          quantity: i.quantity,
+        })),
+      );
+    }
+  }, [items, total]);
 
   return (
     <>
-      <Seo title={`${t.cart.title} · Zebiza.com`} path="/kurv" />
+      <Seo title={`${t.cart.title} · Zebiza.com`} path="/kurv" noindex />
       <div className="container-z py-8">
         <h1 className="mb-6 text-2xl font-bold sm:text-3xl">{t.cart.title}</h1>
 
@@ -25,7 +44,7 @@ export default function Cart() {
             <p className="text-muted-foreground">{t.cart.empty}</p>
             <p className="text-sm text-muted-foreground">{t.cart.emptyCta}</p>
             <Link
-              to={localizedPath("/nyheder")}
+              to={localizedPath("/kategori/hudpleje-ansigt")}
               className="bg-foreground px-6 py-3 text-sm font-semibold text-primary-foreground"
             >
               {t.hero.ctaPrimary}

@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { SlidersHorizontal, X } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { useProducts } from "@/hooks/useProducts";
@@ -8,7 +8,11 @@ import { useFilters, type SortKey } from "@/hooks/useFilters";
 import ProductGrid from "@/components/product/ProductGrid";
 import TrustBar from "@/components/layout/TrustBar";
 import Seo from "@/components/layout/Seo";
-
+import { getCategoryCopy, isGenericCategoryHtml } from "@/lib/categoryContent";
+import { sanitizeCategoryHtml } from "@/lib/contentSanitize";
+import { absoluteUrl } from "@/lib/site";
+import { isBeautyCategorySlug } from "@/lib/beautyCatalog";
+import { analytics } from "@/lib/analytics";
 type Kind = "all" | "category" | "collection";
 
 const sortKeys: { key: SortKey; labelKey: keyof ReturnType<typeof sortLabels> }[] = [
@@ -32,29 +36,75 @@ function sortLabels(t: ReturnType<typeof useLanguage>["t"]) {
 }
 
 export default function Collection({ kind, slug: fixedSlug }: { kind: Kind; slug?: string }) {
-  const { t, localizedPath } = useLanguage();
+  const { t, lang, localizedPath } = useLanguage();
   const { slug: routeSlug } = useParams();
   const slug = fixedSlug ?? routeSlug;
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const base = useMemo(() => {
-    if (kind === "all") return {};
-    if (kind === "collection") return { category: slug };
-    return { category: slug };
+    if (kind === "all") return { beautyOnly: true as const };
+    if (kind === "collection") return { category: slug, beautyOnly: true as const };
+    return { category: slug, beautyOnly: true as const };
   }, [kind, slug]);
 
   const { filters, setFilter, reset, query, activeCount } = useFilters(base);
   const { data, isLoading } = useProducts(query);
   const { data: categories } = useCategories();
 
+  const category = kind === "category" ? categories?.find((c) => c.slug === slug) : undefined;
+  const copy = slug ? getCategoryCopy(slug) : undefined;
+
   const title =
-    kind === "all"
+    copy?.h1 ??
+    (kind === "all"
       ? t.nav.shop
       : (t.nav as Record<string, string>)[slug ?? ""] ??
-        categories?.find((c) => c.slug === slug)?.name ??
-        (slug ?? "");
+        category?.name ??
+        (slug ?? ""));
+
+  const intro = copy?.intro ?? t.category.intro;
+  const metaDescription =
+    copy?.metaDescription ??
+    `${title} hos Zebiza.com — dansk beauty-webshop med fair priser og levering til Danmark.`;
+
+  const seoPath =
+    kind === "all" ? "/shop" : kind === "category" ? `/kategori/${slug}` : `/${slug}`;
+
+  const showBackendDescription =
+    category?.description &&
+    !isGenericCategoryHtml(category.description) &&
+    sanitizeCategoryHtml(category.description, lang);
+
+  const related =
+    copy?.relatedSlugs
+      ?.map((s) => categories?.find((c) => c.slug === s))
+      .filter(Boolean) ??
+    categories?.filter((c) => isBeautyCategorySlug(c.slug) && c.slug !== slug).slice(0, 8);
+
+  useEffect(() => {
+    if (data?.length) analytics.viewItemList(data, title);
+  }, [data, title]);
 
   const sl = sortLabels(t);
+
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Forside",
+        item: absoluteUrl(localizedPath("/")),
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: title,
+        item: absoluteUrl(localizedPath(seoPath)),
+      },
+    ],
+  };
 
   const FilterControls = () => (
     <div className="space-y-6">
@@ -97,59 +147,59 @@ export default function Collection({ kind, slug: fixedSlug }: { kind: Kind; slug
         </label>
       </div>
 
-      {/* Placeholders for backend-driven attribute filters */}
       <div>
         <h3 className="mb-2 text-sm font-bold uppercase tracking-wide">{t.filters.category}</h3>
         <ul className="space-y-1 text-sm text-muted-foreground">
-          {categories?.slice(0, 8).map((c) => (
-            <li key={c.id}>
-              <Link to={localizedPath(`/kategori/${c.slug}`)} className="hover:text-foreground">
-                {c.name} <span className="text-xs">({c.count})</span>
-              </Link>
-            </li>
-          ))}
+          {categories
+            ?.filter((c) => isBeautyCategorySlug(c.slug))
+            .slice(0, 12)
+            .map((c) => (
+              <li key={c.id}>
+                <Link to={localizedPath(`/kategori/${c.slug}`)} className="hover:text-foreground">
+                  {c.name} <span className="text-xs">({c.count})</span>
+                </Link>
+              </li>
+            ))}
         </ul>
-      </div>
-
-      <div className="space-y-3 border-t border-border pt-4 text-xs text-muted-foreground">
-        <p className="font-semibold text-foreground">{t.filters.brand}</p>
-        <p className="font-semibold text-foreground">{t.filters.color}</p>
-        <p className="font-semibold text-foreground">{t.filters.gift}</p>
-        <p className="font-semibold text-foreground">{t.filters.type}</p>
       </div>
 
       <button
         onClick={reset}
-        className="w-full border border-foreground py-2 text-sm font-semibold hover:bg-foreground hover:text-primary-foreground"
+        className="w-full border border-foreground py-2 text-sm font-semibold transition-colors duration-150 hover:bg-foreground hover:text-primary-foreground"
       >
         {t.filters.clear}
       </button>
     </div>
   );
 
+  // Filter query params should not be indexed as unique pages
+  const filterNoindex = activeCount > 0;
+
   return (
     <>
       <Seo
-        title={`${title} – Find trends og prisvenlige favoritter hos Zebiza.com`}
-        description={t.category.intro}
-        path={kind === "all" ? "/shop" : `/${slug}`}
+        title={`${title} | Zebiza`}
+        description={metaDescription}
+        path={seoPath}
+        noindex={filterNoindex}
+        jsonLd={breadcrumbLd}
       />
 
-      {/* Header */}
       <div className="border-b border-border bg-section">
         <div className="container-z py-8">
-          <nav className="mb-2 text-xs text-muted-foreground">
-            <Link to={localizedPath("/")} className="hover:text-foreground">{t.common.home}</Link>
+          <nav className="mb-2 text-xs text-muted-foreground" aria-label="Breadcrumb">
+            <Link to={localizedPath("/")} className="hover:text-foreground">
+              {t.common.home}
+            </Link>
             <span className="mx-1">/</span>
             <span className="text-foreground">{title}</span>
           </nav>
           <h1 className="text-2xl font-bold sm:text-3xl">{title}</h1>
-          <p className="mt-2 max-w-2xl text-sm text-muted-foreground">{t.category.intro}</p>
+          <p className="mt-2 max-w-2xl text-sm text-muted-foreground">{intro}</p>
         </div>
       </div>
 
       <div className="container-z py-8">
-        {/* Toolbar */}
         <div className="mb-6 flex items-center justify-between gap-4">
           <button
             onClick={() => setDrawerOpen(true)}
@@ -165,8 +215,11 @@ export default function Collection({ kind, slug: fixedSlug }: { kind: Kind; slug
             {data?.length ?? 0} {t.common.results}
           </span>
           <div className="ml-auto flex items-center gap-2">
-            <label className="text-sm text-muted-foreground">{t.sort.label}:</label>
+            <label className="text-sm text-muted-foreground" htmlFor="sort">
+              {t.sort.label}:
+            </label>
             <select
+              id="sort"
               value={filters.orderby}
               onChange={(e) => setFilter("orderby", e.target.value as SortKey)}
               className="border border-border px-3 py-2 text-sm outline-none focus:border-foreground"
@@ -181,7 +234,6 @@ export default function Collection({ kind, slug: fixedSlug }: { kind: Kind; slug
         </div>
 
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-[240px_1fr]">
-          {/* Desktop filters */}
           <aside className="hidden lg:block">
             <h2 className="mb-4 text-lg font-bold">{t.filters.title}</h2>
             <FilterControls />
@@ -194,42 +246,48 @@ export default function Collection({ kind, slug: fixedSlug }: { kind: Kind; slug
               <ProductGrid products={data} isLoading={isLoading} skeletonCount={9} />
             )}
 
-            {/* Inspiration / related categories */}
             <section className="mt-12">
               <h2 className="mb-4 text-lg font-bold">{t.sections.relatedCategories}</h2>
               <div className="flex flex-wrap gap-2">
-                {categories?.map((c) => (
-                  <Link
-                    key={c.id}
-                    to={localizedPath(`/kategori/${c.slug}`)}
-                    className="border border-border px-3 py-1.5 text-sm hover:border-foreground"
-                  >
-                    {c.name}
-                  </Link>
-                ))}
+                {related?.map((c) =>
+                  c ? (
+                    <Link
+                      key={c.id}
+                      to={localizedPath(`/kategori/${c.slug}`)}
+                      className="border border-border px-3 py-1.5 text-sm transition-colors duration-150 hover:border-foreground"
+                    >
+                      {c.name}
+                    </Link>
+                  ) : null,
+                )}
               </div>
             </section>
           </div>
         </div>
 
-        {/* SEO text block */}
         <section className="mt-14 border-t border-border pt-10">
           <h2 className="mb-3 text-lg font-bold">{t.category.seoBlockTitle}</h2>
-          <p className="max-w-3xl text-sm leading-relaxed text-muted-foreground">
-            {title} hos Zebiza.com samler et bredt udvalg af trends, beauty og livsstil til fair
-            priser. {t.category.intro} Vi opdaterer løbende med nyheder, sæsonfavoritter og
-            prisvenlige fund, så du nemt kan finde noget godt til hverdagen — til dig selv eller som
-            en lille gave.
-          </p>
+          {showBackendDescription ? (
+            <div
+              className="prose-zebiza max-w-3xl text-sm leading-relaxed text-muted-foreground"
+              dangerouslySetInnerHTML={{ __html: showBackendDescription }}
+            />
+          ) : (
+            <p className="max-w-3xl text-sm leading-relaxed text-muted-foreground">
+              {copy?.body ??
+                `${title} hos Zebiza — en dansk beauty-webshop med fokus på hudpleje, makeup, hår, negle, parfume og beauty tools. ${intro}`}
+            </p>
+          )}
         </section>
 
-        {/* FAQ */}
         <section className="mt-10">
           <h2 className="mb-4 text-lg font-bold">{t.category.faqTitle}</h2>
           <div className="max-w-3xl space-y-3 text-sm">
             <details className="border border-border p-4">
               <summary className="cursor-pointer font-semibold">Hvornår kommer min pakke?</summary>
-              <p className="mt-2 text-muted-foreground">{t.trust.delivery}. {t.product.deliveryEstimate}.</p>
+              <p className="mt-2 text-muted-foreground">
+                {t.trust.delivery}. {t.product.deliveryEstimate}.
+              </p>
             </details>
             <details className="border border-border p-4">
               <summary className="cursor-pointer font-semibold">Kan jeg returnere?</summary>
@@ -237,7 +295,9 @@ export default function Collection({ kind, slug: fixedSlug }: { kind: Kind; slug
             </details>
             <details className="border border-border p-4">
               <summary className="cursor-pointer font-semibold">Er Zebiza en dansk webshop?</summary>
-              <p className="mt-2 text-muted-foreground">{t.trust.danishOwned}. {t.trust.support}.</p>
+              <p className="mt-2 text-muted-foreground">
+                {t.trust.danishOwned}. {t.trust.support}.
+              </p>
             </details>
           </div>
         </section>
@@ -245,11 +305,10 @@ export default function Collection({ kind, slug: fixedSlug }: { kind: Kind; slug
 
       <TrustBar variant="row" />
 
-      {/* Mobile filter drawer */}
       {drawerOpen && (
         <>
           <div className="fixed inset-0 z-50 bg-foreground/40" onClick={() => setDrawerOpen(false)} />
-          <aside className="fixed left-0 top-0 z-50 h-full w-full max-w-xs overflow-y-auto bg-background p-4">
+          <aside className="fixed left-0 top-0 z-50 h-full w-full max-w-xs overflow-y-auto bg-background p-4 animate-in slide-in-from-left duration-300">
             <div className="mb-4 flex items-center justify-between">
               <h2 className="text-lg font-bold">{t.filters.title}</h2>
               <button onClick={() => setDrawerOpen(false)} aria-label={t.header.close}>

@@ -1,5 +1,5 @@
 import { useLanguage } from "@/context/LanguageContext";
-import Seo from "@/components/layout/Seo";
+import Seo, { organizationJsonLd, websiteJsonLd } from "@/components/layout/Seo";
 import Hero from "@/components/home/Hero";
 import InspirationTiles from "@/components/home/InspirationTiles";
 import ProductSection from "@/components/home/ProductSection";
@@ -15,12 +15,7 @@ export default function Home() {
         title={t.meta.homeTitle}
         description={t.meta.homeDescription}
         path="/"
-        jsonLd={{
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: "Zebiza.com",
-          description: t.meta.homeDescription,
-        }}
+        jsonLd={[organizationJsonLd(), websiteJsonLd(t.meta.homeDescription)]}
       />
 
       <Hero />
@@ -28,50 +23,49 @@ export default function Home() {
 
       <ProductSection
         title={t.sections.nyheder}
-        query={{ category: "nyheder" }}
-        viewAllPath="/nyheder"
+        query={{ orderby: "date", perPage: 8, beautyOnly: true }}
+        viewAllPath="/kategori/hudpleje-ansigt"
       />
+
       <ProductSection
-        title={t.sections.populaert}
-        query={{ category: "populaert" }}
-        viewAllPath="/populaert"
+        title={t.sections.beauty}
+        query={{ category: "hudpleje-ansigt", perPage: 8, beautyOnly: true }}
+        viewAllPath="/kategori/hudpleje-ansigt"
         tone="section"
       />
 
       <InspirationTiles />
 
       <ProductSection
-        title={t.sections.beauty}
-        query={{ category: "beauty" }}
-        viewAllPath="/beauty"
+        title="Makeup"
+        query={{ category: "kosmetik-ansigt", perPage: 8, beautyOnly: true }}
+        viewAllPath="/kategori/kosmetik-ansigt"
+      />
+
+      <ProductSection
+        title="Hårpleje"
+        query={{ category: "harpleje", perPage: 8, beautyOnly: true }}
+        viewAllPath="/kategori/harpleje"
         tone="section"
       />
+
       <ProductSection
-        title={t.sections.livsstil}
-        query={{ category: "livsstil" }}
-        viewAllPath="/livsstil"
+        title="Parfume & dufte"
+        query={{ category: "parfume-dufte", perPage: 8, beautyOnly: true }}
+        viewAllPath="/kategori/parfume-dufte"
       />
+
       <ProductSection
-        title={t.sections.gavefund}
-        query={{ category: "gaver" }}
-        viewAllPath="/gaver"
+        title="Beauty tools"
+        query={{ category: "beauty-tools", perPage: 8, beautyOnly: true }}
+        viewAllPath="/kategori/beauty-tools"
         tone="section"
       />
-      <ProductSection
-        title={t.sections.saeson}
-        query={{ category: "saeson" }}
-        viewAllPath="/saeson"
-      />
+
       <ProductSection
         title={t.sections.prisvenlige}
-        query={{ category: "tilbud", orderby: "saving" }}
+        query={{ onSale: true, perPage: 8, beautyOnly: true, orderby: "saving" }}
         viewAllPath="/tilbud"
-        tone="section"
-      />
-      <ProductSection
-        title={t.sections.bestsellere}
-        query={{ orderby: "popularity" }}
-        viewAllPath="/shop"
       />
 
       <section className="container-z py-12">

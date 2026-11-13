@@ -12,7 +12,7 @@ export default function Search() {
 
   return (
     <>
-      <Seo title={`${q} – ${t.nav.shop} · Zebiza.com`} description={t.category.intro} path="/soeg" />
+      <Seo title={`${q} – ${t.nav.shop} · Zebiza.com`} description={t.category.intro} path="/soeg" noindex />
       <div className="container-z py-8">
         <h1 className="text-2xl font-bold sm:text-3xl">
           {t.header.searchPlaceholder.replace("…", "")}: <span className="text-trend">{q}</span>

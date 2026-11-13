@@ -10,6 +10,7 @@ import {
 import type { CartItem, WCProduct } from "@/types/woocommerce";
 import { storeApi } from "@/services/storeApi";
 import { useLanguage } from "./LanguageContext";
+import { analytics } from "@/lib/analytics";
 
 interface CartContextValue {
   items: CartItem[];
@@ -19,6 +20,7 @@ interface CartContextValue {
   discount: number;
   total: number;
   isOpen: boolean;
+  syncing: boolean;
   openCart: () => void;
   closeCart: () => void;
   addItem: (product: WCProduct, quantity?: number) => void;
@@ -30,6 +32,34 @@ interface CartContextValue {
 
 const CartContext = createContext<CartContextValue | null>(null);
 const STORAGE_KEY = "zebiza_cart_v1";
+
+function mapStoreCartItems(
+  items: {
+    key: string;
+    id: number;
+    quantity: number;
+    name: string;
+    images?: { src: string }[];
+    prices?: { price: string; currency_minor_unit?: number };
+    permalink?: string;
+  }[],
+): CartItem[] {
+  return items.map((i) => {
+    const unit = i.prices?.currency_minor_unit ?? 2;
+    const price = Number(i.prices?.price ?? 0) / Math.pow(10, unit);
+    const slug =
+      i.permalink?.split("/").filter(Boolean).pop()?.replace(/\/$/, "") ?? String(i.id);
+    return {
+      key: i.key,
+      productId: i.id,
+      name: i.name,
+      slug,
+      image: i.images?.[0]?.src ?? "",
+      price,
+      quantity: i.quantity,
+    };
+  });
+}
 
 export function CartProvider({ children }: { children: ReactNode }) {
   const { lang } = useLanguage();
@@ -43,10 +73,16 @@ export function CartProvider({ children }: { children: ReactNode }) {
   });
   const [coupon, setCoupon] = useState<string | null>(null);
   const [isOpen, setIsOpen] = useState(false);
+  const [syncing, setSyncing] = useState(false);
 
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
   }, [items]);
+
+  // Establish Store API session (nonce + cart token)
+  useEffect(() => {
+    void storeApi.ensureSession(lang);
+  }, [lang]);
 
   const addItem = useCallback(
     (product: WCProduct, quantity = 1) => {
@@ -71,8 +107,14 @@ export function CartProvider({ children }: { children: ReactNode }) {
         ];
       });
       setIsOpen(true);
-      // Best-effort sync to the WooCommerce Store API (no-op when unconfigured).
-      void storeApi.addItem(product.id, quantity, lang);
+      analytics.addToCart(product, quantity);
+      setSyncing(true);
+      void storeApi.addItem(product.id, quantity, lang).then((res) => {
+        setSyncing(false);
+        if (res.ok && res.data?.items) {
+          setItems(mapStoreCartItems(res.data.items));
+        }
+      });
     },
     [lang],
   );
@@ -84,15 +126,27 @@ export function CartProvider({ children }: { children: ReactNode }) {
           ? prev.filter((i) => i.key !== key)
           : prev.map((i) => (i.key === key ? { ...i, quantity } : i)),
       );
-      void storeApi.updateItem(key, quantity, lang);
+      if (!key.startsWith("local-")) {
+        void storeApi.updateItem(key, quantity, lang).then((res) => {
+          if (res.ok && res.data?.items) setItems(mapStoreCartItems(res.data.items));
+        });
+      }
     },
     [lang],
   );
 
   const removeItem = useCallback(
     (key: string) => {
-      setItems((prev) => prev.filter((i) => i.key !== key));
-      void storeApi.removeItem(key, lang);
+      setItems((prev) => {
+        const item = prev.find((i) => i.key === key);
+        if (item) analytics.removeFromCart(item.productId, item.name, item.price, item.quantity);
+        return prev.filter((i) => i.key !== key);
+      });
+      if (!key.startsWith("local-")) {
+        void storeApi.removeItem(key, lang).then((res) => {
+          if (res.ok && res.data?.items) setItems(mapStoreCartItems(res.data.items));
+        });
+      }
     },
     [lang],
   );
@@ -121,6 +175,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
       discount,
       total: subtotal - discount,
       isOpen,
+      syncing,
       openCart: () => setIsOpen(true),
       closeCart: () => setIsOpen(false),
       addItem,
@@ -129,7 +184,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
       applyCoupon,
       clear,
     };
-  }, [items, coupon, isOpen, addItem, updateItem, removeItem, applyCoupon, clear]);
+  }, [items, coupon, isOpen, syncing, addItem, updateItem, removeItem, applyCoupon, clear]);
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }
