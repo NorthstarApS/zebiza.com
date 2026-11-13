@@ -240,4 +240,53 @@ export const storeApi = {
       return [];
     }
   },
+
+  /**
+   * Sync local cart lines into the custom Zebiza/ZAC server session.
+   * Required before checkout on production (zebiza/v1/sync-cart).
+   * Does not bypass zac_delivery validation — only aligns cart state.
+   */
+  async syncCart(
+    items: { id: number; quantity: number }[],
+  ): Promise<{ ok: boolean; count?: number; error?: string }> {
+    try {
+      const base = getWpApiBase();
+      const url = new URL(
+        `${base}/wp-json/zebiza/v1/sync-cart`,
+        typeof window !== "undefined" ? window.location.origin : "https://zebiza.com",
+      );
+      const headers = new Headers({
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      });
+      const nonce = readStored(NONCE_KEY);
+      const token = readStored(CART_TOKEN_KEY);
+      if (nonce) {
+        headers.set("Nonce", nonce);
+        headers.set("X-WC-Store-API-Nonce", nonce);
+      }
+      if (token) {
+        headers.set("Cart-Token", token);
+        headers.set("X-WC-Store-API-Cart-Token", token);
+      }
+      const res = await fetch(url.toString(), {
+        method: "POST",
+        credentials: "include",
+        headers,
+        body: JSON.stringify({ items }),
+      });
+      captureSession(res);
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        return {
+          ok: false,
+          error: (body as { message?: string }).message ?? `sync-cart ${res.status}`,
+        };
+      }
+      const data = (await res.json()) as { success?: boolean; count?: number };
+      return { ok: Boolean(data.success), count: data.count };
+    } catch (err) {
+      return { ok: false, error: String(err) };
+    }
+  },
 };

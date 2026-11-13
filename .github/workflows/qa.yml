@@ -1,0 +1,32 @@
+name: QA
+
+on:
+  pull_request:
+  push:
+    branches: [main, "cursor/**"]
+
+jobs:
+  build-and-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - name: Install
+        run: npm ci
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Build (seo + vite + prerender)
+        run: npm run build
+        env:
+          VITE_SITE_ORIGIN: https://zebiza.com
+          VITE_WP_API_BASE: https://zebiza.com
+      - name: SSR verify (dist)
+        run: npm run qa:ssr
+      - name: Product quality score
+        run: npm run qa:products
+        env:
+          VITE_WP_API_BASE: https://zebiza.com

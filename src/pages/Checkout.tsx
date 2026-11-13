@@ -168,7 +168,8 @@ export default function Checkout() {
     analytics.addShippingInfo(grandTotal, shippingTier);
     analytics.addPaymentInfo(grandTotal, payment);
 
-    // Ensure shipping is selected before checkout
+    // Align ZAC/Zebiza server cart + Woo shipping before Store API checkout
+    await storeApi.syncCart(items.map((i) => ({ id: i.productId, quantity: i.quantity })));
     if (selectedRateId) {
       await storeApi.selectShippingRate(selectedRateId, 0, lang);
     }

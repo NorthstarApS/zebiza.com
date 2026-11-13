@@ -13,6 +13,7 @@
     "prerender": "node scripts/prerender.mjs",
     "qa:products": "node scripts/product-quality.mjs",
     "qa:ssr": "node scripts/ssr-verify.mjs",
+    "qa:prod": "node scripts/prod-audit.mjs",
     "typecheck": "tsc -p tsconfig.app.json --noEmit"
   },
   "dependencies": {
