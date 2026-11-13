@@ -1,0 +1,364 @@
+{
+  "generatedAt": "2026-11-13T18:57:01.836Z",
+  "summary": {
+    "checked": 70,
+    "ok200": 68,
+    "redirect3xx": 2,
+    "client4xx": 0,
+    "server5xx": 0,
+    "errors": 0,
+    "sitemapUrlCount": 241
+  },
+  "results": [
+    {
+      "url": "https://zebiza.com/da",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/kategori/hudpleje-ansigt",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/kategori/harpleje",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/kategori/nails",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/product-category/skincare",
+      "status": 301,
+      "location": "https://zebiza.com/da/kategori/skincare"
+    },
+    {
+      "url": "https://zebiza.com/product/catalog-product-15691",
+      "status": 301,
+      "location": "https://zebiza.com/da/kategori/hudpleje-ansigt"
+    },
+    {
+      "url": "https://zebiza.com/merchant-feed.xml",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/sitemap.xml",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/robots.txt",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/kategori/ansigtsrens",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/kategori/bad-saebe",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/kategori/badeprodukter",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/kategori/barbering-grooming",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/kategori/beauty-tools",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/kategori/eyeliner",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/kategori/fodpleje",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/kategori/haarboerster-redskaber",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/kategori/haarfarve",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/kategori/haarstyling",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/kategori/kosmetik-ansigt",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/kategori/kosmetik-laeber",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/kategori/kosmetik-oejne",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/kategori/kropspleje",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/kategori/makeup-pensler",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/kategori/oejencreme",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/kategori/oejenskygge",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/kategori/beauty-oevrigt",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/kategori/parfume-dufte",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/kategori/skaegpleje",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/kategori/spejle",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/pakke-med-afslappende-behandling-til-omridset-omkring-oejnene-cbd-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/genopladelig-mini-shaver-med-led-lys-epiluch-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/pakke-med-styrkende-ansigtsbehandling-cbd-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/ansigtsforyngende-massager-med-hoej-frekvens-t-vibe-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/dameparfume-cartier-declaration-parfum",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/dameparfume-hollister-festival-nite-edp-100-ml",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/saet-opstrammende-ansigtsmassageapparat-med-led-ems-og-varme-og-rice-joyboost-30-ml-serum",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/saet-opstrammende-ansigtsmassager-med-led-ems-og-varme-og-kombucha-ansigtsserum-30-ml-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/pack-oejenmassager-anti-age-med-lysterapi-og-termoterapi-og-oejencreme-cbd-zenglow-15-ml-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/saet-genopladelig-ansigtsrens-mod-urenheder-og-kombucha-ansigtsgel-vibepure-200-ml-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/saet-elektrisk-ansigtsrenser-mod-hudorme-og-cbd-ansigtsrensgel-zenpure-200-ml-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/saet-genopladelig-ansigtsrens-mod-urenheder-og-rice-joypure-ansigtsgel-200-ml-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/pack-oejenmassageapparat-mod-aldring-med-fototerapi-og-termoterapi-og-oejenkontur-rice-joyglow-15-ml-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/saet-elektrisk-ansigtsrenser-mod-hudorme-og-ansigtsvaskegel-rice-joypure-200-ml-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/saet-elektrisk-ansigtssauna-ansigtsrens-rice-joypure-200-ml-og-ansigtstoner-rice-joyfresh-150-ml-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/pakke-elektrisk-ansigtssauna-cbd-ansigtsrens-zenpure-200-ml-og-cbd-ansigtstoner-zenfresh-150-ml-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/makeup-organisatoren-innovagoods-graa-polypropylen-refurbished-a",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/saet-elektrisk-ansigts-sauna-elektrisk-hudrenser-mod-sorte-prikker-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/pakke-med-behandling-til-traette-ben-cbd-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/laebestift-clinique-almost-black-honey-19-g",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/3-i-1-sammenklappeligt-led-spejl-med-makeup-organiser-panomir-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/automatisk-makeup-boerste-renere-og-toerretumbler-maklin-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/genopladelig-haartrimmer-med-4-skaer-og-led-forsilker-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/praecision-epilator-med-led-til-ansigtshaar-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/saet-ansigtsmassager-ansigtsserum-rice-joyboost-30-ml-og-ansigtscreme-rice-joycare-50-ml-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/pakke-ansigtsmassager-kombucha-ansigtsserum-vibeboost-30-ml-og-kombucha-ansigtscreme-vibecare-50-ml-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/barbermaskine-til-kropsbehaaring-med-aluminiumsteleskophaandtag-extaver-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/keramisk-spiral-kroellejern-spihair-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/kroellejern-demeliss-1200-w-refurbished-a",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/rejsetoilettaske-moos-passion-multifarvet-polyester-genbrug-23-x-12-x-8-cm",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/rejsetoilettaske-mickey-mouse-clubhouse-good-day-blaa-26-x-15-x-12-cm",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/haarfjerner-med-pulserende-lys-kuldefunktion-og-tilbehoer-kulepil-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/kosmetik-saet-til-kvinder-nivea-q10-anti-arrugas-anti-age-q10-2-dele",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/olie-til-skaeg-trussardi-primo-50-ml",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/pakke-med-behandling-til-reduktion-af-cellulitis-rice-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/pakke-med-dyb-rensende-ansigtsbehandling-kombucha-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/pakke-med-rensende-ansigtsbehandling-rice-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/pakke-med-rensende-behandling-mod-sorte-hudorme-cbd-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/pakke-med-behandling-til-opstramning-af-huden-under-oejnene-med-tredobbelt-virkning-kombucha-innovagoods",
+      "status": 200,
+      "location": null
+    },
+    {
+      "url": "https://zebiza.com/da/produkt/fugtighedscreme-til-ansigtet-rice-innovagoods",
+      "status": 200,
+      "location": null
+    }
+  ]
+}

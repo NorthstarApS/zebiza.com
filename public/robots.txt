@@ -1,14 +1,38 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
+# Zebiza.com — den offentlige shop er crawl-fladen
 User-agent: *
 Allow: /
+
+Disallow: /kurv
+Disallow: /cart
+Disallow: /kasse
+Disallow: /checkout
+Disallow: /soeg
+Disallow: /search
+Disallow: /tak
+Disallow: /tak-for-din-ordre
+Disallow: /my-account
+Disallow: /wp-admin/
+Disallow: /wp-json/
+Disallow: /xmlrpc.php
+Disallow: /feed/
+Disallow: /author/
+Disallow: /_serverFn/
+Disallow: /da/kurv
+Disallow: /da/checkout
+Disallow: /da/kasse
+Disallow: /en/kurv
+Disallow: /en/checkout
+Disallow: /en/cart
+Disallow: /en/kasse
+Disallow: /sv/
+Disallow: /de/
+Disallow: /pt/
+
+# Parameter / filter crawl traps
+Disallow: /*?*minPrice=
+Disallow: /*?*maxPrice=
+Disallow: /*?*orderby=
+Disallow: /*?*on_sale=
+Disallow: /*?*filter_
+
+Sitemap: https://zebiza.com/sitemap.xml

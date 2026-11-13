@@ -3,7 +3,7 @@ import type { Dictionary } from "./da";
 const de: Dictionary = {
   meta: {
     langName: "Deutsch",
-    homeTitle: "Zebiza.com – Trends, Beauty, Lifestyle und tolle Fundstücke",
+    homeTitle: "Zebiza — beauty",
     homeDescription:
       "Entdecke Trends, Beauty-Favoriten, Lifestyle und preiswerte Alltagsfundstücke bei Zebiza.com. Dänischer Webshop mit fairen Preisen und schneller Lieferung.",
   },
@@ -65,12 +65,12 @@ const de: Dictionary = {
     tilbud: "Angebot",
   },
   hero: {
-    eyebrow: "Trend · Beauty · Lifestyle",
-    headline: "Trends, Beauty und Alltagsfundstücke an einem Ort",
-    sub: "Entdecke beliebte Produkte, Geschenkideen, Beauty-Favoriten und preiswerte Alltagsfundstücke bei Zebiza.com.",
-    micro: "Entdecke Neuheiten, Favoriten und preiswerte Fundstücke.",
-    ctaPrimary: "Neuheiten ansehen",
-    ctaSecondary: "Beliebte Favoriten finden",
+    eyebrow: "Zebiza",
+    headline: "Beautyfavoritter, kendte brands og hverdagsfund",
+    sub: "Hudpleje, makeup, hår, negle, parfume og beauty tools.",
+    micro: "Shop beauty med tryg betaling.",
+    ctaPrimary: "Shop hudpleje",
+    ctaSecondary: "Shop makeup",
   },
   sections: {
     nyheder: "Neuheiten und Trends",

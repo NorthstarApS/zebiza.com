@@ -105,9 +105,9 @@ export default function Header() {
             <Link
               key={item.key}
               to={localizedPath(item.path)}
-              className={cn("whitespace-nowrap hover:text-trend", accentClass(item.accent))}
+              className={cn("whitespace-nowrap transition-colors duration-150 hover:text-trend", accentClass(item.accent))}
             >
-              {t.nav[item.key]}
+              {item.label ?? (item.dictKey ? t.nav[item.dictKey] : item.key)}
             </Link>
           ))}
         </div>
@@ -124,7 +124,7 @@ export default function Header() {
                 onClick={() => setMobileOpen(false)}
                 className={cn("py-3 text-sm font-semibold", accentClass(item.accent))}
               >
-                {t.nav[item.key]}
+                {item.label ?? (item.dictKey ? t.nav[item.dictKey] : item.key)}
               </Link>
             ))}
             <div className="py-3">

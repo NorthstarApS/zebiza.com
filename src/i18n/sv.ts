@@ -3,7 +3,7 @@ import type { Dictionary } from "./da";
 const sv: Dictionary = {
   meta: {
     langName: "Svenska",
-    homeTitle: "Zebiza.com – Trender, beauty, livsstil och bra fynd",
+    homeTitle: "Zebiza — beauty",
     homeDescription:
       "Upptäck trender, beauty-favoriter, livsstil och prisvärda vardagsfynd på Zebiza.com. Danskägd webbshop med rättvisa priser och snabb leverans.",
   },
@@ -65,12 +65,12 @@ const sv: Dictionary = {
     tilbud: "Erbjudande",
   },
   hero: {
-    eyebrow: "Trend · Beauty · Livsstil",
-    headline: "Trender, beauty och vardagsfynd samlat på ett ställe",
-    sub: "Upptäck populära produkter, presenttips, beauty-favoriter och prisvärda vardagsfynd på Zebiza.com.",
-    micro: "Upptäck nyheter, favoriter och prisvärda fynd.",
-    ctaPrimary: "Se nyheter",
-    ctaSecondary: "Hitta populära favoriter",
+    eyebrow: "Zebiza",
+    headline: "Beautyfavoritter, kendte brands og hverdagsfund",
+    sub: "Hudpleje, makeup, hår, negle, parfume og beauty tools.",
+    micro: "Shop beauty med tryg betaling.",
+    ctaPrimary: "Shop hudpleje",
+    ctaSecondary: "Shop makeup",
   },
   sections: {
     nyheder: "Nyheter och trender",

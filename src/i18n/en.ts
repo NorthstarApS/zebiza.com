@@ -3,12 +3,12 @@ import type { Dictionary } from "./da";
 const en: Dictionary = {
   meta: {
     langName: "English",
-    homeTitle: "Zebiza.com – Trends, beauty, lifestyle and great finds",
+    homeTitle: "Zebiza — beauty favourites, known brands and everyday finds",
     homeDescription:
-      "Discover trends, beauty favourites, lifestyle and affordable everyday finds at Zebiza.com. Danish-owned webshop with fair prices and fast delivery.",
+      "Danish beauty webshop with skincare, makeup, haircare, nails, fragrance and beauty tools. Fair prices and delivery in Denmark.",
   },
   announcement:
-    "Trends, beauty and everyday finds · Fair prices · Danish customer service · Delivery typically 3-6 days",
+    "Danish beauty webshop · Fair prices · Secure payment · Delivery typically 3-6 business days · 30-day returns",
   nav: {
     nyheder: "New in",
     populaert: "Popular",
@@ -22,7 +22,7 @@ const en: Dictionary = {
     shop: "Shop",
   },
   header: {
-    searchPlaceholder: "Search products, trends and finds…",
+    searchPlaceholder: "Search product, brand, EAN or SKU…",
     account: "Account",
     wishlist: "Wishlist",
     cart: "Cart",
@@ -65,12 +65,12 @@ const en: Dictionary = {
     tilbud: "Deal",
   },
   hero: {
-    eyebrow: "Trend · Beauty · Lifestyle",
-    headline: "Trends, beauty and everyday finds in one place",
-    sub: "Discover popular products, gift ideas, beauty favourites and affordable everyday finds at Zebiza.com.",
-    micro: "Discover new arrivals, favourites and affordable finds.",
-    ctaPrimary: "Shop new in",
-    ctaSecondary: "Find popular favourites",
+    eyebrow: "Zebiza",
+    headline: "Beauty favourites, known brands and everyday finds",
+    sub: "Skincare, makeup, hair, nails, fragrance and beauty tools — in one Danish webshop with fair prices.",
+    micro: "Shop beauty with secure payment and delivery in Denmark.",
+    ctaPrimary: "Shop skincare",
+    ctaSecondary: "Shop makeup",
   },
   sections: {
     nyheder: "New in and trends",
@@ -191,7 +191,7 @@ const en: Dictionary = {
     shopping: "Shopping",
     service: "Customer service",
     legal: "Terms",
-    tagline: "Trends, beauty and everyday finds at fair prices.",
+    tagline: "Beauty favourites and known brands at fair prices.",
     aboutZebiza: "About Zebiza",
     delivery: "Delivery & returns",
     terms: "Terms & conditions",

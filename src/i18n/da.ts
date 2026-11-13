@@ -2,12 +2,12 @@
 export const da = {
   meta: {
     langName: "Dansk",
-    homeTitle: "Zebiza.com – Trends, beauty, livsstil og gode fund",
+    homeTitle: "Zebiza — beautyfavoritter, kendte brands og hverdagsfund",
     homeDescription:
-      "Opdag trends, beauty-favoritter, livsstil og prisvenlige hverdagsfund hos Zebiza.com. Dansk ejet webshop med fair priser og hurtig levering.",
+      "Dansk beauty-webshop med hudpleje, makeup, hårpleje, negle, parfume og beauty tools. Fair priser, tryg betaling og levering til Danmark.",
   },
   announcement:
-    "Trends, beauty og hverdagsfund · Fair priser · Dansk kundeservice · Levering typisk 3-6 dage",
+    "Dansk beauty-webshop · Fair priser · Tryg betaling · Levering typisk 3-6 hverdage · 30 dages retur",
   nav: {
     nyheder: "Nyheder",
     populaert: "Populært",
@@ -21,7 +21,7 @@ export const da = {
     shop: "Shop",
   },
   header: {
-    searchPlaceholder: "Søg efter produkter, trends og fund…",
+    searchPlaceholder: "Søg produkt, brand, EAN eller SKU…",
     account: "Konto",
     wishlist: "Ønskeliste",
     cart: "Kurv",
@@ -64,12 +64,12 @@ export const da = {
     tilbud: "Tilbud",
   },
   hero: {
-    eyebrow: "Trend · Beauty · Livsstil",
-    headline: "Trends, beauty og hverdagsfund samlet ét sted",
-    sub: "Opdag populære produkter, gaveidéer, beauty-favoritter og prisvenlige fund til hverdagen hos Zebiza.com.",
-    micro: "Opdag nyheder, favoritter og prisvenlige fund.",
-    ctaPrimary: "Se nyheder",
-    ctaSecondary: "Find populære favoritter",
+    eyebrow: "Zebiza",
+    headline: "Beautyfavoritter, kendte brands og spændende hverdagsfund",
+    sub: "Hudpleje, makeup, hår, negle, parfume og beauty tools — samlet i én dansk webshop med fair priser.",
+    micro: "Shop beauty med tryg betaling og levering til Danmark.",
+    ctaPrimary: "Shop hudpleje",
+    ctaSecondary: "Shop makeup",
   },
   sections: {
     nyheder: "Nyheder og trends",
@@ -190,7 +190,7 @@ export const da = {
     shopping: "Shopping",
     service: "Kundeservice",
     legal: "Betingelser",
-    tagline: "Trends, beauty og hverdagsfund til fair priser.",
+    tagline: "Beautyfavoritter og kendte brands til fair priser.",
     aboutZebiza: "Om Zebiza",
     delivery: "Levering & returnering",
     terms: "Handelsbetingelser",
@@ -208,7 +208,7 @@ export const da = {
   pages: {
     aboutTitle: "Om Zebiza",
     aboutBody:
-      "Zebiza.com er en dansk ejet webshop med et bredt udvalg af trends, beauty og livsstil. Vi samler populære produkter, gaveidéer og prisvenlige hverdagsfund ét sted — så det er nemt at opdage, sammenligne og finde noget godt til fair priser.",
+      "Zebiza.com er en dansk ejet beauty-webshop. Vi samler hudpleje, makeup, hårpleje, negle, parfume og beauty tools fra kendte brands og spændende hverdagsfavoritter — så det er nemt at finde det rigtige til fair priser.",
     deliveryTitle: "Levering & returnering",
     deliveryBody:
       "Vi sender typisk inden for 1-2 hverdage, og levering tager normalt 3-6 hverdage. Du har 30 dages returret på de fleste varer. Kontakt vores danske kundeservice, hvis du har brug for hjælp.",
