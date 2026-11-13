@@ -68,8 +68,8 @@
       "action": "grep wp-content for zac_delivery; fix CJ/delivery confirmation; see reports/zac-delivery-root-cause.md"
     },
     {
-      "owner": "Lovable publisher",
-      "action": "Merge PR #1 and Publish so SSR + merchant-feed.xml go live"
+      "owner": "Cloudflare / GitHub deployer",
+      "action": "Merge PR #1 and deploy dist/ via Cloudflare Pages (see docs/DEPLOY.md) so SSR + merchant-feed.xml go live"
     },
     {
       "owner": "Reepay admin",
