@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Search, Heart, User, ShoppingBag, Menu, X } from "lucide-react";
+import { Search, ShoppingBag, Menu, X } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { useCart } from "@/context/CartContext";
 import { mainNav } from "@/lib/navigation";
 import LanguageSwitcher from "./LanguageSwitcher";
+import SearchSuggest from "./SearchSuggest";
 import logo from "@/assets/zebiza_logo.png.asset.json";
 import { cn } from "@/lib/utils";
 
@@ -49,13 +50,14 @@ export default function Header() {
         </Link>
 
         {/* Search (desktop) */}
-        <form onSubmit={submitSearch} className="hidden flex-1 lg:flex">
+        <form onSubmit={submitSearch} className="relative hidden flex-1 lg:flex">
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={t.header.searchPlaceholder}
             className="w-full border border-border border-r-0 px-4 py-2.5 text-sm outline-none focus:border-foreground"
             aria-label={t.header.searchPlaceholder}
+            autoComplete="off"
           />
           <button
             type="submit"
@@ -63,16 +65,18 @@ export default function Header() {
           >
             <Search className="h-4 w-4" />
           </button>
+          <SearchSuggest query={query} onPick={() => setQuery("")} />
         </form>
 
         <div className="ml-auto flex items-center gap-3 sm:gap-4">
           <LanguageSwitcher className="hidden sm:flex" />
-          <button aria-label={t.header.account} className="hidden hover:text-trend sm:block">
-            <User className="h-5 w-5" />
-          </button>
-          <button aria-label={t.header.wishlist} className="hidden hover:text-trend sm:block">
-            <Heart className="h-5 w-5" />
-          </button>
+          <Link
+            to={localizedPath("/kontakt")}
+            aria-label="Kundeservice"
+            className="hidden text-sm font-medium hover:text-trend sm:inline"
+          >
+            Hjælp
+          </Link>
           <button onClick={openCart} aria-label={t.header.cart} className="relative hover:text-trend">
             <ShoppingBag className="h-5 w-5" />
             {count > 0 && (
@@ -85,17 +89,25 @@ export default function Header() {
       </div>
 
       {/* Search (mobile) */}
-      <form onSubmit={submitSearch} className="container-z flex pb-3 lg:hidden">
+      <form onSubmit={submitSearch} className="container-z relative flex pb-3 lg:hidden">
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={t.header.searchPlaceholder}
           className="w-full border border-border border-r-0 px-3 py-2.5 text-sm outline-none focus:border-foreground"
           aria-label={t.header.searchPlaceholder}
+          autoComplete="off"
         />
         <button type="submit" className="bg-foreground px-4 text-primary-foreground" aria-label="Search">
           <Search className="h-4 w-4" />
         </button>
+        <SearchSuggest
+          query={query}
+          onPick={() => {
+            setQuery("");
+            setMobileOpen(false);
+          }}
+        />
       </form>
 
       {/* Main nav (desktop) */}
@@ -127,6 +139,13 @@ export default function Header() {
                 {item.label ?? (item.dictKey ? t.nav[item.dictKey] : item.key)}
               </Link>
             ))}
+            <Link
+              to={localizedPath("/kontakt")}
+              onClick={() => setMobileOpen(false)}
+              className="py-3 text-sm font-semibold"
+            >
+              Hjælp / kontakt
+            </Link>
             <div className="py-3">
               <LanguageSwitcher />
             </div>

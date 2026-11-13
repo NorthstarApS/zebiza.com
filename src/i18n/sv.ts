@@ -147,7 +147,7 @@ const sv: Dictionary = {
     empty: "Din varukorg är tom",
     emptyCta: "Börja med att utforska nyheter och populära fynd.",
     orderSummary: "Orderöversikt",
-    deliveryMessage: "Leverans oftast 3-6 vardagar. Fri frakt vid köp över 499 kr.",
+    deliveryMessage: "Leverans oftast 3-6 vardagar. Standardfrakt 59 kr. Fri frakt från 999 kr efter rabatt.",
     goToCheckout: "Gå till kassan",
   },
   checkout: {

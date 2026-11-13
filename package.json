@@ -5,11 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run seo:assets && vite build",
+    "build": "npm run seo:assets && vite build && npm run prerender",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
     "seo:assets": "node scripts/generate-seo-assets.mjs",
+    "prerender": "node scripts/prerender.mjs",
+    "qa:products": "node scripts/product-quality.mjs",
+    "qa:ssr": "node scripts/ssr-verify.mjs",
     "typecheck": "tsc -p tsconfig.app.json --noEmit"
   },
   "dependencies": {

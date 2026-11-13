@@ -147,7 +147,7 @@ const de: Dictionary = {
     empty: "Dein Warenkorb ist leer",
     emptyCta: "Beginne mit Neuheiten und beliebten Fundstücken.",
     orderSummary: "Bestellübersicht",
-    deliveryMessage: "Lieferung meist 3-6 Werktage. Kostenloser Versand ab 499 DKK.",
+    deliveryMessage: "Lieferung meist 3-6 Werktage. Standardversand 59 DKK. Kostenlos ab 999 DKK nach Rabatt.",
     goToCheckout: "Zur Kasse gehen",
   },
   checkout: {

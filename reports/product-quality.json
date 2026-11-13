@@ -1,0 +1,3954 @@
+{
+  "generatedAt": "2026-11-13T21:07:40.531Z",
+  "summary": {
+    "total": 218,
+    "PASS": 186,
+    "REVIEW": 19,
+    "BLOCKED": 13,
+    "missingBrand": 29,
+    "missingGtin": 88,
+    "missingImage": 1
+  },
+  "products": [
+    {
+      "id": 301268,
+      "name": "CBD Øjenmaske til afslappende behandling",
+      "slug": "pakke-med-afslappende-behandling-til-omridset-omkring-oejnene-cbd-innovagoods",
+      "sku": "V0103986",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 177.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/pakke-med-afslappende-behandling-til-omridset-omkring-oejnene-cbd-innovagoods"
+    },
+    {
+      "id": 301259,
+      "name": "Genopladelig Mini Shaver med LED lys Epiluch InnovaGoods",
+      "slug": "genopladelig-mini-shaver-med-led-lys-epiluch-innovagoods",
+      "sku": "V0103457",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 112.95,
+      "inStock": true,
+      "categories": [
+        "barbering-grooming"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/genopladelig-mini-shaver-med-led-lys-epiluch-innovagoods"
+    },
+    {
+      "id": 301254,
+      "name": "Ansigtsserum og massager CBD InnovaGoods",
+      "slug": "pakke-med-styrkende-ansigtsbehandling-cbd-innovagoods",
+      "sku": "V0103974",
+      "brand": "InnovaGoods",
+      "gtin": "8435527816438",
+      "price": 232.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/pakke-med-styrkende-ansigtsbehandling-cbd-innovagoods"
+    },
+    {
+      "id": 301242,
+      "name": "Ansigtsforyngende massager med høj frekvens T-Vibe InnovaGoods",
+      "slug": "ansigtsforyngende-massager-med-hoej-frekvens-t-vibe-innovagoods",
+      "sku": "V0103113",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 109.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/ansigtsforyngende-massager-med-hoej-frekvens-t-vibe-innovagoods"
+    },
+    {
+      "id": 301233,
+      "name": "Dameparfume Cartier Déclaration Parfum",
+      "slug": "dameparfume-cartier-declaration-parfum",
+      "sku": "M0125955",
+      "brand": "Cartier",
+      "gtin": "",
+      "price": 914.95,
+      "inStock": true,
+      "categories": [
+        "parfume-kvinder"
+      ],
+      "status": "BLOCKED",
+      "score": 73,
+      "reasons": [
+        "Mangler billede",
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/dameparfume-cartier-declaration-parfum"
+    },
+    {
+      "id": 301222,
+      "name": "Dameparfume Hollister Festival Nite EDP (100 ml)",
+      "slug": "dameparfume-hollister-festival-nite-edp-100-ml",
+      "sku": "S4515520",
+      "brand": "Hollister",
+      "gtin": "0085715268112",
+      "price": 202.95,
+      "inStock": true,
+      "categories": [
+        "parfume-kvinder"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/dameparfume-hollister-festival-nite-edp-100-ml"
+    },
+    {
+      "id": 301082,
+      "name": "Sæt Opstrammende Ansigtsmassageapparat med LED, EMS og varme og Rice Joyboost 30 ml serum",
+      "slug": "saet-opstrammende-ansigtsmassageapparat-med-led-ems-og-varme-og-rice-joyboost-30-ml-serum",
+      "sku": "V0104107",
+      "brand": "InnovaGoods",
+      "gtin": "8435527828707",
+      "price": 278.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/saet-opstrammende-ansigtsmassageapparat-med-led-ems-og-varme-og-rice-joyboost-30-ml-serum"
+    },
+    {
+      "id": 301073,
+      "name": "Sæt Opstrammende Ansigtsmassager med LED, EMS og Varme og Kombucha Ansigtsserum 30 ml InnovaGoods",
+      "slug": "saet-opstrammende-ansigtsmassager-med-led-ems-og-varme-og-kombucha-ansigtsserum-30-ml-innovagoods",
+      "sku": "V0104105",
+      "brand": "InnovaGoods",
+      "gtin": "8435527828684",
+      "price": 278.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/saet-opstrammende-ansigtsmassager-med-led-ems-og-varme-og-kombucha-ansigtsserum-30-ml-innovagoods"
+    },
+    {
+      "id": 301064,
+      "name": "Pack Øjenmassager anti-age med lysterapi og termoterapi og Øjencreme CBD Zenglow 15 ml InnovaGoods",
+      "slug": "pack-oejenmassager-anti-age-med-lysterapi-og-termoterapi-og-oejencreme-cbd-zenglow-15-ml-innovagoods",
+      "sku": "V0104115",
+      "brand": "InnovaGoods",
+      "gtin": "8435527828783",
+      "price": 251.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/pack-oejenmassager-anti-age-med-lysterapi-og-termoterapi-og-oejencreme-cbd-zenglow-15-ml-innovagoods"
+    },
+    {
+      "id": 301055,
+      "name": "Sæt Genopladelig Ansigtsrens mod Urenheder og Kombucha Ansigtsgel Vibepure 200 ml InnovaGoods",
+      "slug": "saet-genopladelig-ansigtsrens-mod-urenheder-og-kombucha-ansigtsgel-vibepure-200-ml-innovagoods",
+      "sku": "V0104113",
+      "brand": "InnovaGoods",
+      "gtin": "8435527828769",
+      "price": 251.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/saet-genopladelig-ansigtsrens-mod-urenheder-og-kombucha-ansigtsgel-vibepure-200-ml-innovagoods"
+    },
+    {
+      "id": 301046,
+      "name": "Sæt Elektrisk Ansigtsrenser mod Hudorme og CBD Ansigtsrensgel Zenpure 200 ml InnovaGoods",
+      "slug": "saet-elektrisk-ansigtsrenser-mod-hudorme-og-cbd-ansigtsrensgel-zenpure-200-ml-innovagoods",
+      "sku": "V0104111",
+      "brand": "InnovaGoods",
+      "gtin": "8435527828745",
+      "price": 196.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/saet-elektrisk-ansigtsrenser-mod-hudorme-og-cbd-ansigtsrensgel-zenpure-200-ml-innovagoods"
+    },
+    {
+      "id": 301037,
+      "name": "Sæt genopladelig ansigtsrens mod urenheder og Rice Joypure ansigtsgel 200 ml InnovaGoods",
+      "slug": "saet-genopladelig-ansigtsrens-mod-urenheder-og-rice-joypure-ansigtsgel-200-ml-innovagoods",
+      "sku": "V0104114",
+      "brand": "InnovaGoods",
+      "gtin": "8435527828776",
+      "price": 251.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/saet-genopladelig-ansigtsrens-mod-urenheder-og-rice-joypure-ansigtsgel-200-ml-innovagoods"
+    },
+    {
+      "id": 301028,
+      "name": "Pack Øjenmassageapparat mod aldring med fototerapi og termoterapi og Øjenkontur Rice Joyglow 15 ml InnovaGoods",
+      "slug": "pack-oejenmassageapparat-mod-aldring-med-fototerapi-og-termoterapi-og-oejenkontur-rice-joyglow-15-ml-innovagoods",
+      "sku": "V0104116",
+      "brand": "InnovaGoods",
+      "gtin": "8435527828790",
+      "price": 251.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/pack-oejenmassageapparat-mod-aldring-med-fototerapi-og-termoterapi-og-oejenkontur-rice-joyglow-15-ml-innovagoods"
+    },
+    {
+      "id": 301019,
+      "name": "Sæt Elektrisk Ansigtsrenser mod Hudorme og Ansigtsvaskegel Rice Joypure 200 ml InnovaGoods",
+      "slug": "saet-elektrisk-ansigtsrenser-mod-hudorme-og-ansigtsvaskegel-rice-joypure-200-ml-innovagoods",
+      "sku": "V0104112",
+      "brand": "InnovaGoods",
+      "gtin": "8435527828752",
+      "price": 195.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/saet-elektrisk-ansigtsrenser-mod-hudorme-og-ansigtsvaskegel-rice-joypure-200-ml-innovagoods"
+    },
+    {
+      "id": 301010,
+      "name": "Elektrisk Ansigtssauna & Rice Skincare Pakke fra InnovaGoods",
+      "slug": "saet-elektrisk-ansigtssauna-ansigtsrens-rice-joypure-200-ml-og-ansigtstoner-rice-joyfresh-150-ml-innovagoods",
+      "sku": "V0104110",
+      "brand": "InnovaGoods",
+      "gtin": "8435527828738",
+      "price": 290.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/saet-elektrisk-ansigtssauna-ansigtsrens-rice-joypure-200-ml-og-ansigtstoner-rice-joyfresh-150-ml-innovagoods"
+    },
+    {
+      "id": 301001,
+      "name": "Elektrisk ansigtsdamper, CBD-rens og toner fra InnovaGoods",
+      "slug": "pakke-elektrisk-ansigtssauna-cbd-ansigtsrens-zenpure-200-ml-og-cbd-ansigtstoner-zenfresh-150-ml-innovagoods",
+      "sku": "V0104109",
+      "brand": "InnovaGoods",
+      "gtin": "8435527828721",
+      "price": 290.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/pakke-elektrisk-ansigtssauna-cbd-ansigtsrens-zenpure-200-ml-og-cbd-ansigtstoner-zenfresh-150-ml-innovagoods"
+    },
+    {
+      "id": 300992,
+      "name": "Makeup Organisator InnovaGoods Grå – Refurbished",
+      "slug": "makeup-organisatoren-innovagoods-graa-polypropylen-refurbished-a",
+      "sku": "V0800031",
+      "brand": "InnovaGoods",
+      "gtin": "8435527825836",
+      "price": 227.95,
+      "inStock": true,
+      "categories": [
+        "beauty-tools"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/makeup-organisatoren-innovagoods-graa-polypropylen-refurbished-a"
+    },
+    {
+      "id": 300983,
+      "name": "Sæt Elektrisk Ansigts Sauna & Elektrisk Hudrenser mod Sorte Prikker InnovaGoods",
+      "slug": "saet-elektrisk-ansigts-sauna-elektrisk-hudrenser-mod-sorte-prikker-innovagoods",
+      "sku": "V0104063",
+      "brand": "InnovaGoods",
+      "gtin": "8435527828295",
+      "price": 278.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/saet-elektrisk-ansigts-sauna-elektrisk-hudrenser-mod-sorte-prikker-innovagoods"
+    },
+    {
+      "id": 300979,
+      "name": "CBD Behandling til Trætte Ben – InnovaGoods",
+      "slug": "pakke-med-behandling-til-traette-ben-cbd-innovagoods",
+      "sku": "V0103985",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 290.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/pakke-med-behandling-til-traette-ben-cbd-innovagoods"
+    },
+    {
+      "id": 300976,
+      "name": "Clinique Almost Black Honey læbestift, 1,9 g",
+      "slug": "laebestift-clinique-almost-black-honey-19-g",
+      "sku": "S05109756",
+      "brand": "Clinique",
+      "gtin": "0020714004507",
+      "price": 174.95,
+      "inStock": true,
+      "categories": [
+        "kosmetik-laeber"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/laebestift-clinique-almost-black-honey-19-g"
+    },
+    {
+      "id": 300949,
+      "name": "3-i-1 sammenklappeligt LED-spejl med makeup-organiser Panomir InnovaGoods",
+      "slug": "3-i-1-sammenklappeligt-led-spejl-med-makeup-organiser-panomir-innovagoods",
+      "sku": "V0103402",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 176.95,
+      "inStock": true,
+      "categories": [
+        "spejle"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/3-i-1-sammenklappeligt-led-spejl-med-makeup-organiser-panomir-innovagoods"
+    },
+    {
+      "id": 300940,
+      "name": "Automatisk Makeup børste renere og tørretumbler Maklin InnovaGoods",
+      "slug": "automatisk-makeup-boerste-renere-og-toerretumbler-maklin-innovagoods",
+      "sku": "V0103409",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 133.95,
+      "inStock": true,
+      "categories": [
+        "makeup-pensler"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/automatisk-makeup-boerste-renere-og-toerretumbler-maklin-innovagoods"
+    },
+    {
+      "id": 300911,
+      "name": "Genopladelig hårtrimmer med 4 skær og LED Forsilker InnovaGoods",
+      "slug": "genopladelig-haartrimmer-med-4-skaer-og-led-forsilker-innovagoods",
+      "sku": "V0101159",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 161.95,
+      "inStock": true,
+      "categories": [
+        "beauty-tools-generelt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/genopladelig-haartrimmer-med-4-skaer-og-led-forsilker-innovagoods"
+    },
+    {
+      "id": 300903,
+      "name": "Præcision-Epilator med LED til Ansigtshår – InnovaGoods",
+      "slug": "praecision-epilator-med-led-til-ansigtshaar-innovagoods",
+      "sku": "V0101131",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 77.95,
+      "inStock": true,
+      "categories": [
+        "skaegpleje"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/praecision-epilator-med-led-til-ansigtshaar-innovagoods"
+    },
+    {
+      "id": 300885,
+      "name": "Elektrisk Ansigtsserum & Creme Pakke med LED Massager",
+      "slug": "saet-ansigtsmassager-ansigtsserum-rice-joyboost-30-ml-og-ansigtscreme-rice-joycare-50-ml-innovagoods",
+      "sku": "V0104108",
+      "brand": "InnovaGoods",
+      "gtin": "8435527828714",
+      "price": 417.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/saet-ansigtsmassager-ansigtsserum-rice-joyboost-30-ml-og-ansigtscreme-rice-joycare-50-ml-innovagoods"
+    },
+    {
+      "id": 300876,
+      "name": "Pakke: Kombucha Serum, Creme & LED Massager InnovaGoods",
+      "slug": "pakke-ansigtsmassager-kombucha-ansigtsserum-vibeboost-30-ml-og-kombucha-ansigtscreme-vibecare-50-ml-innovagoods",
+      "sku": "V0104106",
+      "brand": "InnovaGoods",
+      "gtin": "8435527828691",
+      "price": 334.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/pakke-ansigtsmassager-kombucha-ansigtsserum-vibeboost-30-ml-og-kombucha-ansigtscreme-vibecare-50-ml-innovagoods"
+    },
+    {
+      "id": 300857,
+      "name": "Barbermaskine til kropsbehåring med aluminiumsteleskophåndtag Extaver InnovaGoods",
+      "slug": "barbermaskine-til-kropsbehaaring-med-aluminiumsteleskophaandtag-extaver-innovagoods",
+      "sku": "V0103854",
+      "brand": "InnovaGoods",
+      "gtin": "8435527826277",
+      "price": 152.95,
+      "inStock": true,
+      "categories": [
+        "skaegpleje"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/barbermaskine-til-kropsbehaaring-med-aluminiumsteleskophaandtag-extaver-innovagoods"
+    },
+    {
+      "id": 300842,
+      "name": "Keramisk Spiral krøllejern Spihair InnovaGoods",
+      "slug": "keramisk-spiral-kroellejern-spihair-innovagoods",
+      "sku": "V0103378",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 126.95,
+      "inStock": true,
+      "categories": [
+        "haarboerster-redskaber"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/keramisk-spiral-kroellejern-spihair-innovagoods"
+    },
+    {
+      "id": 300791,
+      "name": "Krøllejern Demeliss 1200 W (Refurbished A)",
+      "slug": "kroellejern-demeliss-1200-w-refurbished-a",
+      "sku": "V0710087",
+      "brand": "Demeliss",
+      "gtin": "3666085200369",
+      "price": 149.95,
+      "inStock": true,
+      "categories": [
+        "haarboerster-redskaber"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/kroellejern-demeliss-1200-w-refurbished-a"
+    },
+    {
+      "id": 300767,
+      "name": "Rejsetoilettaske Moos Passion Multifarvet Polyester Genbrug 23 x 12 x 8 cm",
+      "slug": "rejsetoilettaske-moos-passion-multifarvet-polyester-genbrug-23-x-12-x-8-cm",
+      "sku": "S4312011",
+      "brand": "Moos",
+      "gtin": "8412688594320",
+      "price": 80.95,
+      "inStock": true,
+      "categories": [
+        "beauty-oevrigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/rejsetoilettaske-moos-passion-multifarvet-polyester-genbrug-23-x-12-x-8-cm"
+    },
+    {
+      "id": 300763,
+      "name": "Rejsetoilettaske Mickey Mouse Clubhouse Good day Blå 26 x 15 x 12 cm",
+      "slug": "rejsetoilettaske-mickey-mouse-clubhouse-good-day-blaa-26-x-15-x-12-cm",
+      "sku": "S4311606",
+      "brand": "Mickey Mouse Clubhouse",
+      "gtin": "8412688583195",
+      "price": 94.95,
+      "inStock": true,
+      "categories": [
+        "beauty-oevrigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/rejsetoilettaske-mickey-mouse-clubhouse-good-day-blaa-26-x-15-x-12-cm"
+    },
+    {
+      "id": 300752,
+      "name": "IPL Hårfjerner med Kuldefunktion & Lys – InnovaGoods Kulepil",
+      "slug": "haarfjerner-med-pulserende-lys-kuldefunktion-og-tilbehoer-kulepil-innovagoods",
+      "sku": "V0103944",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 437.95,
+      "inStock": true,
+      "categories": [
+        "barbering-grooming"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/haarfjerner-med-pulserende-lys-kuldefunktion-og-tilbehoer-kulepil-innovagoods"
+    },
+    {
+      "id": 300750,
+      "name": "Kosmetik sæt til kvinder Nivea Q10 ANTI-ARRUGAS Anti-Age Q10 2 Dele",
+      "slug": "kosmetik-saet-til-kvinder-nivea-q10-anti-arrugas-anti-age-q10-2-dele",
+      "sku": "S05126932",
+      "brand": "Nivea",
+      "gtin": "8412300050616",
+      "price": 196.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/kosmetik-saet-til-kvinder-nivea-q10-anti-arrugas-anti-age-q10-2-dele"
+    },
+    {
+      "id": 300748,
+      "name": "Olie til Skæg Trussardi PRIMO 50 ml",
+      "slug": "olie-til-skaeg-trussardi-primo-50-ml",
+      "sku": "S05127438",
+      "brand": "Trussardi",
+      "gtin": "8059121002235",
+      "price": 172.95,
+      "inStock": true,
+      "categories": [
+        "barbering-grooming"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/olie-til-skaeg-trussardi-primo-50-ml"
+    },
+    {
+      "id": 300743,
+      "name": "Cellulitisbehandling Rice InnovaGoods",
+      "slug": "pakke-med-behandling-til-reduktion-af-cellulitis-rice-innovagoods",
+      "sku": "V0103983",
+      "brand": "InnovaGoods",
+      "gtin": "8435527817657",
+      "price": 366.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/pakke-med-behandling-til-reduktion-af-cellulitis-rice-innovagoods"
+    },
+    {
+      "id": 300739,
+      "name": "Dyb rensende ansigtsbehandling Kombucha InnovaGoods",
+      "slug": "pakke-med-dyb-rensende-ansigtsbehandling-kombucha-innovagoods",
+      "sku": "V0103979",
+      "brand": "InnovaGoods",
+      "gtin": "8435527816827",
+      "price": 394.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/pakke-med-dyb-rensende-ansigtsbehandling-kombucha-innovagoods"
+    },
+    {
+      "id": 300734,
+      "name": "Rice InnovaGoods rensende ansigtsbehandling",
+      "slug": "pakke-med-rensende-ansigtsbehandling-rice-innovagoods",
+      "sku": "V0103978",
+      "brand": "InnovaGoods",
+      "gtin": "8435527816865",
+      "price": 230.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/pakke-med-rensende-ansigtsbehandling-rice-innovagoods"
+    },
+    {
+      "id": 300729,
+      "name": "Rensende ansigtsbehandling mod sorte hvide med CBD",
+      "slug": "pakke-med-rensende-behandling-mod-sorte-hudorme-cbd-innovagoods",
+      "sku": "V0103977",
+      "brand": "InnovaGoods",
+      "gtin": "8435527819019",
+      "price": 358.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/pakke-med-rensende-behandling-mod-sorte-hudorme-cbd-innovagoods"
+    },
+    {
+      "id": 300725,
+      "name": "Øjenpleje med Kombucha og massagefunktion",
+      "slug": "pakke-med-behandling-til-opstramning-af-huden-under-oejnene-med-tredobbelt-virkning-kombucha-innovagoods",
+      "sku": "V0103975",
+      "brand": "InnovaGoods",
+      "gtin": "8435527818593",
+      "price": 315.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/pakke-med-behandling-til-opstramning-af-huden-under-oejnene-med-tredobbelt-virkning-kombucha-innovagoods"
+    },
+    {
+      "id": 300719,
+      "name": "Fugtighedscreme til ansigtet Rice InnovaGoods",
+      "slug": "fugtighedscreme-til-ansigtet-rice-innovagoods",
+      "sku": "V0103967",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 336.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/fugtighedscreme-til-ansigtet-rice-innovagoods"
+    },
+    {
+      "id": 300713,
+      "name": "Fugtighedscreme til ansigtet CBD InnovaGoods, vegansk",
+      "slug": "fugtighedscreme-til-ansigtet-cbd-innovagoods",
+      "sku": "V0103969",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 352.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/fugtighedscreme-til-ansigtet-cbd-innovagoods"
+    },
+    {
+      "id": 300709,
+      "name": "Dobbeltansigtscreme Rice og serum fra InnovaGoods",
+      "slug": "fugtighedscreme-til-ansigtet-i-dobbeltpakke-rice-innovagoods",
+      "sku": "V0103970",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 242.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/fugtighedscreme-til-ansigtet-i-dobbeltpakke-rice-innovagoods"
+    },
+    {
+      "id": 300705,
+      "name": "Fugtighedscreme og serum til ansigtet, vegansk",
+      "slug": "fugtighedscreme-til-ansigtet-i-dobbeltpakke-cbd-innovagoods",
+      "sku": "V0103972",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 254.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/fugtighedscreme-til-ansigtet-i-dobbeltpakke-cbd-innovagoods"
+    },
+    {
+      "id": 300701,
+      "name": "InnovaGoods CBD Ansigtsskrub og Toner, Vegansk",
+      "slug": "ansigtsrens-i-dobbeltpakke-cbd-innovagoods",
+      "sku": "V0103966",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 240.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/ansigtsrens-i-dobbeltpakke-cbd-innovagoods"
+    },
+    {
+      "id": 300697,
+      "name": "Fugtighedscreme til ansigtet Kombucha – InnovaGoods",
+      "slug": "fugtighedscreme-til-ansigtet-i-dobbeltpakke-kombucha-innovagoods",
+      "sku": "V0103971",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 248.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/fugtighedscreme-til-ansigtet-i-dobbeltpakke-kombucha-innovagoods"
+    },
+    {
+      "id": 300692,
+      "name": "Reparations i dobbeltpakke CBD fra InnovaGoods",
+      "slug": "reparations-i-dobbeltpakke-cbd-innovagoods",
+      "sku": "V0103963",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 268.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/reparations-i-dobbeltpakke-cbd-innovagoods"
+    },
+    {
+      "id": 300688,
+      "name": "InnovaGoods Kombucha ansigtsrens i dobbeltpakke",
+      "slug": "ansigtsrens-i-dobbeltpakke-kombucha-innovagoods",
+      "sku": "V0103965",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 216.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/ansigtsrens-i-dobbeltpakke-kombucha-innovagoods"
+    },
+    {
+      "id": 300682,
+      "name": "Fugtighedscreme til ansigtet Kombucha fra InnovaGoods",
+      "slug": "fugtighedscreme-til-ansigtet-kombucha-innovagoods",
+      "sku": "V0103968",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 344.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/fugtighedscreme-til-ansigtet-kombucha-innovagoods"
+    },
+    {
+      "id": 300677,
+      "name": "Rice InnovaGoods kropspleje i dobbeltpakke",
+      "slug": "kropspleje-i-dobbeltpakke-rice-innovagoods",
+      "sku": "V0103950",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 255.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/kropspleje-i-dobbeltpakke-rice-innovagoods"
+    },
+    {
+      "id": 300673,
+      "name": "Sæt til ansigtsrutine CBD InnovaGoods",
+      "slug": "saet-til-ansigtsrutine-cbd-innovagoods",
+      "sku": "V0103958",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 548.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/saet-til-ansigtsrutine-cbd-innovagoods"
+    },
+    {
+      "id": 300669,
+      "name": "InnovaGoods Ansigtsrens i dobbeltpakke – Vegansk",
+      "slug": "ansigtsrens-i-dobbeltpakke-rice-innovagoods",
+      "sku": "V0103964",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 209.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/ansigtsrens-i-dobbeltpakke-rice-innovagoods"
+    },
+    {
+      "id": 300665,
+      "name": "Sæt til ansigtsrutine Rice InnovaGoods",
+      "slug": "saet-til-ansigtsrutine-rice-innovagoods",
+      "sku": "V0103956",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 494.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/saet-til-ansigtsrutine-rice-innovagoods"
+    },
+    {
+      "id": 300657,
+      "name": "Ansigtssæt Kombucha fra InnovaGoods – Vegansk hudpleje",
+      "slug": "saet-til-ansigtsrutine-kombucha-innovagoods",
+      "sku": "V0103957",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 512.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/saet-til-ansigtsrutine-kombucha-innovagoods"
+    },
+    {
+      "id": 300648,
+      "name": "Sæt til ansigts- og kropsrutine CBD InnovaGoods",
+      "slug": "saet-til-ansigts-og-kropsrutine-cbd-innovagoods",
+      "sku": "V0103961",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 790.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/saet-til-ansigts-og-kropsrutine-cbd-innovagoods"
+    },
+    {
+      "id": 300639,
+      "name": "Sæt til ansigts- og kropsrutine Rice InnovaGoods",
+      "slug": "saet-til-ansigts-og-kropsrutine-rice-innovagoods",
+      "sku": "V0103959",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 721.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/saet-til-ansigts-og-kropsrutine-rice-innovagoods"
+    },
+    {
+      "id": 300631,
+      "name": "Øjencreme CBD Zenglow – Vegansk Pleje mod Rynker",
+      "slug": "oejenpleje-cbd-zenglow-innovagoods-15-ml",
+      "sku": "V0103742",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 110.95,
+      "inStock": true,
+      "categories": [
+        "oejencreme"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/oejenpleje-cbd-zenglow-innovagoods-15-ml"
+    },
+    {
+      "id": 300623,
+      "name": "Øjencreme Kombucha Vibeglow – Vegansk Pleje",
+      "slug": "oejenpleje-kombucha-vibeglow-innovagoods-15-ml",
+      "sku": "V0103751",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 110.95,
+      "inStock": true,
+      "categories": [
+        "oejencreme"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/oejenpleje-kombucha-vibeglow-innovagoods-15-ml"
+    },
+    {
+      "id": 300615,
+      "name": "Ansigtsserum Kombucha Vibeboost – Naturlig Pleje fra InnovaGoods",
+      "slug": "ansigtsserum-kombucha-vibeboost-innovagoods-30-ml",
+      "sku": "V0103749",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 110.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/ansigtsserum-kombucha-vibeboost-innovagoods-30-ml"
+    },
+    {
+      "id": 300607,
+      "name": "Fugtgivende CBD-creme til følsom hud – InnovaGoods 50ml",
+      "slug": "fugtgivende-ansigtscreme-cbd-zencare-innovagoods-50-ml",
+      "sku": "V0103741",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 109.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/fugtgivende-ansigtscreme-cbd-zencare-innovagoods-50-ml"
+    },
+    {
+      "id": 300599,
+      "name": "Fugtgivende Kombucha Ansigtscreme – Vegansk Pleje",
+      "slug": "fugtgivende-ansigtscreme-kombucha-vibecare-innovagoods-50-ml",
+      "sku": "V0103750",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 108.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/fugtgivende-ansigtscreme-kombucha-vibecare-innovagoods-50-ml"
+    },
+    {
+      "id": 300591,
+      "name": "CBD Ansigtsgel fra InnovaGoods – Beroligende Pleje",
+      "slug": "ansigtsrens-i-gel-form-cbd-zenpure-innovagoods-200-ml",
+      "sku": "V0103739",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 106.95,
+      "inStock": true,
+      "categories": [
+        "ansigtsrens"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/ansigtsrens-i-gel-form-cbd-zenpure-innovagoods-200-ml"
+    },
+    {
+      "id": 300582,
+      "name": "Energigivende Bencreme med CBD – InnovaGoods Zencalm",
+      "slug": "energigivende-creme-til-traette-ben-cbd-zencalm-innovagoods-200-ml",
+      "sku": "V0103738",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 117.95,
+      "inStock": true,
+      "categories": [
+        "kropspleje"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/energigivende-creme-til-traette-ben-cbd-zencalm-innovagoods-200-ml"
+    },
+    {
+      "id": 300574,
+      "name": "CBD Kropsbalsam Zenheal – Regenererer og Fugter Hud",
+      "slug": "reparerende-balsam-til-kroppen-cbd-zenheal-innovagoods-50-ml",
+      "sku": "V0103737",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 112.95,
+      "inStock": true,
+      "categories": [
+        "kropspleje"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/reparerende-balsam-til-kroppen-cbd-zenheal-innovagoods-50-ml"
+    },
+    {
+      "id": 300566,
+      "name": "Ansigtsserum CBD Zenboost – Vegansk Pleje med Hyaluronsyre",
+      "slug": "ansigtsserum-cbd-zenboost-innovagoods-30-ml",
+      "sku": "V0103736",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 112.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/ansigtsserum-cbd-zenboost-innovagoods-30-ml"
+    },
+    {
+      "id": 300558,
+      "name": "Kombucha Ansigtstoner – Fugtgivende og Eksfolierende Pleje",
+      "slug": "fugtgivende-og-eksfolierende-ansigtstoner-kombucha-vibefresh-innovagoods-150-ml",
+      "sku": "V0103748",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 97.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/fugtgivende-og-eksfolierende-ansigtstoner-kombucha-vibefresh-innovagoods-150-ml"
+    },
+    {
+      "id": 300549,
+      "name": "CBD Zenfresh Ansigtstoner – Fugtende og Eksfolierende Pleje",
+      "slug": "fugtgivende-og-eksfolierende-ansigtstoner-cbd-zenfresh-innovagoods-150-ml",
+      "sku": "V0103740",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 107.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/fugtgivende-og-eksfolierende-ansigtstoner-cbd-zenfresh-innovagoods-150-ml"
+    },
+    {
+      "id": 300540,
+      "name": "Vegansk Kombucha Ansigtsgel fra InnovaGoods – 200ml",
+      "slug": "ansigtsrens-i-gel-form-kombucha-vibepure-innovagoods-200-ml",
+      "sku": "V0103747",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 104.95,
+      "inStock": true,
+      "categories": [
+        "ansigtsrens"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/ansigtsrens-i-gel-form-kombucha-vibepure-innovagoods-200-ml"
+    },
+    {
+      "id": 300531,
+      "name": "Eksfolierende Kropsgel med Ris – Rice Joynew InnovaGoods 200ml",
+      "slug": "eksfolierende-kropsgel-rice-joynew-innovagoods-200-ml",
+      "sku": "V0103744",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 110.95,
+      "inStock": true,
+      "categories": [
+        "kropspleje"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/eksfolierende-kropsgel-rice-joynew-innovagoods-200-ml"
+    },
+    {
+      "id": 300523,
+      "name": "Rice Joypure Ansigtsgel – Dybrensning med Naturlige Ingredienser",
+      "slug": "ansigtsrens-i-gel-form-rice-joypure-innovagoods-200-ml",
+      "sku": "V0103752",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 102.95,
+      "inStock": true,
+      "categories": [
+        "ansigtsrens"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/ansigtsrens-i-gel-form-rice-joypure-innovagoods-200-ml"
+    },
+    {
+      "id": 300515,
+      "name": "Ansigtsserum Rice Joyboost – Naturlig pleje fra InnovaGoods",
+      "slug": "ansigtsserum-rice-joyboost-innovagoods-30-ml",
+      "sku": "V0103754",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 108.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/ansigtsserum-rice-joyboost-innovagoods-30-ml"
+    },
+    {
+      "id": 300507,
+      "name": "Opstrammende Rice Body Lotion – InnovaGoods 250ml",
+      "slug": "body-lotion-opstrammende-rice-joyfirm-innovagoods-250-ml",
+      "sku": "V0103743",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 117.95,
+      "inStock": true,
+      "categories": [
+        "kropspleje"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/body-lotion-opstrammende-rice-joyfirm-innovagoods-250-ml"
+    },
+    {
+      "id": 300499,
+      "name": "Fugtgivende Ansigtstoner Rice Joyfresh – Vegansk & Naturlig Pleje",
+      "slug": "fugtgivende-og-eksfolierende-ansigtstoner-rice-joyfresh-innovagoods-150-ml",
+      "sku": "V0103753",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 95.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/fugtgivende-og-eksfolierende-ansigtstoner-rice-joyfresh-innovagoods-150-ml"
+    },
+    {
+      "id": 300490,
+      "name": "Øjencreme Rice Joyglow – Vegansk & Naturlig Pleje",
+      "slug": "oejenpleje-rice-joyglow-innovagoods-15-ml",
+      "sku": "V0103756",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 108.95,
+      "inStock": true,
+      "categories": [
+        "oejencreme"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/oejenpleje-rice-joyglow-innovagoods-15-ml"
+    },
+    {
+      "id": 300481,
+      "name": "Fugtgivende Rice Ansigtscreme 50ml – InnovaGoods Vegansk",
+      "slug": "fugtgivende-ansigtscreme-rice-joycare-innovagoods-50-ml",
+      "sku": "V0103755",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 107.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/fugtgivende-ansigtscreme-rice-joycare-innovagoods-50-ml"
+    },
+    {
+      "id": 300479,
+      "name": "Halvpermanent farvning Goldwell COLORANCE Nº 7KG 120 ml",
+      "slug": "halvpermanent-farvning-goldwell-colorance-no-7kg-120-ml",
+      "sku": "S05126180",
+      "brand": "Goldwell",
+      "gtin": "4021609211662",
+      "price": 210.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/halvpermanent-farvning-goldwell-colorance-no-7kg-120-ml"
+    },
+    {
+      "id": 300477,
+      "name": "Halvpermanent farvning Goldwell COLORANCE Nº 5RB 120 ml",
+      "slug": "halvpermanent-farvning-goldwell-colorance-no-5rb-120-ml",
+      "sku": "S05126138",
+      "brand": "Goldwell",
+      "gtin": "4021609113058",
+      "price": 188.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/halvpermanent-farvning-goldwell-colorance-no-5rb-120-ml"
+    },
+    {
+      "id": 300468,
+      "name": "Fama Fabre hårbørste Curler",
+      "slug": "curler-fama-fabre",
+      "sku": "V3401659",
+      "brand": "Fama Fabré",
+      "gtin": "8435090818297",
+      "price": 61.95,
+      "inStock": true,
+      "categories": [
+        "haarboerster-redskaber"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/curler-fama-fabre"
+    },
+    {
+      "id": 300466,
+      "name": "Permanent Farve Farouk 6RV – Rød",
+      "slug": "permanent-farve-farouk-6rv",
+      "sku": "V3401738",
+      "brand": "Farouk",
+      "gtin": "0633911765173",
+      "price": 64.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/permanent-farve-farouk-6rv"
+    },
+    {
+      "id": 300464,
+      "name": "Shampoo Fama Fabre, hvid flaske",
+      "slug": "shampoo-fama-fabre",
+      "sku": "V3401658",
+      "brand": "Fama Fabré",
+      "gtin": "8435090806201",
+      "price": 114.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/shampoo-fama-fabre"
+    },
+    {
+      "id": 300462,
+      "name": "Shampoo Steinhart – Hårbærende pleje",
+      "slug": "shampoo-steinhart",
+      "sku": "V3401657",
+      "brand": "Steinhart",
+      "gtin": "8435090849208",
+      "price": 104.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/shampoo-steinhart"
+    },
+    {
+      "id": 300460,
+      "name": "Permanent hårfarve Lisap Klar Kastanje",
+      "slug": "permanent-farve-lisap-klar-kastanje-1-enheder",
+      "sku": "V3401667",
+      "brand": "Lisap",
+      "gtin": "1200025020017",
+      "price": 67.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/permanent-farve-lisap-klar-kastanje-1-enheder"
+    },
+    {
+      "id": 300458,
+      "name": "Keratin Hårbalsam Seibella Queratina, 300 ml",
+      "slug": "keratin-haarbalsam-seibella-queratina",
+      "sku": "V3401485",
+      "brand": "Seibella Queratina",
+      "gtin": "7898432982093",
+      "price": 74.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/keratin-haarbalsam-seibella-queratina"
+    },
+    {
+      "id": 300455,
+      "name": "Shower gel Beauterra Monoi 1 L – Fugtgivende og beroligende",
+      "slug": "shower-gel-beauterra-monoi-1-l",
+      "sku": "S05121793",
+      "brand": "Beauterra",
+      "gtin": "3401360148222",
+      "price": 98.95,
+      "inStock": true,
+      "categories": [
+        "bad-saebe"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/shower-gel-beauterra-monoi-1-l"
+    },
+    {
+      "id": 300453,
+      "name": "Permanent Farve til hår",
+      "slug": "permanent-farve",
+      "sku": "V3400905",
+      "brand": "BigBuy Beauty",
+      "gtin": "8016744804349",
+      "price": 76.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/permanent-farve"
+    },
+    {
+      "id": 300451,
+      "name": "Aktivering ved farve Alfaparf Milano, flødefarvet",
+      "slug": "aktivering-ved-farve-alfaparf-milano-floedefarvet",
+      "sku": "V3400922",
+      "brand": "Alfaparf Milano",
+      "gtin": "8032679462133",
+      "price": 70.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/aktivering-ved-farve-alfaparf-milano-floedefarvet"
+    },
+    {
+      "id": 300449,
+      "name": "Permanent hårfarve Salermvison Fc9 (75 ml)",
+      "slug": "permanent-farve-salermvison-salerm-salermvison-fc9-75-ml",
+      "sku": "V3400994",
+      "brand": "Salerm",
+      "gtin": "8420282009751",
+      "price": 71.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/permanent-farve-salermvison-salerm-salermvison-fc9-75-ml"
+    },
+    {
+      "id": 300447,
+      "name": "Øjenbrynsbehandling The Cosmetic Republic TCR28",
+      "slug": "behandling-til-oejenbryn-the-cosmetic-republic-tcr28",
+      "sku": "V3401138",
+      "brand": "The Cosmetic Republic",
+      "gtin": "8437009592342",
+      "price": 82.95,
+      "inStock": true,
+      "categories": [
+        "kosmetik-oejne"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/behandling-til-oejenbryn-the-cosmetic-republic-tcr28"
+    },
+    {
+      "id": 300445,
+      "name": "Fugtgivende Gel Antioxidant Line Q10 Skeyndor",
+      "slug": "fugtgivende-gel-antioxidant-line-q10-skeyndor-30-ml",
+      "sku": "V3401092",
+      "brand": "Skeyndor",
+      "gtin": "8436001982861",
+      "price": 142.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/fugtgivende-gel-antioxidant-line-q10-skeyndor-30-ml"
+    },
+    {
+      "id": 300443,
+      "name": "Shampoo Fama Fabre Barbershop – 650 ml",
+      "slug": "shampoo-fama-fabre-barbershop",
+      "sku": "V3401066",
+      "brand": "Fama Fabré",
+      "gtin": "8435090857722",
+      "price": 88.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/shampoo-fama-fabre-barbershop"
+    },
+    {
+      "id": 300441,
+      "name": "Schwarzkopf Igora Vibrance Nº 9-4 – Permanent hårfarve",
+      "slug": "permanent-farve-igora-vibrance-schwarzkopf-igora-vibrance-no-9-4",
+      "sku": "V3400867",
+      "brand": "Schwarzkopf",
+      "gtin": "7702045560848",
+      "price": 70.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/permanent-farve-igora-vibrance-schwarzkopf-igora-vibrance-no-9-4"
+    },
+    {
+      "id": 300439,
+      "name": "Permanent Farve Chi Ionic Shine Shades 50-8W",
+      "slug": "permanent-farve-chi-ionic-shine-shades-farouk-chissp8w-2-50-8w",
+      "sku": "V3400243",
+      "brand": "Farouk",
+      "gtin": "0633911765296",
+      "price": 68.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/permanent-farve-chi-ionic-shine-shades-farouk-chissp8w-2-50-8w"
+    },
+    {
+      "id": 300432,
+      "name": "Hårtørrer SwissHome Softly Pink 2400 W",
+      "slug": "haartoerrer-swisshome-softly-pink-2400-w",
+      "sku": "S5002982",
+      "brand": "SwissHome",
+      "gtin": "6926427669276",
+      "price": 255.95,
+      "inStock": true,
+      "categories": [
+        "haarboerster-redskaber"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/haartoerrer-swisshome-softly-pink-2400-w"
+    },
+    {
+      "id": 300430,
+      "name": "Araban hårklemme brun marmoreret",
+      "slug": "klemme-araban-brun-marmoreret",
+      "sku": "S4516999",
+      "brand": "Araban",
+      "gtin": "8431190432333",
+      "price": 144.95,
+      "inStock": true,
+      "categories": [
+        "haarstyling"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/klemme-araban-brun-marmoreret"
+    },
+    {
+      "id": 300428,
+      "name": "Klemme Araban Hvid Sort I Tern",
+      "slug": "klemme-araban-hvid-sort-i-tern",
+      "sku": "S4512481",
+      "brand": "Araban",
+      "gtin": "1708682305",
+      "price": 144.95,
+      "inStock": true,
+      "categories": [
+        "haarstyling"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/klemme-araban-hvid-sort-i-tern"
+    },
+    {
+      "id": 300421,
+      "name": "Glow Lab skoletoilettaske, lyseblå",
+      "slug": "skoletoilettaske-glow-lab-cisnes-lyseblaa-28-x-18-x-10-cm",
+      "sku": "S4309887",
+      "brand": "Glow Lab",
+      "gtin": "8412688521593",
+      "price": 103.95,
+      "inStock": true,
+      "categories": [
+        "beauty-oevrigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/skoletoilettaske-glow-lab-cisnes-lyseblaa-28-x-18-x-10-cm"
+    },
+    {
+      "id": 300415,
+      "name": "Skoletoilettaske BlackFit8 Enjoy Grøn",
+      "slug": "skoletoilettaske-blackfit8-enjoy-groen-31-x-14-x-19-cm",
+      "sku": "S4310091",
+      "brand": "BlackFit8",
+      "gtin": "8412688521302",
+      "price": 111.95,
+      "inStock": true,
+      "categories": [
+        "beauty-oevrigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/skoletoilettaske-blackfit8-enjoy-groen-31-x-14-x-19-cm"
+    },
+    {
+      "id": 300410,
+      "name": "Skoletoilettaske Peppa Pig George Mint",
+      "slug": "skoletoilettaske-peppa-pig-george-mint-26-x-16-x-9-cm",
+      "sku": "S4309315",
+      "brand": "Peppa Pig",
+      "gtin": "8412688526512",
+      "price": 99.95,
+      "inStock": true,
+      "categories": [
+        "beauty-oevrigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/skoletoilettaske-peppa-pig-george-mint-26-x-16-x-9-cm"
+    },
+    {
+      "id": 300408,
+      "name": "Catrice HD Liquid Coverage foundation, nude beige",
+      "slug": "flydende-makeup-foundation-catrice-hd-liquid-coverage-no-032-nude-beige-no-032-nude-beige-30-ml",
+      "sku": "S05119427",
+      "brand": "Catrice",
+      "gtin": "4059729034380",
+      "price": 107.95,
+      "inStock": true,
+      "categories": [
+        "kosmetik-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/flydende-makeup-foundation-catrice-hd-liquid-coverage-no-032-nude-beige-no-032-nude-beige-30-ml"
+    },
+    {
+      "id": 300405,
+      "name": "Æske Kipit Gennemsigtig Transport Førstehjælp sæt (48 enheder)",
+      "slug": "aeske-kipit-gennemsigtig-transport-foerstehjaelp-saet-48-enheder",
+      "sku": "S3631481",
+      "brand": "Kipit",
+      "gtin": "",
+      "price": 428.95,
+      "inStock": true,
+      "categories": [
+        "beauty-oevrigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/aeske-kipit-gennemsigtig-transport-foerstehjaelp-saet-48-enheder"
+    },
+    {
+      "id": 300401,
+      "name": "Permanent farve Saga Pro, nr. 10.021",
+      "slug": "permanent-farve-saga-pro-nysha-color-no-10-021-100-ml",
+      "sku": "S4261299",
+      "brand": "Saga Pro",
+      "gtin": "8445534014086",
+      "price": 115.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/permanent-farve-saga-pro-nysha-color-no-10-021-100-ml"
+    },
+    {
+      "id": 300399,
+      "name": "Permanent Farve Saga Pro Nysha Color Nº 10.34",
+      "slug": "permanent-farve-saga-pro-nysha-color-no-10-34-100-ml",
+      "sku": "S4261298",
+      "brand": "Saga Pro",
+      "gtin": "8445534014079",
+      "price": 115.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/permanent-farve-saga-pro-nysha-color-no-10-34-100-ml"
+    },
+    {
+      "id": 300390,
+      "name": "Negleklipper med LED-lys, forstørrelsesglas og fil Clail InnovaGoods",
+      "slug": "negleklipper-med-led-lys-forstoerrelsesglas-og-fil-clail-innovagoods",
+      "sku": "V0103840",
+      "brand": "InnovaGoods",
+      "gtin": "8435527826154",
+      "price": 113.95,
+      "inStock": true,
+      "categories": [
+        "beauty-tools"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/negleklipper-med-led-lys-forstoerrelsesglas-og-fil-clail-innovagoods"
+    },
+    {
+      "id": 300388,
+      "name": "Ansigtsserum Essence Hello Good Stuff! 30 ml Gel",
+      "slug": "ansigtsserum-essence-hello-goodstuff-30-ml-gel-48-timer",
+      "sku": "S05111978",
+      "brand": "Essence",
+      "gtin": "4059729407092",
+      "price": 91.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/ansigtsserum-essence-hello-goodstuff-30-ml-gel-48-timer"
+    },
+    {
+      "id": 300384,
+      "name": "Berilo barbermaskine, 4 dele (12 enheder)",
+      "slug": "maquinas-de-barbear-descartaveis-berilo-4-dele-12-enheder",
+      "sku": "S3623621",
+      "brand": "Berilo",
+      "gtin": "1687242775",
+      "price": 311.95,
+      "inStock": true,
+      "categories": [
+        "barbering-grooming"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/maquinas-de-barbear-descartaveis-berilo-4-dele-12-enheder"
+    },
+    {
+      "id": 300380,
+      "name": "Bomuldshygienepuder, hvid (24 stk.)",
+      "slug": "bomuld-50-g-hvid-24-enheder",
+      "sku": "S3623349",
+      "brand": "BigBuy Home",
+      "gtin": "",
+      "price": 178.95,
+      "inStock": true,
+      "categories": [
+        "badeprodukter"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/bomuld-50-g-hvid-24-enheder"
+    },
+    {
+      "id": 300375,
+      "name": "Børne toilettaske Frozen Believe, Syren",
+      "slug": "boerne-toilettaske-frozen-believe-26-x-16-x-9-cm-syren",
+      "sku": "S4308631",
+      "brand": "Frozen",
+      "gtin": "8412688512386",
+      "price": 99.95,
+      "inStock": true,
+      "categories": [
+        "beauty-oevrigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/boerne-toilettaske-frozen-believe-26-x-16-x-9-cm-syren"
+    },
+    {
+      "id": 300373,
+      "name": "Shower gel Moussel Classique 850 ml",
+      "slug": "shower-gel-moussel-classique-850-ml",
+      "sku": "S05109576",
+      "brand": "Moussel",
+      "gtin": "8720181257117",
+      "price": 91.95,
+      "inStock": true,
+      "categories": [
+        "bad-saebe"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/shower-gel-moussel-classique-850-ml"
+    },
+    {
+      "id": 300371,
+      "name": "Inca hårklemmer sort, 2 enheder",
+      "slug": "haarklemmer-inca-pinza-grande-sort-2-enheder",
+      "sku": "S05113594",
+      "brand": "Inca",
+      "gtin": "8435142800133",
+      "price": 86.95,
+      "inStock": true,
+      "categories": [
+        "haarstyling"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/haarklemmer-inca-pinza-grande-sort-2-enheder"
+    },
+    {
+      "id": 300369,
+      "name": "Alma Secret Manuka Læbepomade 10 ml",
+      "slug": "laebepomade-alma-secret-manuka-original-10-ml",
+      "sku": "S05111159",
+      "brand": "Alma Secret",
+      "gtin": "8436568711218",
+      "price": 114.95,
+      "inStock": true,
+      "categories": [
+        "kosmetik-laeber"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/laebepomade-alma-secret-manuka-original-10-ml"
+    },
+    {
+      "id": 300367,
+      "name": "Stendhal Øjenskygge Nº 503 Quartz Rose, 2,5 g",
+      "slug": "oejenskygge-stendhal-sublimatrice-no-503-quartz-rose-25-g",
+      "sku": "S4511860",
+      "brand": "Stendhal",
+      "gtin": "3355996045663",
+      "price": 209.95,
+      "inStock": true,
+      "categories": [
+        "oejenskygge"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/oejenskygge-stendhal-sublimatrice-no-503-quartz-rose-25-g"
+    },
+    {
+      "id": 300364,
+      "name": "Ilū Gua Sha-sten i rosekvarts til ansigt",
+      "slug": "massager-ilu-gua-sha-stone-rose-kvarts-sten-1-enheder",
+      "sku": "S05110301",
+      "brand": "Ilū",
+      "gtin": "5903018920078",
+      "price": 118.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/massager-ilu-gua-sha-stone-rose-kvarts-sten-1-enheder"
+    },
+    {
+      "id": 300362,
+      "name": "Shampoo Rizos Pantene, 270 ml",
+      "slug": "shampoo-rizos-perfectos-pantene-270-ml",
+      "sku": "S7905461",
+      "brand": "Pantene",
+      "gtin": "4084500289673",
+      "price": 102.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/shampoo-rizos-perfectos-pantene-270-ml"
+    },
+    {
+      "id": 300360,
+      "name": "Flydende makeup foundation Bourjois Healthy Mix Nº 001 30 ml Fugtgivende",
+      "slug": "flydende-makeup-foundation-bourjois-healthy-mix-no-001-30-ml-fugtgivende",
+      "sku": "S05109666",
+      "brand": "Bourjois",
+      "gtin": "3616303915551",
+      "price": 103.95,
+      "inStock": true,
+      "categories": [
+        "kosmetik-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/flydende-makeup-foundation-bourjois-healthy-mix-no-001-30-ml-fugtgivende"
+    },
+    {
+      "id": 300348,
+      "name": "Friktionsepilator Frepil InnovaGoods – Hårfjerning uden smerte",
+      "slug": "eksfolierende-friktionsepilator-med-nanokrystaller-frepil-innovagoods",
+      "sku": "V0103657",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 86.95,
+      "inStock": true,
+      "categories": [
+        "beauty-tools-generelt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/eksfolierende-friktionsepilator-med-nanokrystaller-frepil-innovagoods"
+    },
+    {
+      "id": 300346,
+      "name": "Fugtgivende shampoo Farouk Biosilk Hydrating Therapy 355 ml",
+      "slug": "fugtgivende-shampoo-farouk-biosilk-hydrating-therapy-355-ml",
+      "sku": "S0588874",
+      "brand": "Farouk",
+      "gtin": "0633911741634",
+      "price": 127.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/fugtgivende-shampoo-farouk-biosilk-hydrating-therapy-355-ml"
+    },
+    {
+      "id": 300344,
+      "name": "Eucerin UreaRepair Plus håndcreme, 2 x 75 ml",
+      "slug": "haandcreme-eucerin-urearepair-plus-crema-de-manos-urea-lote-75-ml-2-enheder",
+      "sku": "S05101429",
+      "brand": "Eucerin",
+      "gtin": "4005800230011",
+      "price": 123.95,
+      "inStock": true,
+      "categories": [
+        "fodpleje"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/haandcreme-eucerin-urearepair-plus-crema-de-manos-urea-lote-75-ml-2-enheder"
+    },
+    {
+      "id": 300342,
+      "name": "Permanent hårfarve Phyto Paris, kastanjeblond",
+      "slug": "permanent-haarfarve-phyto-paris-phytocolor-5-castano-claro-no-5-castano-claro",
+      "sku": "S05100393",
+      "brand": "Phyto Paris",
+      "gtin": "3338221002587",
+      "price": 120.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/permanent-haarfarve-phyto-paris-phytocolor-5-castano-claro-no-5-castano-claro"
+    },
+    {
+      "id": 300338,
+      "name": "Læbepomade med farve Maybelline Green Edition Nº 02-Bonfire 1,7 g",
+      "slug": "laebepomade-med-farve-maybelline-green-edition-no-02-bonfire-17-g",
+      "sku": "S05104395",
+      "brand": "Maybelline",
+      "gtin": "0000030164888",
+      "price": 106.95,
+      "inStock": true,
+      "categories": [
+        "kosmetik-laeber"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/laebepomade-med-farve-maybelline-green-edition-no-02-bonfire-17-g"
+    },
+    {
+      "id": 300312,
+      "name": "Liftrik Ansigtspastre – Opstrammer Hud og Løfter Ansigt",
+      "slug": "usynlige-plastre-til-ansigtsloeftning-liftrik-innovagoods-40-enheder",
+      "sku": "V0103608",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 89.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/usynlige-plastre-til-ansigtsloeftning-liftrik-innovagoods-40-enheder"
+    },
+    {
+      "id": 300309,
+      "name": "Ansigtscreme StriVectin Contour Restore 50 ml Reafirmante",
+      "slug": "ansigtscreme-strivectin-contour-restore-50-ml-reafirmante",
+      "sku": "S05101899",
+      "brand": "StriVectin",
+      "gtin": "0810014323619",
+      "price": 391.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/ansigtscreme-strivectin-contour-restore-50-ml-reafirmante"
+    },
+    {
+      "id": 300305,
+      "name": "Max Factor Browfinity øjenbryns-gel, medium brown",
+      "slug": "make-up-til-oejenbryn-max-factor-browfinity-no-02-medium-brown-42-ml",
+      "sku": "S0598783",
+      "brand": "Max Factor",
+      "gtin": "3616302485345",
+      "price": 116.95,
+      "inStock": true,
+      "categories": [
+        "kosmetik-oejne"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/make-up-til-oejenbryn-max-factor-browfinity-no-02-medium-brown-42-ml"
+    },
+    {
+      "id": 300303,
+      "name": "Permanent hårfarve Wella Shinefinity color 08/8",
+      "slug": "permanent-haarfarve-wella-shinefinity-color-no-08-8-60-ml",
+      "sku": "S4259088",
+      "brand": "Wella",
+      "gtin": "4064666057606",
+      "price": 193.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/permanent-haarfarve-wella-shinefinity-color-no-08-8-60-ml"
+    },
+    {
+      "id": 300301,
+      "name": "Permanent hårfarve Wella Shinefinity Nº 06/71",
+      "slug": "permanent-haarfarve-wella-shinefinity-no-06-71-60-ml",
+      "sku": "S4259079",
+      "brand": "Wella",
+      "gtin": "4064666057439",
+      "price": 193.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/permanent-haarfarve-wella-shinefinity-no-06-71-60-ml"
+    },
+    {
+      "id": 300298,
+      "name": "Givenchy Le Rouge Læbestift N307, 3,4 g",
+      "slug": "laebestift-givenchy-le-rouge-lips-n307-34-g",
+      "sku": "V0600039",
+      "brand": "Givenchy",
+      "gtin": "3274872390959",
+      "price": 214.95,
+      "inStock": true,
+      "categories": [
+        "kosmetik-laeber"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/laebestift-givenchy-le-rouge-lips-n307-34-g"
+    },
+    {
+      "id": 300296,
+      "name": "Tandbørstehoved TM Electron",
+      "slug": "tandboerstehoved-tm-electron",
+      "sku": "S6501990",
+      "brand": "TM Electron",
+      "gtin": "8436034264682",
+      "price": 84.95,
+      "inStock": true,
+      "categories": [
+        "barbering-grooming"
+      ],
+      "status": "BLOCKED",
+      "score": 50,
+      "reasons": [
+        "Ikke beauty-relevant / misclassified merchandising"
+      ],
+      "url": "https://zebiza.com/da/produkt/tandboerstehoved-tm-electron"
+    },
+    {
+      "id": 300294,
+      "name": "Mielle Hårbalsam Detangling Co-Wash 240 ml",
+      "slug": "haarbalsam-mielle-detangling-co-wash-240-ml",
+      "sku": "S4258284",
+      "brand": "Mielle",
+      "gtin": "0854102006121",
+      "price": 254.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/haarbalsam-mielle-detangling-co-wash-240-ml"
+    },
+    {
+      "id": 300292,
+      "name": "Falske negle Ardell 75887 Green Glitter Chrome (1 enheder)",
+      "slug": "falske-negle-ardell-75887-green-glitter-chrome-1-enheder",
+      "sku": "S0593838",
+      "brand": "Ardell",
+      "gtin": "0074764758873",
+      "price": 76.95,
+      "inStock": true,
+      "categories": [
+        "beauty-tools-generelt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/falske-negle-ardell-75887-green-glitter-chrome-1-enheder"
+    },
+    {
+      "id": 300283,
+      "name": "Keramisk glatning Brush Cestrus InnovaGoods",
+      "slug": "keramisk-glatning-brush-cestrus-innovagoods",
+      "sku": "V0103416",
+      "brand": "InnovaGoods",
+      "gtin": "8435527819514",
+      "price": 130.95,
+      "inStock": true,
+      "categories": [
+        "haarboerster-redskaber"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/keramisk-glatning-brush-cestrus-innovagoods"
+    },
+    {
+      "id": 300281,
+      "name": "Eurostil Dagcreme med Hyaluronsyre, 50 ml",
+      "slug": "dagcreme-eurostil-cream-hyaluronsyre-50-ml",
+      "sku": "S4249584",
+      "brand": "Eurostil",
+      "gtin": "8423029070755",
+      "price": 298.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/dagcreme-eurostil-cream-hyaluronsyre-50-ml"
+    },
+    {
+      "id": 300275,
+      "name": "Neutraliserende hårbalsam Exi-neutro, 1000 ml",
+      "slug": "neutraliserende-haarbalsam-exi-neutro-exitenn-1000-ml-1000-ml",
+      "sku": "S4244149",
+      "brand": "Exitenn",
+      "gtin": "8436002837153",
+      "price": 175.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/neutraliserende-haarbalsam-exi-neutro-exitenn-1000-ml-1000-ml"
+    },
+    {
+      "id": 300270,
+      "name": "JJDK Anna Marie toilettaske, sort",
+      "slug": "toilettaske-jjdk-anna-marie-sort",
+      "sku": "S4510356",
+      "brand": "JJDK",
+      "gtin": "5703918612000",
+      "price": 385.95,
+      "inStock": true,
+      "categories": [
+        "beauty-oevrigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/toilettaske-jjdk-anna-marie-sort"
+    },
+    {
+      "id": 300259,
+      "name": "Genopladelig ansigtsrens Hydro-cleanser til rensning af urenheder i ansigtet Hyser InnovaGoods",
+      "slug": "genopladelig-ansigtsrens-hydro-cleanser-til-rensning-af-urenheder-i-ansigtet-hyser-innovagoods",
+      "sku": "V0103362",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 163.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/genopladelig-ansigtsrens-hydro-cleanser-til-rensning-af-urenheder-i-ansigtet-hyser-innovagoods"
+    },
+    {
+      "id": 300257,
+      "name": "Schwarzkopf Hårstyling Creme 80 ml",
+      "slug": "haarstyling-creme-schwarzkopf-natural-styling-80-ml",
+      "sku": "S4241978",
+      "brand": "Schwarzkopf",
+      "gtin": "4045787131093",
+      "price": 166.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/haarstyling-creme-schwarzkopf-natural-styling-80-ml"
+    },
+    {
+      "id": 300248,
+      "name": "Trimmer til næse- og ørehår Trimpen InnovaGoods",
+      "slug": "trimmer-til-naese-og-oerehaar-trimpen-innovagoods",
+      "sku": "V0103330",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 95.95,
+      "inStock": true,
+      "categories": [
+        "skaegpleje"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/trimmer-til-naese-og-oerehaar-trimpen-innovagoods"
+    },
+    {
+      "id": 300246,
+      "name": "Papillots Eurostil Cortos Kort orange",
+      "slug": "papillots-eurostil-papillots-cortos-kort-orange",
+      "sku": "S4255069",
+      "brand": "Eurostil",
+      "gtin": "8423029013165",
+      "price": 69.95,
+      "inStock": true,
+      "categories": [
+        "haarboerster-redskaber"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/papillots-eurostil-papillots-cortos-kort-orange"
+    },
+    {
+      "id": 300237,
+      "name": "InnovaGoods Dryple: 3-i-1 hårtørrer, styling og krøllebørste",
+      "slug": "3-i-1-toerring-styling-og-curling-haarboerste-dryple-innovagoods-550-w",
+      "sku": "V0103343",
+      "brand": "InnovaGoods",
+      "gtin": "8435527818821",
+      "price": 220.95,
+      "inStock": true,
+      "categories": [
+        "haarboerster-redskaber"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/3-i-1-toerring-styling-og-curling-haarboerste-dryple-innovagoods-550-w"
+    },
+    {
+      "id": 300235,
+      "name": "Permanent hårfarve Revlonissimo Colorsmetique nr. 77.40",
+      "slug": "permanent-farve-revlonissimo-colorsmetique-revlon-revlonissimo-colorsmetique-77-40-no-77-40-60-ml",
+      "sku": "S4245849",
+      "brand": "Revlon",
+      "gtin": "8432225099965",
+      "price": 187.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/permanent-farve-revlonissimo-colorsmetique-revlon-revlonissimo-colorsmetique-77-40-no-77-40-60-ml"
+    },
+    {
+      "id": 300233,
+      "name": "Permanent farve Revlon Nº 66.66 (70 ml)",
+      "slug": "permanent-farve-revlon-revlonissimo-color-cor-66-66-no-66-66-70-ml",
+      "sku": "S4255909",
+      "brand": "Revlon",
+      "gtin": "8007376008243",
+      "price": 190.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/permanent-farve-revlon-revlonissimo-color-cor-66-66-no-66-66-70-ml"
+    },
+    {
+      "id": 300231,
+      "name": "Wella Permanent Farve Koleston Me+ Nº 9/31",
+      "slug": "permanent-farve-koleston-me-wella-no-9-31-60-ml",
+      "sku": "S4246691",
+      "brand": "Wella",
+      "gtin": "8005610651118",
+      "price": 198.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/permanent-farve-koleston-me-wella-no-9-31-60-ml"
+    },
+    {
+      "id": 300229,
+      "name": "Permanent farve Wella Nº 7/03, blond (60 ml)",
+      "slug": "permanent-farve-color-touch-wella-no-7-03-60-ml-60-ml",
+      "sku": "S4246309",
+      "brand": "Wella",
+      "gtin": "8005610547053",
+      "price": 177.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/permanent-farve-color-touch-wella-no-7-03-60-ml-60-ml"
+    },
+    {
+      "id": 300220,
+      "name": "Anti-ageing Eye Massager med fototerapi, termoterapi og vibrationer Therey InnovaGoods",
+      "slug": "anti-ageing-eye-massager-med-fototerapi-termoterapi-og-vibrationer-therey-innovagoods",
+      "sku": "V0103319",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 115.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/anti-ageing-eye-massager-med-fototerapi-termoterapi-og-vibrationer-therey-innovagoods"
+    },
+    {
+      "id": 300218,
+      "name": "Farmavita Permanent Farve Nº 8 3, 100 ml",
+      "slug": "permanent-farve-b-life-color-farmavita-no-8-3-100-ml",
+      "sku": "S4243126",
+      "brand": "Farmavita",
+      "gtin": "8022033011343",
+      "price": 154.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/permanent-farve-b-life-color-farmavita-no-8-3-100-ml"
+    },
+    {
+      "id": 300216,
+      "name": "Farmavita Permanent Farve Nº 8 1, 60 ml",
+      "slug": "permanent-farve-suprema-farmavita-no-8-1-60-ml",
+      "sku": "S4253797",
+      "brand": "Farmavita",
+      "gtin": "8022033021649",
+      "price": 127.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/permanent-farve-suprema-farmavita-no-8-1-60-ml"
+    },
+    {
+      "id": 300037,
+      "name": "InnovaGoods hårfjerner til intimhygiejne",
+      "slug": "haarfjerner-innovagoods-wellness-beaute",
+      "sku": "V0101146",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 202.95,
+      "inStock": true,
+      "categories": [
+        "barbering-grooming"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/haarfjerner-innovagoods-wellness-beaute"
+    },
+    {
+      "id": 230801,
+      "name": "Nano-ionspray til ansigt og øjne – kompakt forstøver",
+      "slug": "8cm-nebulizer",
+      "sku": "CJMB2638263",
+      "brand": "",
+      "gtin": "",
+      "price": 272.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "BLOCKED",
+      "score": 38,
+      "reasons": [
+        "Ikke beauty-relevant / misclassified merchandising",
+        "Mangler brand",
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/8cm-nebulizer"
+    },
+    {
+      "id": 230807,
+      "name": "Lommespejl – Foldbart lommespejl til makeup",
+      "slug": "pocket-mirrortouch-up-your-makeup-anytime-anywhereexquisite-foldable-pocket-mirror",
+      "sku": "CJMI2665309",
+      "brand": "",
+      "gtin": "",
+      "price": 302.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "REVIEW",
+      "score": 68,
+      "reasons": [
+        "Mangler brand",
+        "Mangler GTIN (SKU findes)",
+        "Mistænkelig/dårlig dansk produkttekst"
+      ],
+      "url": "https://zebiza.com/da/produkt/pocket-mirrortouch-up-your-makeup-anytime-anywhereexquisite-foldable-pocket-mirror"
+    },
+    {
+      "id": 230805,
+      "name": "Professionel elektrisk hårtørrer med negativ ion-funktion",
+      "slug": "professional-electric-foldable-hair-dryer-for-household-use-with-negative-ion-function",
+      "sku": "CJTF2855055",
+      "brand": "",
+      "gtin": "",
+      "price": 339.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "REVIEW",
+      "score": 88,
+      "reasons": [
+        "Mangler brand",
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/professional-electric-foldable-hair-dryer-for-household-use-with-negative-ion-function"
+    },
+    {
+      "id": 230809,
+      "name": "Hårsteamere til mobil brug, justerbar højde og hjul",
+      "slug": "hair-steamer-for-mobile-use",
+      "sku": "CJZR2602751",
+      "brand": "",
+      "gtin": "",
+      "price": 1872.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "BLOCKED",
+      "score": 38,
+      "reasons": [
+        "Ikke beauty-relevant / misclassified merchandising",
+        "Mangler brand",
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/hair-steamer-for-mobile-use"
+    },
+    {
+      "id": 230813,
+      "name": "Justerbar hårvaskemåtte til frisør – sort",
+      "slug": "black-hair-washing-basin",
+      "sku": "CJZR2602749",
+      "brand": "",
+      "gtin": "",
+      "price": 970.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "BLOCKED",
+      "score": 38,
+      "reasons": [
+        "Ikke beauty-relevant / misclassified merchandising",
+        "Mangler brand",
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/black-hair-washing-basin"
+    },
+    {
+      "id": 230811,
+      "name": "Professionel hårtølling med 5 skuffer og hjul",
+      "slug": "hairdressing-trolley-plastic-with-wheels",
+      "sku": "CJZR2602750",
+      "brand": "",
+      "gtin": "",
+      "price": 1120.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "BLOCKED",
+      "score": 18,
+      "reasons": [
+        "Ikke beauty-relevant / misclassified merchandising",
+        "Mangler brand",
+        "Mangler GTIN (SKU findes)",
+        "Mistænkelig/dårlig dansk produkttekst"
+      ],
+      "url": "https://zebiza.com/da/produkt/hairdressing-trolley-plastic-with-wheels"
+    },
+    {
+      "id": 230815,
+      "name": "Elektrisk øjenvipperpusher",
+      "slug": "electric-eyelash-pusher",
+      "sku": "CJJJ2650660",
+      "brand": "",
+      "gtin": "",
+      "price": 307.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "REVIEW",
+      "score": 88,
+      "reasons": [
+        "Mangler brand",
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/electric-eyelash-pusher"
+    },
+    {
+      "id": 230817,
+      "name": "Elektrisk opvarmet vippeklynger",
+      "slug": "electric-heated-eyelash-curler",
+      "sku": "CJJJ2651006",
+      "brand": "",
+      "gtin": "70305383",
+      "price": 307.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "REVIEW",
+      "score": 70,
+      "reasons": [
+        "Mangler brand",
+        "Mistænkelig/dårlig dansk produkttekst"
+      ],
+      "url": "https://zebiza.com/da/produkt/electric-heated-eyelash-curler"
+    },
+    {
+      "id": 230819,
+      "name": "Elektrisk opvarmet vippecurler",
+      "slug": "electric-heated-eyelash-curler-2",
+      "sku": "CJJJ2650993",
+      "brand": "",
+      "gtin": "",
+      "price": 320.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "REVIEW",
+      "score": 68,
+      "reasons": [
+        "Mangler brand",
+        "Mangler GTIN (SKU findes)",
+        "Mistænkelig/dårlig dansk produkttekst"
+      ],
+      "url": "https://zebiza.com/da/produkt/electric-heated-eyelash-curler-2"
+    },
+    {
+      "id": 230823,
+      "name": "Elektrisk øjenbrynhælder med tynd spids",
+      "slug": "electric-eyelash-curler-thin-tip-thick-base",
+      "sku": "CJJJ2650584",
+      "brand": "",
+      "gtin": "",
+      "price": 324.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "REVIEW",
+      "score": 68,
+      "reasons": [
+        "Mangler brand",
+        "Mangler GTIN (SKU findes)",
+        "Mistænkelig/dårlig dansk produkttekst"
+      ],
+      "url": "https://zebiza.com/da/produkt/electric-eyelash-curler-thin-tip-thick-base"
+    },
+    {
+      "id": 230821,
+      "name": "Elektrisk opvarmet øjenbrynsvipper",
+      "slug": "electric-heated-eyelash-curler-3",
+      "sku": "CJJJ2650542",
+      "brand": "",
+      "gtin": "",
+      "price": 329.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "REVIEW",
+      "score": 68,
+      "reasons": [
+        "Mangler brand",
+        "Mangler GTIN (SKU findes)",
+        "Mistænkelig/dårlig dansk produkttekst"
+      ],
+      "url": "https://zebiza.com/da/produkt/electric-heated-eyelash-curler-3"
+    },
+    {
+      "id": 230825,
+      "name": "Elektrisk opvarmet øjenbrynsblyant",
+      "slug": "electric-heated-eyelash-pencil",
+      "sku": "CJJJ2650973",
+      "brand": "",
+      "gtin": "",
+      "price": 315.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "REVIEW",
+      "score": 68,
+      "reasons": [
+        "Mangler brand",
+        "Mangler GTIN (SKU findes)",
+        "Mistænkelig/dårlig dansk produkttekst"
+      ],
+      "url": "https://zebiza.com/da/produkt/electric-heated-eyelash-pencil"
+    },
+    {
+      "id": 230827,
+      "name": "Elektrisk øjenbrynsvælder – dobbelt håndtag",
+      "slug": "electric-eyelash-curler-double-handle",
+      "sku": "CJJJ2650574",
+      "brand": "",
+      "gtin": "",
+      "price": 314.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "REVIEW",
+      "score": 68,
+      "reasons": [
+        "Mangler brand",
+        "Mangler GTIN (SKU findes)",
+        "Mistænkelig/dårlig dansk produkttekst"
+      ],
+      "url": "https://zebiza.com/da/produkt/electric-eyelash-curler-double-handle"
+    },
+    {
+      "id": 230837,
+      "name": "Eyelash Perm Kit til løft, ICONSIGN",
+      "slug": "iconsign-10-pairs-pouch-eyelash-perm-lotion-lashes-lift-quick-perming-5-to-8-minutes-beauty-makeup-tools",
+      "sku": "CJCZ1533761",
+      "brand": "",
+      "gtin": "",
+      "price": 359.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "REVIEW",
+      "score": 88,
+      "reasons": [
+        "Mangler brand",
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/iconsign-10-pairs-pouch-eyelash-perm-lotion-lashes-lift-quick-perming-5-to-8-minutes-beauty-makeup-tools"
+    },
+    {
+      "id": 230845,
+      "name": "WUWUVISTA voksset – komplet kit til hårfjerning",
+      "slug": "waxing-kit-wuwuvista-69-items-hair-removal-wax-kit-with-wax-warmer-waxing-beads-for-face-brazilian-full-body-bikini-sensitiive-skin-skin-suitable-for-plugs-of-american-european-specification",
+      "sku": "CJST2347231",
+      "brand": "",
+      "gtin": "",
+      "price": 546.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "REVIEW",
+      "score": 88,
+      "reasons": [
+        "Mangler brand",
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/waxing-kit-wuwuvista-69-items-hair-removal-wax-kit-with-wax-warmer-waxing-beads-for-face-brazilian-full-body-bikini-sensitiive-skin-skin-suitable-for-plugs-of-american-european-specification"
+    },
+    {
+      "id": 230847,
+      "name": "WUWUVISTA voksbeads kit – 11 dele til ansigt og krop",
+      "slug": "waxing-kit-11-items-wuwuvista-hair-removal-wax-kit-with-wax-melt-warmer-waxing-beads-for-facebrazilianfull-bodybikinisensitiive-skin-suitable-for-plugs-of-american-european-specification",
+      "sku": "CJST2347171",
+      "brand": "",
+      "gtin": "",
+      "price": 390.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "REVIEW",
+      "score": 88,
+      "reasons": [
+        "Mangler brand",
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/waxing-kit-11-items-wuwuvista-hair-removal-wax-kit-with-wax-melt-warmer-waxing-beads-for-facebrazilianfull-bodybikinisensitiive-skin-suitable-for-plugs-of-american-european-specification"
+    },
+    {
+      "id": 230849,
+      "name": "WUWUVISTA Voks Kit – 19 Stykker til Ansigt og Legeme",
+      "slug": "waxing-kit-19-items-wuwuvista-hair-removal-wax-kit-with-wax-melt-warmer-waxing-beads-for-face-brazilian-full-body-bikini-suitable-for-plugs-of-american-european-specifications",
+      "sku": "CJST2347211",
+      "brand": "",
+      "gtin": "",
+      "price": 418.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "REVIEW",
+      "score": 88,
+      "reasons": [
+        "Mangler brand",
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/waxing-kit-19-items-wuwuvista-hair-removal-wax-kit-with-wax-melt-warmer-waxing-beads-for-face-brazilian-full-body-bikini-suitable-for-plugs-of-american-european-specifications"
+    },
+    {
+      "id": 230853,
+      "name": "Elektrisk tandbørste – ren og effektiv tandskik",
+      "slug": "electric-toothbrush",
+      "sku": "CJST2532783",
+      "brand": "",
+      "gtin": "",
+      "price": 295.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "BLOCKED",
+      "score": 18,
+      "reasons": [
+        "Ikke beauty-relevant / misclassified merchandising",
+        "Mangler brand",
+        "Mangler GTIN (SKU findes)",
+        "Mistænkelig/dårlig dansk produkttekst"
+      ],
+      "url": "https://zebiza.com/da/produkt/electric-toothbrush"
+    },
+    {
+      "id": 230851,
+      "name": "WUWUVISTA Voksbeads Kit – 23 stk til ansigt og krop",
+      "slug": "waxing-kit-wuwuvista-23-items-hair-removal-wax-kit-with-wax-warmer-waxing-beads-for-face-brazilian-full-body-bikini-sensitiive-skin-skin-suitable-for-plugs-of-american-european-specification",
+      "sku": "CJST2347230",
+      "brand": "",
+      "gtin": "74171161",
+      "price": 468.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "REVIEW",
+      "score": 90,
+      "reasons": [
+        "Mangler brand"
+      ],
+      "url": "https://zebiza.com/da/produkt/waxing-kit-wuwuvista-23-items-hair-removal-wax-kit-with-wax-warmer-waxing-beads-for-face-brazilian-full-body-bikini-sensitiive-skin-skin-suitable-for-plugs-of-american-european-specification"
+    },
+    {
+      "id": 230855,
+      "name": "Vandflosser til tænder – renser mellemrum effektivt",
+      "slug": "water-flosser-clean-teeth",
+      "sku": "CJST2532774",
+      "brand": "",
+      "gtin": "",
+      "price": 524.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "BLOCKED",
+      "score": 38,
+      "reasons": [
+        "Ikke beauty-relevant / misclassified merchandising",
+        "Mangler brand",
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/water-flosser-clean-teeth"
+    },
+    {
+      "id": 230857,
+      "name": "Elektrisk tandbørste – ren og effektiv hygiejne",
+      "slug": "electric-toothbrush-2",
+      "sku": "CJST2532921",
+      "brand": "",
+      "gtin": "",
+      "price": 289.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "BLOCKED",
+      "score": 18,
+      "reasons": [
+        "Ikke beauty-relevant / misclassified merchandising",
+        "Mangler brand",
+        "Mangler GTIN (SKU findes)",
+        "Mistænkelig/dårlig dansk produkttekst"
+      ],
+      "url": "https://zebiza.com/da/produkt/electric-toothbrush-2"
+    },
+    {
+      "id": 230859,
+      "name": "V1 Portabel Tandrenser – V1 Portable Water Flosser",
+      "slug": "v1-portable-water-flosser-disinfects-and-cleans-teeth",
+      "sku": "CJST2650510",
+      "brand": "",
+      "gtin": "",
+      "price": 469.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "BLOCKED",
+      "score": 18,
+      "reasons": [
+        "Ikke beauty-relevant / misclassified merchandising",
+        "Mangler brand",
+        "Mangler GTIN (SKU findes)",
+        "Mistænkelig/dårlig dansk produkttekst"
+      ],
+      "url": "https://zebiza.com/da/produkt/v1-portable-water-flosser-disinfects-and-cleans-teeth"
+    },
+    {
+      "id": 230865,
+      "name": "6800 Helhedsansigtsgasmaske med filter – kemisk beskyttelse",
+      "slug": "6800-full-face-gas-mask-15-in-1-chemical-vapor-paint-spray-respirator-with-filter",
+      "sku": "CJMZ2566444",
+      "brand": "",
+      "gtin": "",
+      "price": 444.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "BLOCKED",
+      "score": 38,
+      "reasons": [
+        "Ikke beauty-relevant / misclassified merchandising",
+        "Mangler brand",
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/6800-full-face-gas-mask-15-in-1-chemical-vapor-paint-spray-respirator-with-filter"
+    },
+    {
+      "id": 230867,
+      "name": "Elektrisk hårrasør til mænd – kabelfri trimmer",
+      "slug": "mens-electric-hair-clippers-clippers-cordless-clippers-adult-razors-professional-trimmers-razor-hairdresse",
+      "sku": "CJTX2705657",
+      "brand": "",
+      "gtin": "",
+      "price": 268.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "REVIEW",
+      "score": 88,
+      "reasons": [
+        "Mangler brand",
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/mens-electric-hair-clippers-clippers-cordless-clippers-adult-razors-professional-trimmers-razor-hairdresse"
+    },
+    {
+      "id": 230873,
+      "name": "Foldbar negleservicebord med hjul og skuffer",
+      "slug": "folding-manicure-table-with-wheels-folding-manicure-table-with-wheels",
+      "sku": "CJMJ2580586",
+      "brand": "",
+      "gtin": "",
+      "price": 1294.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "BLOCKED",
+      "score": 38,
+      "reasons": [
+        "Ikke beauty-relevant / misclassified merchandising",
+        "Mangler brand",
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/folding-manicure-table-with-wheels-folding-manicure-table-with-wheels"
+    },
+    {
+      "id": 230881,
+      "name": "16-stk hårklip sæt sort – Metallic Glitter til fest",
+      "slug": "16-piece-hair-clip-set-black-hair-clips-for-women-metallic-glitter-hair-clips-for-parties-weddings-proms-and-special-occasions-party-gifts",
+      "sku": "CJHH2973167",
+      "brand": "",
+      "gtin": "",
+      "price": 216.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "REVIEW",
+      "score": 88,
+      "reasons": [
+        "Mangler brand",
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/16-piece-hair-clip-set-black-hair-clips-for-women-metallic-glitter-hair-clips-for-parties-weddings-proms-and-special-occasions-party-gifts"
+    },
+    {
+      "id": 230883,
+      "name": "3.000 gennemsigtige elastikbånd til hjem og kontor",
+      "slug": "3000-transparent-elastic-bands-versatile-for-household-office-and-organization-party-supplies",
+      "sku": "CJHH2973168",
+      "brand": "",
+      "gtin": "",
+      "price": 222.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "BLOCKED",
+      "score": 38,
+      "reasons": [
+        "Ikke beauty-relevant / misclassified merchandising",
+        "Mangler brand",
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/3000-transparent-elastic-bands-versatile-for-household-office-and-organization-party-supplies"
+    },
+    {
+      "id": 230885,
+      "name": "Roseguld Hårstræger – Glanshårstørste til Daglig Brug",
+      "slug": "rose-gold-hair-straightening-brush-smoothing-hair-brush-for-daily-care-and-straight-hair-party-accessory-set",
+      "sku": "CJTF2973166",
+      "brand": "",
+      "gtin": "",
+      "price": 397.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "REVIEW",
+      "score": 88,
+      "reasons": [
+        "Mangler brand",
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/rose-gold-hair-straightening-brush-smoothing-hair-brush-for-daily-care-and-straight-hair-party-accessory-set"
+    },
+    {
+      "id": 230887,
+      "name": "Guld Gel Nagelmaskine til Hjembrug",
+      "slug": "gold-gel-nail-machine-professional-device-for-at-home-nail-design-elegant-finish-party-accessory-set",
+      "sku": "CJMJ2973164",
+      "brand": "",
+      "gtin": "",
+      "price": 338.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "REVIEW",
+      "score": 88,
+      "reasons": [
+        "Mangler brand",
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/gold-gel-nail-machine-professional-device-for-at-home-nail-design-elegant-finish-party-accessory-set"
+    },
+    {
+      "id": 249494,
+      "name": "Wella Nº 66/55 permanent hårfarve, 60 ml",
+      "slug": "permanent-farve-koleston-me-wella-no-66-55-60-ml",
+      "sku": "S4246729",
+      "brand": "Wella",
+      "gtin": "8005610656083",
+      "price": 198.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/permanent-farve-koleston-me-wella-no-66-55-60-ml"
+    },
+    {
+      "id": 249490,
+      "name": "Permanent Farve Illumina Color Wella Nº 535",
+      "slug": "permanent-farve-illumina-color-wella-no-535-60-ml",
+      "sku": "S4242889",
+      "brand": "Wella",
+      "gtin": "4015600235895",
+      "price": 222.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/permanent-farve-illumina-color-wella-no-535-60-ml"
+    },
+    {
+      "id": 249486,
+      "name": "Permanent hårfarve Salerm 5,95 (75 ml)",
+      "slug": "permanent-farve-salermvison-salerm-595-75-ml",
+      "sku": "S4245622",
+      "brand": "Salerm",
+      "gtin": "8420282007153",
+      "price": 167.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/permanent-farve-salermvison-salerm-595-75-ml"
+    },
+    {
+      "id": 249475,
+      "name": "Permanent hårfarve Montibello Denuee #7.6",
+      "slug": "permanent-farve-denuee-montibello-denuee-sin-7-6",
+      "sku": "S4247978",
+      "brand": "Montibello",
+      "gtin": "8429525434916",
+      "price": 167.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/permanent-farve-denuee-montibello-denuee-sin-7-6"
+    },
+    {
+      "id": 249473,
+      "name": "Permanent Farve Personal Periche #6.2 (60 g)",
+      "slug": "permanent-farve-personal-periche-6-2-60-g",
+      "sku": "S4242020",
+      "brand": "Periche",
+      "gtin": "8436002650264",
+      "price": 151.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/permanent-farve-personal-periche-6-2-60-g"
+    },
+    {
+      "id": 249467,
+      "name": "Permanent hårfarve Lisap Nº 9/66, 100 ml",
+      "slug": "permanent-farve-diapason-lisap-no-9-66-100-ml",
+      "sku": "S4252882",
+      "brand": "Lisap",
+      "gtin": "1202655800014",
+      "price": 161.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/permanent-farve-diapason-lisap-no-9-66-100-ml"
+    },
+    {
+      "id": 249465,
+      "name": "Kam til frisørklip Wahl Moser, 16 mm",
+      "slug": "kam-til-frisoerklip-wahl-moser-clipper-guide-5-8-no5-16-mm",
+      "sku": "S4243146",
+      "brand": "Wahl Moser",
+      "gtin": "8445534001062",
+      "price": 94.95,
+      "inStock": true,
+      "categories": [
+        "skaegpleje"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/kam-til-frisoerklip-wahl-moser-clipper-guide-5-8-no5-16-mm"
+    },
+    {
+      "id": 249463,
+      "name": "Lisap Permanent Farve Violet Mahogany 100 ml",
+      "slug": "permanent-farve-escalation-now-color-lisap-lisap192-no-4-48-violet-mahogany-100-ml",
+      "sku": "S4252788",
+      "brand": "Lisap",
+      "gtin": "1202624510012",
+      "price": 185.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/permanent-farve-escalation-now-color-lisap-lisap192-no-4-48-violet-mahogany-100-ml"
+    },
+    {
+      "id": 249461,
+      "name": "Lisap Permanent Farve 6/4 Mørk Blonde Mahogany",
+      "slug": "permanent-farve-escalation-now-color-lisap-no-6-4-dark-blonde-mahogany-100-ml",
+      "sku": "S4252751",
+      "brand": "Lisap",
+      "gtin": "1202624040014",
+      "price": 171.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/permanent-farve-escalation-now-color-lisap-no-6-4-dark-blonde-mahogany-100-ml"
+    },
+    {
+      "id": 249457,
+      "name": "Farmavita Permanent Farve Nº 7 77 Brunblond",
+      "slug": "permanent-farve-life-color-plus-farmavita-no-7-77-intense-brown-blonde-100-ml",
+      "sku": "S4253696",
+      "brand": "Farmavita",
+      "gtin": "8022033006912",
+      "price": 143.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/permanent-farve-life-color-plus-farmavita-no-7-77-intense-brown-blonde-100-ml"
+    },
+    {
+      "id": 249448,
+      "name": "Falske øjenvipper Eylure Nº 070",
+      "slug": "falske-oejenvipper-naturals-eylure-105812099-no-070-no-070",
+      "sku": "S0582594",
+      "brand": "Eylure",
+      "gtin": "5011522002347",
+      "price": 90.95,
+      "inStock": true,
+      "categories": [
+        "kosmetik-oejne"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/falske-oejenvipper-naturals-eylure-105812099-no-070-no-070"
+    },
+    {
+      "id": 249435,
+      "name": "Keramisk Wave keramisk hår glattejern Wavio InnovaGoods 55 W",
+      "slug": "keramisk-wave-keramisk-haar-glattejern-wavio-innovagoods-55-w",
+      "sku": "V0103294",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 128.95,
+      "inStock": true,
+      "categories": [
+        "haarboerster-redskaber"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/keramisk-wave-keramisk-haar-glattejern-wavio-innovagoods-55-w"
+    },
+    {
+      "id": 249354,
+      "name": "Essie Neglelak Angora Cardi – Rødbrun Farve",
+      "slug": "neglelak-essie-nail-color-no-42-angora-cardi-135-ml",
+      "sku": "S0563513",
+      "brand": "Essie",
+      "gtin": "0000030095441",
+      "price": 111.95,
+      "inStock": true,
+      "categories": [
+        "beauty-tools-generelt"
+      ],
+      "status": "REVIEW",
+      "score": 80,
+      "reasons": [
+        "Mistænkelig/dårlig dansk produkttekst"
+      ],
+      "url": "https://zebiza.com/da/produkt/neglelak-essie-nail-color-no-42-angora-cardi-135-ml"
+    },
+    {
+      "id": 249184,
+      "name": "Shiseido Læbeblyant Ink Duo – 1,1 g",
+      "slug": "laebeblyant-lipliner-ink-duo-shiseido-11-g",
+      "sku": "S0576962",
+      "brand": "Shiseido",
+      "gtin": "0729238164222",
+      "price": 116.95,
+      "inStock": true,
+      "categories": [
+        "kosmetik-laeber"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/laebeblyant-lipliner-ink-duo-shiseido-11-g"
+    },
+    {
+      "id": 249071,
+      "name": "Gosh Copenhagen Flydende Foundation X-Ceptional Wear",
+      "slug": "flydende-makeup-foundation-x-ceptional-wear-gosh-copenhagen-35-ml",
+      "sku": "S0574209",
+      "brand": "Gosh Copenhagen",
+      "gtin": "0000057044163",
+      "price": 76.95,
+      "inStock": true,
+      "categories": [
+        "kosmetik-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/flydende-makeup-foundation-x-ceptional-wear-gosh-copenhagen-35-ml"
+    },
+    {
+      "id": 248974,
+      "name": "Sort børste i plastik til hårvård",
+      "slug": "boerste-sort-plastik",
+      "sku": "S3605296",
+      "brand": "BigBuy Beauty",
+      "gtin": "8430852309693",
+      "price": 70.95,
+      "inStock": true,
+      "categories": [
+        "haarboerster-redskaber"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/boerste-sort-plastik"
+    },
+    {
+      "id": 248963,
+      "name": "Elektrisk ansigtsrens til hudorme Pore·Off InnovaGoods",
+      "slug": "elektrisk-ansigtsrens-til-hudorme-pore%c2%b7off-innovagoods",
+      "sku": "V0103157",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 106.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/elektrisk-ansigtsrens-til-hudorme-pore%c2%b7off-innovagoods"
+    },
+    {
+      "id": 248954,
+      "name": "Elektrisk ansigtsdamper Moispa InnovaGoods",
+      "slug": "elektrisk-ansigtsdamper-moispa-innovagoods",
+      "sku": "V0103153",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 176.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/elektrisk-ansigtsdamper-moispa-innovagoods"
+    },
+    {
+      "id": 248663,
+      "name": "Max Factor Øjenbrynsblyant 0,5 g",
+      "slug": "oejenbrynsblyant-max-factor-05-g",
+      "sku": "S0572703",
+      "brand": "Max Factor",
+      "gtin": "3614229448030",
+      "price": 72.95,
+      "inStock": true,
+      "categories": [
+        "eyeliner"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/oejenbrynsblyant-max-factor-05-g"
+    },
+    {
+      "id": 248267,
+      "name": "Lysreflekterende Jelly Toppers Rimmel London – 11 ml",
+      "slug": "lysreflekterende-jelly-toppers-rimmel-london-11-ml",
+      "sku": "S0568380",
+      "brand": "Rimmel London",
+      "gtin": "3614229161229",
+      "price": 73.95,
+      "inStock": true,
+      "categories": [
+        "kosmetik-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/lysreflekterende-jelly-toppers-rimmel-london-11-ml"
+    },
+    {
+      "id": 248215,
+      "name": "Llongueras Permanent Sort Hårfarve Nr. 1 – Professionel Dækning",
+      "slug": "permanent-farve-llongueras",
+      "sku": "S0566479",
+      "brand": "Llongueras",
+      "gtin": "8410825420013",
+      "price": 70.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/permanent-farve-llongueras"
+    },
+    {
+      "id": 248190,
+      "name": "Håndklæde til følsom hud Beter Konjac Toalla (1 enheder)",
+      "slug": "haandklaede-til-foelsom-hud-beter-konjac-toalla-1-enheder",
+      "sku": "S0543969",
+      "brand": "Beter",
+      "gtin": "8412122220440",
+      "price": 112.95,
+      "inStock": true,
+      "categories": [
+        "ansigtsrens"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/haandklaede-til-foelsom-hud-beter-konjac-toalla-1-enheder"
+    },
+    {
+      "id": 247756,
+      "name": "Make-up Pung Revlon (1 enheder)",
+      "slug": "make-up-pung-revlon-1-enheder",
+      "sku": "S0559771",
+      "brand": "Revlon",
+      "gtin": "0309979139019",
+      "price": 65.95,
+      "inStock": true,
+      "categories": [
+        "kosmetik-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/make-up-pung-revlon-1-enheder"
+    },
+    {
+      "id": 247281,
+      "name": "Neil Enamel Paese neglelak – Farverne 115, 100-108 og 191",
+      "slug": "neglelak-neil-enamel-paese",
+      "sku": "S0555397",
+      "brand": "Paese",
+      "gtin": "5907546503482",
+      "price": 64.95,
+      "inStock": true,
+      "categories": [
+        "beauty-tools-generelt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/neglelak-neil-enamel-paese"
+    },
+    {
+      "id": 247174,
+      "name": "Artero børste K594, to-farvet",
+      "slug": "boerste-artero-k594",
+      "sku": "S0523201",
+      "brand": "Artero",
+      "gtin": "8435037166405",
+      "price": 177.95,
+      "inStock": true,
+      "categories": [
+        "haarboerster-redskaber"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/boerste-artero-k594"
+    },
+    {
+      "id": 247129,
+      "name": "Bourjois Rouge Little Round – Læbestift med spejl",
+      "slug": "rouge-little-round-bourjois",
+      "sku": "S0557104",
+      "brand": "Bourjois",
+      "gtin": "3614225613333",
+      "price": 79.95,
+      "inStock": true,
+      "categories": [
+        "kosmetik-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/rouge-little-round-bourjois"
+    },
+    {
+      "id": 246710,
+      "name": "Renser til makeupbørster Heart af InnovaGoods",
+      "slug": "renser-til-makeupboerster-heart-innovagoods",
+      "sku": "V0101013",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 70.95,
+      "inStock": true,
+      "categories": [
+        "makeup-pensler"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/renser-til-makeupboerster-heart-innovagoods"
+    },
+    {
+      "id": 246703,
+      "name": "Hipster Barber Skæg Skabelon til Barbering",
+      "slug": "hipster-barber-skaeg-skabelon-til-barbering-innovagoods",
+      "sku": "V0100984",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 72.95,
+      "inStock": true,
+      "categories": [
+        "barbering-grooming"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/hipster-barber-skaeg-skabelon-til-barbering-innovagoods"
+    },
+    {
+      "id": 246631,
+      "name": "Børste Beter neglebørste, grå nylon",
+      "slug": "boerste-beter-cepillo-1-enheder",
+      "sku": "S0523003",
+      "brand": "Beter",
+      "gtin": "8412122222208",
+      "price": 74.95,
+      "inStock": true,
+      "categories": [
+        "beauty-tools-generelt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/boerste-beter-cepillo-1-enheder"
+    },
+    {
+      "id": 246629,
+      "name": "Shampoo Farouk Chi Infra 355 ml",
+      "slug": "shampoo-farouk-chi-infra-355-ml",
+      "sku": "S0529154",
+      "brand": "Farouk",
+      "gtin": "0633911616277",
+      "price": 132.95,
+      "inStock": true,
+      "categories": [
+        "harpleje"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/shampoo-farouk-chi-infra-355-ml"
+    },
+    {
+      "id": 246604,
+      "name": "Farve uden Ammoniak Llongueras Optima Nº 8.32-Light Blond Natural (1 enheder)",
+      "slug": "farve-uden-ammoniak-llongueras-optima-no-8-32-light-blond-natural-1-enheder",
+      "sku": "S0532640",
+      "brand": "Llongueras",
+      "gtin": "8432225052137",
+      "price": 107.95,
+      "inStock": true,
+      "categories": [
+        "haarfarve"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/farve-uden-ammoniak-llongueras-optima-no-8-32-light-blond-natural-1-enheder"
+    },
+    {
+      "id": 245489,
+      "name": "Skoletoilettaske Moos Camel Camel Med puder 31 x 14 x 19 cm",
+      "slug": "skoletoilettaske-moos-camel-med-puder-camel-31-x-14-x-19-cm",
+      "sku": "S4306997",
+      "brand": "Moos",
+      "gtin": "8412688485260",
+      "price": 220.95,
+      "inStock": true,
+      "categories": [
+        "beauty-oevrigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/skoletoilettaske-moos-camel-med-puder-camel-31-x-14-x-19-cm"
+    },
+    {
+      "id": 245485,
+      "name": "Skoletoilettaske Moos Camel med puder",
+      "slug": "skoletoilettaske-moos-camel-med-puder-camel-23-x-12-x-8-cm",
+      "sku": "S4306998",
+      "brand": "Moos",
+      "gtin": "8412688485239",
+      "price": 128.95,
+      "inStock": true,
+      "categories": [
+        "beauty-oevrigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/skoletoilettaske-moos-camel-med-puder-camel-23-x-12-x-8-cm"
+    },
+    {
+      "id": 245462,
+      "name": "Skoletoilettaske BlackFit8 Glow up Pink 31 x 14 x 19 cm",
+      "slug": "skoletoilettaske-blackfit8-glow-up-pink-31-x-14-x-19-cm",
+      "sku": "S4306931",
+      "brand": "BlackFit8",
+      "gtin": "8412688484317",
+      "price": 111.95,
+      "inStock": true,
+      "categories": [
+        "beauty-oevrigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/skoletoilettaske-blackfit8-glow-up-pink-31-x-14-x-19-cm"
+    },
+    {
+      "id": 245457,
+      "name": "Skoletoilettaske Lady Bug Fuchsia 26 x 16 x 9 cm",
+      "slug": "skoletoilettaske-lady-bug-fuchsia-26-x-16-x-9-cm",
+      "sku": "S4306216",
+      "brand": "Lady Bug",
+      "gtin": "8412688486434",
+      "price": 99.95,
+      "inStock": true,
+      "categories": [
+        "beauty-oevrigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/skoletoilettaske-lady-bug-fuchsia-26-x-16-x-9-cm"
+    },
+    {
+      "id": 245448,
+      "name": "Skoletoilettaske BlackFit8 M248 Blå 26 x 15 x 12 cm",
+      "slug": "skoletoilettaske-blackfit8-m248-blaa-26-x-15-x-12-cm",
+      "sku": "S4303875",
+      "brand": "BlackFit8",
+      "gtin": "8412688376117",
+      "price": 105.95,
+      "inStock": true,
+      "categories": [
+        "beauty-oevrigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/skoletoilettaske-blackfit8-m248-blaa-26-x-15-x-12-cm"
+    },
+    {
+      "id": 245443,
+      "name": "Skoletoilettaske BlackFit8 Mørkeblå 26x15x12 cm",
+      "slug": "skoletoilettaske-blackfit8-m248-moerkeblaa-26-x-15-x-12-cm",
+      "sku": "S4303870",
+      "brand": "BlackFit8",
+      "gtin": "8412688375400",
+      "price": 105.95,
+      "inStock": true,
+      "categories": [
+        "beauty-oevrigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/skoletoilettaske-blackfit8-m248-moerkeblaa-26-x-15-x-12-cm"
+    },
+    {
+      "id": 245411,
+      "name": "Læbestift Soft Cream Glam Of Sweden (4 g) 05-brave",
+      "slug": "pintalabios-soft-cream-glam-of-sweden-4-g-05-brave",
+      "sku": "S0581605",
+      "brand": "Glam Of Sweden",
+      "gtin": "7332842014826",
+      "price": 77.95,
+      "inStock": true,
+      "categories": [
+        "kosmetik-laeber"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/pintalabios-soft-cream-glam-of-sweden-4-g-05-brave"
+    },
+    {
+      "id": 139775,
+      "name": "Rejsetoilettaske Real Madrid C.F. Hvid Sportslig 22 x 10 x 8 cm",
+      "slug": "rejsetoilettaske-real-madrid-c-f-hvid-sportslig-22-x-10-x-8-cm",
+      "sku": "S4312989",
+      "brand": "Real Madrid C.F.",
+      "gtin": "8412688607884",
+      "price": 134.95,
+      "inStock": true,
+      "categories": [
+        "beauty-oevrigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/rejsetoilettaske-real-madrid-c-f-hvid-sportslig-22-x-10-x-8-cm"
+    },
+    {
+      "id": 135832,
+      "name": "Essence Makeup Sæt GLOW LIKE HONEY",
+      "slug": "makeup-saet-essence-glow-like-honey",
+      "sku": "S05150851",
+      "brand": "Essence",
+      "gtin": "4059729584717",
+      "price": 88.95,
+      "inStock": true,
+      "categories": [
+        "beauty-tools-generelt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/makeup-saet-essence-glow-like-honey"
+    },
+    {
+      "id": 134516,
+      "name": "Elektrisk Ansigt og Hals Massager med LED & Varme",
+      "slug": "elektrisk-ansigts-og-halsopstrammende-massager-med-led-ems-og-varme-selora-innovagoods",
+      "sku": "V0104021",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 223.95,
+      "inStock": true,
+      "categories": [
+        "hudpleje-ansigt"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/elektrisk-ansigts-og-halsopstrammende-massager-med-led-ems-og-varme-selora-innovagoods"
+    },
+    {
+      "id": 132770,
+      "name": "Ionisk Lufttørrer & Stylingsbørste med 7 Hoveder fra InnovaGoods",
+      "slug": "ionisk-multifunktionel-lufttoerrer-og-stylingsboerste-med-coanda-teknologi-og-7-tilbehoer-wavify-innovagoods",
+      "sku": "V0104025",
+      "brand": "InnovaGoods",
+      "gtin": "",
+      "price": 572.95,
+      "inStock": true,
+      "categories": [
+        "haarboerster-redskaber"
+      ],
+      "status": "PASS",
+      "score": 98,
+      "reasons": [
+        "Mangler GTIN (SKU findes)"
+      ],
+      "url": "https://zebiza.com/da/produkt/ionisk-multifunktionel-lufttoerrer-og-stylingsboerste-med-coanda-teknologi-og-7-tilbehoer-wavify-innovagoods"
+    },
+    {
+      "id": 123581,
+      "name": "Stendhal flydende foundation, farve 320",
+      "slug": "catalog-product-15763",
+      "sku": "S05150312",
+      "brand": "Stendhal",
+      "gtin": "3355996048404",
+      "price": 281.95,
+      "inStock": true,
+      "categories": [
+        "kosmetik-ansigt"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/catalog-product-15763"
+    },
+    {
+      "id": 123425,
+      "name": "Lacoste L.12.12 Magnetic showergel, 50 ml",
+      "slug": "catalog-product-15345",
+      "sku": "S0800416",
+      "brand": "Lacoste",
+      "gtin": "8005610266718",
+      "price": 149.95,
+      "inStock": true,
+      "categories": [
+        "bad-saebe"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/catalog-product-15345"
+    },
+    {
+      "id": 123253,
+      "name": "Scholl Party Feet Gel Protection – Fodpleje til Damer",
+      "slug": "catalog-product-12868",
+      "sku": "V3401464",
+      "brand": "Scholl",
+      "gtin": "00000500487930",
+      "price": 145.95,
+      "inStock": true,
+      "categories": [
+        "fodpleje"
+      ],
+      "status": "PASS",
+      "score": 100,
+      "reasons": [],
+      "url": "https://zebiza.com/da/produkt/catalog-product-12868"
+    }
+  ]
+}

@@ -48,7 +48,7 @@ async function storeFetch<T>(
   path: string,
   lang: LanguageCode | undefined,
   init?: RequestInit,
-): Promise<{ data: T | null; ok: boolean; status: number; error?: string }> {
+): Promise<{ data: T | null; ok: boolean; status: number; error?: string; code?: string }> {
   if (!storeConfigured) return { data: null, ok: false, status: 0, error: "not configured" };
   try {
     const headers = new Headers(init?.headers);
@@ -76,7 +76,8 @@ async function storeFetch<T>(
       const body = await res.json().catch(() => ({}));
       const message =
         (body as { message?: string }).message ?? `Store API ${path}: ${res.status}`;
-      return { data: null, ok: false, status: res.status, error: message };
+      const code = (body as { code?: string }).code;
+      return { data: null, ok: false, status: res.status, error: message, code };
     }
 
     if (res.status === 204) return { data: null, ok: true, status: 204 };
@@ -86,6 +87,37 @@ async function storeFetch<T>(
     console.warn("[storeApi] request failed:", err);
     return { data: null, ok: false, status: 0, error: String(err) };
   }
+}
+
+export interface StoreShippingRate {
+  rate_id: string;
+  name: string;
+  description?: string;
+  delivery_time?: string;
+  price: string;
+  taxes?: string;
+  selected?: boolean;
+  currency_minor_unit?: number;
+  currency_code?: string;
+}
+
+export interface StoreShippingPackage {
+  package_id: number;
+  name?: string;
+  destination?: Record<string, string>;
+  shipping_rates: StoreShippingRate[];
+}
+
+export interface StoreCartTotals {
+  total_items: string;
+  total_items_tax?: string;
+  total_discount?: string;
+  total_shipping?: string | null;
+  total_shipping_tax?: string | null;
+  total_price: string;
+  total_tax?: string;
+  currency_code?: string;
+  currency_minor_unit?: number;
 }
 
 export interface StoreCart {
@@ -98,12 +130,12 @@ export interface StoreCart {
     prices?: { price: string; currency_minor_unit?: number };
     permalink?: string;
   }[];
-  totals?: {
-    total_items: string;
-    total_price: string;
-    currency_minor_unit?: number;
-  };
+  totals?: StoreCartTotals;
   coupons?: { code: string }[];
+  shipping_rates?: StoreShippingPackage[];
+  has_calculated_shipping?: boolean;
+  needs_shipping?: boolean;
+  payment_methods?: string[];
 }
 
 export interface PaymentGateway {
@@ -111,6 +143,29 @@ export interface PaymentGateway {
   title: string;
   description?: string;
   enabled?: boolean;
+}
+
+export interface CheckoutResult {
+  order_id?: number;
+  order_number?: string;
+  status?: string;
+  order_key?: string;
+  payment_method?: string;
+  payment_result?: {
+    payment_status?: string;
+    payment_details?: { key: string; value: string }[];
+    redirect_url?: string;
+  } | null;
+}
+
+export function minorToMajor(amount: string | number | null | undefined, minor = 2): number {
+  if (amount == null || amount === "") return 0;
+  return Number(amount) / Math.pow(10, minor);
+}
+
+export function shippingRateMajor(rate: StoreShippingRate): number {
+  const minor = rate.currency_minor_unit ?? 2;
+  return minorToMajor(rate.price, minor) + minorToMajor(rate.taxes ?? "0", minor);
 }
 
 export const storeApi = {
@@ -144,6 +199,18 @@ export const storeApi = {
       body: JSON.stringify({ code }),
     }),
 
+  updateCustomer: (
+    payload: {
+      billing_address?: Record<string, string>;
+      shipping_address?: Record<string, string>;
+    },
+    lang: LanguageCode = "da",
+  ) =>
+    storeFetch<StoreCart>("/cart/update-customer", lang, {
+      method: "POST",
+      body: JSON.stringify(payload),
+    }),
+
   selectShippingRate: (rateId: string, packageId = 0, lang: LanguageCode = "da") =>
     storeFetch<StoreCart>("/cart/select-shipping-rate", lang, {
       method: "POST",
@@ -151,7 +218,7 @@ export const storeApi = {
     }),
 
   checkout: (payload: unknown, lang: LanguageCode = "da") =>
-    storeFetch<Record<string, unknown>>("/checkout", lang, {
+    storeFetch<CheckoutResult>("/checkout", lang, {
       method: "POST",
       body: JSON.stringify(payload),
     }),

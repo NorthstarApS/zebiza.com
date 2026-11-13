@@ -1,29 +1,42 @@
+# Static SEO / Merchant assets (must not fall through to SPA HTML)
+/merchant-feed.xml   /merchant-feed.xml   200
+/sitemap.xml         /sitemap.xml         200
+/robots.txt          /robots.txt          200
+/google-merchant.xml /merchant-feed.xml   200
+/feeds/google-merchant.xml /merchant-feed.xml 200
+
 # Legacy WooCommerce → canonical SPA (single hop 301)
-/product/:slug  /da/produkt/:slug  301
-/product/:slug/ /da/produkt/:slug  301
-/da/product/:slug /da/produkt/:slug 301
-/en/product/:slug /da/produkt/:slug 301
+/product/:slug  /da/produkt/:slug/  301
+/product/:slug/ /da/produkt/:slug/  301
+/da/product/:slug /da/produkt/:slug/ 301
+/en/product/:slug /da/produkt/:slug/ 301
 
 /product-category/*  /da/kategori/:splat  301
 /da/product-category/* /da/kategori/:splat 301
 /en/product-category/* /da/kategori/:splat 301
 
 # English/legacy category aliases → Danish owners
-/da/kategori/skincare /da/kategori/hudpleje-ansigt 301
-/da/kategori/haircare /da/kategori/harpleje 301
-/da/kategori/nail-care /da/kategori/nails 301
-/da/kategori/beauty-tools-generelt /da/kategori/beauty-tools 301
-/da/kategori/facial-tools /da/kategori/beauty-tools 301
-/da/kategori/parfume-kvinder /da/kategori/parfume-dufte 301
+/da/kategori/skincare /da/kategori/hudpleje-ansigt/ 301
+/da/kategori/haircare /da/kategori/harpleje/ 301
+/da/kategori/nail-care /da/kategori/nails/ 301
+/da/kategori/beauty-tools-generelt /da/kategori/beauty-tools/ 301
+/da/kategori/facial-tools /da/kategori/beauty-tools/ 301
+/da/kategori/parfume-kvinder /da/kategori/parfume-dufte/ 301
 
 # Brand permalinks from Woo
-/varemærke/:slug /da/brand/:slug 301
-/varemaerke/:slug /da/brand/:slug 301
-/da/varemærke/:slug /da/brand/:slug 301
+/varemærke/:slug /da/brand/:slug/ 301
+/varemaerke/:slug /da/brand/:slug/ 301
+/da/varemærke/:slug /da/brand/:slug/ 301
 
-# Root
-/ /da 302
+# Root → Danish
+/ /da/ 302
 
-# Merchant feed alias
-/google-merchant.xml /merchant-feed.xml 200
-/feeds/google-merchant.xml /merchant-feed.xml 200
+# Trailing-slash normalization for prerendered paths
+/da /da/ 301
+/da/kategori/:slug /da/kategori/:slug/ 301
+/da/produkt/:slug /da/produkt/:slug/ 301
+/da/brand/:slug /da/brand/:slug/ 301
+
+# SPA fallback for app routes without a prerendered file
+/da/*  /da/index.html  200
+/*     /index.html     200

@@ -1,0 +1,75 @@
+{
+  "generatedAt": "2026-11-13T21:10:00Z",
+  "environment": "production Store API https://zebiza.com (frontend PR not deployed)",
+  "tests": [
+    {
+      "id": "product_load",
+      "result": "PASS",
+      "evidence": "GET /wp-json/wc/store/v1/products returns 218 products"
+    },
+    {
+      "id": "add_to_cart",
+      "result": "PASS",
+      "evidence": "POST /cart/add-item with nonce+cart-token; items_count=1 for product 301268"
+    },
+    {
+      "id": "update_customer_address",
+      "result": "PASS",
+      "evidence": "POST /cart/update-customer DK 2100 → has_calculated_shipping=true"
+    },
+    {
+      "id": "shipping_rate",
+      "result": "PASS",
+      "evidence": "flat_rate:3 'Fragt 59 kr.' price=4720+tax=1180 minor units (=59 DKK incl. VAT). free_shipping:2 at ≥999 DKK after discount"
+    },
+    {
+      "id": "select_shipping",
+      "result": "PASS",
+      "evidence": "POST /cart/select-shipping-rate rate_id=flat_rate:3"
+    },
+    {
+      "id": "payment_gateways_list",
+      "result": "PASS",
+      "evidence": "GET /wp-json/zebiza/v1/payment-gateways → reepay_checkout, reepay_mobilepay"
+    },
+    {
+      "id": "checkout_reepay_card",
+      "result": "BLOCKED",
+      "code": "zac_delivery",
+      "http": 400,
+      "message": "Leveringen kan ikke bekræftes lige nu. Prøv igen om et øjeblik.",
+      "evidence": "POST /wc/store/v1/checkout with full address + flat_rate:3 + reepay_checkout"
+    },
+    {
+      "id": "checkout_reepay_mobilepay",
+      "result": "BLOCKED",
+      "code": "zac_delivery",
+      "http": 400,
+      "note": "Same zac_delivery validation blocks before payment redirect"
+    },
+    {
+      "id": "paid_order_verified",
+      "result": "BLOCKED",
+      "reason": "Cannot reach Reepay payment URL while zac_delivery returns 400. No order_id created. Never simulated as PASS."
+    },
+    {
+      "id": "ga4_purchase",
+      "result": "NOT_VERIFIED",
+      "note": "Frontend only fires purchase after confirmed payment status or after gateway return — not on failed checkout"
+    }
+  ],
+  "ownerActionsRequired": [
+    {
+      "owner": "WooCommerce / ZAC plugin admin",
+      "action": "Diagnose and fix zac_delivery Store API checkout validation (or expose required extension fields)"
+    },
+    {
+      "owner": "Reepay / Frisbii admin",
+      "action": "Confirm testmode credentials and webhook URL after zac_delivery is fixed"
+    },
+    {
+      "owner": "Frontend deploy",
+      "action": "Merge PR #1 and publish so checkout UI uses live shipping rates (59 kr / free ≥999)"
+    }
+  ]
+}

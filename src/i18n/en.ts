@@ -147,7 +147,7 @@ const en: Dictionary = {
     empty: "Your cart is empty",
     emptyCta: "Start by exploring new arrivals and popular finds.",
     orderSummary: "Order summary",
-    deliveryMessage: "Delivery typically 3-6 business days. Free shipping over DKK 499.",
+    deliveryMessage: "Delivery typically 3-6 business days. Standard shipping DKK 59. Free shipping from DKK 999 after discount.",
     goToCheckout: "Go to checkout",
   },
   checkout: {

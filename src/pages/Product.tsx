@@ -1,6 +1,6 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Heart, Minus, Plus, ShoppingBag, Truck, ShieldCheck, RotateCcw } from "lucide-react";
+import { Minus, Plus, ShoppingBag, Truck, ShieldCheck, RotateCcw } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { useProduct } from "@/hooks/useProduct";
 import { useProducts } from "@/hooks/useProducts";
@@ -285,12 +285,6 @@ export default function Product() {
                   <Plus className="h-4 w-4" />
                 </button>
               </div>
-              <button
-                aria-label={t.header.wishlist}
-                className="flex h-12 w-12 items-center justify-center border border-border hover:border-foreground"
-              >
-                <Heart className="h-5 w-5" />
-              </button>
             </div>
 
             <div className="mt-4 flex flex-col gap-2 sm:flex-row">

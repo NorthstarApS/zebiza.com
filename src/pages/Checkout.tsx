@@ -1,10 +1,15 @@
 import { useNavigate, Link } from "react-router-dom";
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { ShieldCheck } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { useCart } from "@/context/CartContext";
-import { storeApi } from "@/services/storeApi";
+import {
+  storeApi,
+  shippingRateMajor,
+  type StoreCart,
+  type StoreShippingRate,
+} from "@/services/storeApi";
 import { formatPrice } from "@/lib/format";
 import Seo from "@/components/layout/Seo";
 import { analytics } from "@/lib/analytics";
@@ -27,16 +32,23 @@ function Field({
   );
 }
 
+function flattenRates(cart: StoreCart | null | undefined): StoreShippingRate[] {
+  const packages = cart?.shipping_rates ?? [];
+  return packages.flatMap((p) => p.shipping_rates ?? []);
+}
+
 export default function Checkout() {
   const { t, lang, localizedPath } = useLanguage();
   const { items, subtotal, discount, total, clear } = useCart();
   const navigate = useNavigate();
   const [sameAddress, setSameAddress] = useState(true);
   const [accepted, setAccepted] = useState(false);
-  const [delivery, setDelivery] = useState("flat_rate");
-  const [payment, setPayment] = useState("bacs");
+  const [payment, setPayment] = useState("reepay_checkout");
   const [submitting, setSubmitting] = useState(false);
   const [formError, setFormError] = useState<string | null>(null);
+  const [selectedRateId, setSelectedRateId] = useState<string>("");
+  const [liveCart, setLiveCart] = useState<StoreCart | null>(null);
+  const [shippingLoading, setShippingLoading] = useState(false);
 
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -52,16 +64,14 @@ export default function Checkout() {
     staleTime: 60_000,
   });
 
-  const paymentOptions = useMemo(
-    () =>
-      gateways.length > 0
-        ? gateways
-        : [
-            { id: "bacs", title: t.checkout.cardPayment, description: t.checkout.trust },
-            { id: "cod", title: t.checkout.mobilepay },
-          ],
-    [gateways, t.checkout.cardPayment, t.checkout.mobilepay, t.checkout.trust],
-  );
+  const paymentOptions = useMemo(() => {
+    if (gateways.length > 0) return gateways;
+    // Prefer real Reepay ids over disabled bacs/cod fallbacks when API is unreachable.
+    return [
+      { id: "reepay_checkout", title: t.checkout.cardPayment, description: t.checkout.trust },
+      { id: "reepay_mobilepay", title: t.checkout.mobilepay, description: "MobilePay" },
+    ];
+  }, [gateways, t.checkout.cardPayment, t.checkout.mobilepay, t.checkout.trust]);
 
   useEffect(() => {
     if (items.length) {
@@ -83,42 +93,105 @@ export default function Checkout() {
     }
   }, [paymentOptions, payment]);
 
+  const refreshShipping = useCallback(async () => {
+    if (!postcode || postcode.length < 4 || !address || !city) return;
+    setShippingLoading(true);
+    const shipping_address = {
+      first_name: firstName || "Kunde",
+      last_name: lastName || "Kunde",
+      company: "",
+      address_1: address,
+      address_2: "",
+      city,
+      state: "",
+      postcode,
+      country: "DK",
+      phone: phone || "",
+    };
+    const billing_address = {
+      ...shipping_address,
+      email: email || "guest@zebiza.com",
+    };
+    const updated = await storeApi.updateCustomer(
+      { shipping_address, billing_address },
+      lang,
+    );
+    if (updated.ok && updated.data) {
+      const rates = flattenRates(updated.data);
+      const preferred =
+        rates.find((r) => r.selected)?.rate_id ||
+        rates.find((r) => r.rate_id === "flat_rate:3")?.rate_id ||
+        rates[0]?.rate_id ||
+        "";
+      if (preferred) {
+        const selected = await storeApi.selectShippingRate(preferred, 0, lang);
+        if (selected.ok && selected.data) {
+          setLiveCart(selected.data);
+          setSelectedRateId(preferred);
+        } else {
+          setLiveCart(updated.data);
+          setSelectedRateId(preferred);
+        }
+      } else {
+        setLiveCart(updated.data);
+      }
+    }
+    setShippingLoading(false);
+  }, [address, city, email, firstName, lang, lastName, phone, postcode]);
+
+  useEffect(() => {
+    const tmr = window.setTimeout(() => {
+      void refreshShipping();
+    }, 450);
+    return () => window.clearTimeout(tmr);
+  }, [refreshShipping]);
+
+  const rates = flattenRates(liveCart);
+  const activeRate =
+    rates.find((r) => r.rate_id === selectedRateId) || rates.find((r) => r.selected) || rates[0];
+  const shippingCost = activeRate ? shippingRateMajor(activeRate) : 0;
+  const grandTotal = total + shippingCost;
+
+  const onSelectRate = async (rateId: string) => {
+    setSelectedRateId(rateId);
+    const res = await storeApi.selectShippingRate(rateId, 0, lang);
+    if (res.ok && res.data) setLiveCart(res.data);
+  };
+
   const placeOrder = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!accepted) return;
     setFormError(null);
     setSubmitting(true);
 
-    analytics.addShippingInfo(total, delivery);
-    analytics.addPaymentInfo(total, payment);
+    const shippingTier = activeRate?.rate_id || selectedRateId || "unknown";
+    analytics.addShippingInfo(grandTotal, shippingTier);
+    analytics.addPaymentInfo(grandTotal, payment);
+
+    // Ensure shipping is selected before checkout
+    if (selectedRateId) {
+      await storeApi.selectShippingRate(selectedRateId, 0, lang);
+    }
+
+    const shipping_address = {
+      first_name: firstName,
+      last_name: lastName,
+      company: "",
+      address_1: address,
+      address_2: "",
+      city,
+      state: "",
+      postcode,
+      country: "DK",
+      phone,
+    };
 
     const payload = {
       billing_address: {
-        first_name: firstName,
-        last_name: lastName,
-        company: "",
-        address_1: address,
-        address_2: "",
-        city,
-        state: "",
-        postcode,
-        country: "DK",
+        ...shipping_address,
         email,
-        phone,
       },
-      shipping_address: sameAddress
-        ? {
-            first_name: firstName,
-            last_name: lastName,
-            company: "",
-            address_1: address,
-            address_2: "",
-            city,
-            state: "",
-            postcode,
-            country: "DK",
-          }
-        : undefined,
+      shipping_address: sameAddress ? shipping_address : shipping_address,
       payment_method: payment,
       customer_note: "",
     };
@@ -127,34 +200,70 @@ export default function Checkout() {
     setSubmitting(false);
 
     if (res.ok && res.data) {
-      const orderId =
-        String(
-          (res.data as { order_id?: number; order_number?: string }).order_id ??
-            (res.data as { order_number?: string }).order_number ??
-            `local-${Date.now()}`,
+      const orderId = String(res.data.order_id ?? res.data.order_number ?? "");
+      const paymentResult = res.data.payment_result;
+      const redirect =
+        paymentResult?.redirect_url ||
+        paymentResult?.payment_details?.find((d) => d.key === "redirect")?.value;
+
+      // Reepay / gateway redirect — payment not yet complete. Do NOT fire purchase.
+      if (redirect) {
+        clear();
+        window.location.assign(redirect);
+        return;
+      }
+
+      const status = (paymentResult?.payment_status || res.data.status || "").toLowerCase();
+      const paid =
+        status === "success" ||
+        status === "completed" ||
+        status === "processing" ||
+        status === "paid";
+
+      if (paid && orderId) {
+        analytics.purchase(
+          orderId,
+          grandTotal,
+          items.map((i) => ({
+            id: i.productId,
+            name: i.name,
+            price: i.price,
+            quantity: i.quantity,
+          })),
         );
-      analytics.purchase(
-        orderId,
-        total,
-        items.map((i) => ({
-          id: i.productId,
-          name: i.name,
-          price: i.price,
-          quantity: i.quantity,
-        })),
+        clear();
+        navigate(
+          localizedPath(
+            `/tak?order=${encodeURIComponent(orderId)}&status=${encodeURIComponent(status || "ok")}`,
+          ),
+        );
+        return;
+      }
+
+      // Order draft created but payment not confirmed
+      setFormError(
+        "Ordren er oprettet, men betalingen er ikke bekræftet. Du bliver ikke opkrævet endnu — kontakt kundeservice hvis beløbet er trukket.",
       );
-      clear();
-      navigate(localizedPath(`/tak?order=${encodeURIComponent(orderId)}`));
+      if (orderId) {
+        navigate(
+          localizedPath(
+            `/tak?order=${encodeURIComponent(orderId)}&status=${encodeURIComponent(status || "pending")}`,
+          ),
+        );
+      }
       return;
     }
 
-    // Store API may reject without a fully synced cart / payment plugin.
-    // Do not fake a successful paid order — surface the error.
-    const message =
+    // Store API may reject (e.g. zac_delivery). Never fake a paid order.
+    let message =
       res.error ??
       "Kunne ikke gennemføre ordren lige nu. Tjek oplysninger og prøv igen, eller kontakt kundeservice.";
+    if (res.code === "zac_delivery") {
+      message =
+        "Leveringen kan ikke bekræftes lige nu (WooCommerce-leveringsvalidering). Prøv igen om et øjeblik, eller kontakt kundeservice — betaling er ikke gennemført.";
+    }
     setFormError(message);
-    toast.error?.(message);
+    toast.error(message);
   };
 
   if (items.length === 0) {
@@ -170,9 +279,6 @@ export default function Checkout() {
       </div>
     );
   }
-
-  const shippingCost = delivery === "flat_rate" ? 39 : 0;
-  const grandTotal = total + shippingCost;
 
   return (
     <>
@@ -236,6 +342,8 @@ export default function Checkout() {
                   value={postcode}
                   onChange={(e) => setPostcode(e.target.value)}
                   autoComplete="postal-code"
+                  pattern="[0-9]{4}"
+                  inputMode="numeric"
                 />
                 <Field
                   label={t.checkout.city}
@@ -258,15 +366,39 @@ export default function Checkout() {
 
             <section>
               <h2 className="mb-3 text-lg font-bold">{t.checkout.deliveryMethod}</h2>
-              <label className="flex items-center gap-2 border border-border p-3 text-sm">
-                <input
-                  type="radio"
-                  name="delivery"
-                  checked={delivery === "flat_rate"}
-                  onChange={() => setDelivery("flat_rate")}
-                />
-                {t.checkout.standardShipping} — 39 kr.
-              </label>
+              {shippingLoading && (
+                <p className="mb-2 text-xs text-muted-foreground">{t.common.loading}</p>
+              )}
+              {rates.length === 0 ? (
+                <p className="border border-border p-3 text-sm text-muted-foreground">
+                  Indtast postnummer og adresse for at se fragtpriser fra WooCommerce.
+                </p>
+              ) : (
+                <div className="space-y-2">
+                  {rates.map((rate) => {
+                    const cost = shippingRateMajor(rate);
+                    const checked = (selectedRateId || activeRate?.rate_id) === rate.rate_id;
+                    return (
+                      <label
+                        key={rate.rate_id}
+                        className="flex items-center gap-2 border border-border p-3 text-sm"
+                      >
+                        <input
+                          type="radio"
+                          name="delivery"
+                          checked={checked}
+                          onChange={() => void onSelectRate(rate.rate_id)}
+                        />
+                        <span className="flex-1">
+                          {rate.name || t.checkout.standardShipping}
+                          {rate.delivery_time ? ` · ${rate.delivery_time}` : ""}
+                        </span>
+                        <span className="font-medium">{formatPrice(cost, lang)}</span>
+                      </label>
+                    );
+                  })}
+                </div>
+              )}
             </section>
 
             <section>
@@ -344,7 +476,9 @@ export default function Checkout() {
               )}
               <div className="flex justify-between">
                 <span>Fragt</span>
-                <span>{formatPrice(shippingCost, lang)}</span>
+                <span>
+                  {rates.length ? formatPrice(shippingCost, lang) : "—"}
+                </span>
               </div>
               <div className="flex justify-between pt-2 text-base font-bold">
                 <span>{t.common.total}</span>
@@ -354,13 +488,19 @@ export default function Checkout() {
             </div>
             <button
               type="submit"
-              disabled={!accepted || submitting}
+              disabled={!accepted || submitting || !selectedRateId}
               className="mt-5 flex w-full items-center justify-center gap-2 bg-foreground py-3.5 text-sm font-semibold text-primary-foreground transition-colors duration-150 hover:bg-primary-hover disabled:opacity-50"
             >
               <ShieldCheck className="h-4 w-4" />
               {submitting ? t.common.loading : t.checkout.placeOrder}
             </button>
             <p className="mt-3 text-xs text-muted-foreground">{t.checkout.trust}</p>
+            <p className="mt-2 text-xs text-muted-foreground">
+              Levering typisk 3–6 hverdage. 30 dages retur.{" "}
+              <Link to={localizedPath("/levering-og-returnering")} className="underline">
+                Læs mere
+              </Link>
+            </p>
           </aside>
         </form>
       </div>

@@ -146,7 +146,7 @@ export const da = {
     empty: "Din kurv er tom",
     emptyCta: "Start med at udforske nyheder og populære fund.",
     orderSummary: "Ordreoverblik",
-    deliveryMessage: "Levering typisk 3-6 hverdage. Fri fragt ved køb over 499 kr.",
+    deliveryMessage: "Levering typisk 3-6 hverdage. Standardfragt 59 kr. Fri fragt ved køb for mindst 999 kr. efter rabat.",
     goToCheckout: "Gå til kassen",
   },
   checkout: {
