@@ -1,7 +1,7 @@
 # Root cause: `zac_delivery` HTTP 400
 
-**Status:** BLOCKED — plugin PHP lives only on the WordPress host; cloud agents cannot see `/mnt/webdata/www`  
-**Observed:** 2026-11-13; **reconfirmed** 2026-11-14 (Store API still HTTP 400, no Reepay redirect)  
+**Status:** BLOCKED on host access — runbook + scripts ready (`docs/ZAC_DELIVERY_FIX_RUNBOOK.md`)  
+**Observed:** 2026-11-13; **reconfirmed** 2026-11-14 ~21:30 Europe/Copenhagen (Store API still HTTP 400, no Reepay redirect; ~1.6s latency)  
 **Endpoint:** `POST https://zebiza.com/wp-json/wc/store/v1/checkout`
 
 ## Host access (2026-11-14)
@@ -116,10 +116,22 @@ Plugin PHP is **not** in `NorthstarApS/zebiza.com` (frontend SPA only). Org-wide
 - Clearer user-facing error when `code === zac_delivery`.
 - Still **never** fakes a paid order.
 
+## Setup landed in this repo (2026-11-14)
+
+| Artifact | Purpose |
+|---|---|
+| `scripts/host-zac-delivery-fix.sh` | On-host: find ROOT, grep `zac_delivery`, install diagnostics MU-plugin |
+| `scripts/reepay-checkout-e2e.py` | After fix: honest PASS only with Reepay `redirect_url` |
+| `docs/ZAC_DELIVERY_FIX_RUNBOOK.md` | Operator steps; no validation bypass |
+| `wordpress/mu-plugins/zac-delivery-diagnostics.php` | Logging-only MU-plugin |
+
+`sync-cart` with `{items:[{id,quantity}]}` returns `count:1` and still fails checkout — not a frontend sync bug.
+
 ## Owner & next action
 
 | Role | Action |
 |---|---|
-| WooCommerce / ZAC plugin owner | Locate plugin via grep; fix CJ/delivery confirmation; verify Store API checkout returns redirect |
-| Payments owner | After fix: Reepay testmode card + MobilePay; record order id + WC status |
+| Host access | Place agent on worker `aed9c789…` **or** inject `ZEBIZA_SSH_*` + `WP_ADMIN_*` into Cloud Agent env |
+| WooCommerce / ZAC plugin owner | Run `host-zac-delivery-fix.sh`; fix CJ/delivery confirmation; verify Store API checkout returns redirect |
+| Payments owner | `python3 scripts/reepay-checkout-e2e.py` then Reepay test card; record order id + WC status |
 | Frontend | Already merge-ready for deploy; no further workaround without bypassing validation |
