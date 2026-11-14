@@ -1,8 +1,47 @@
 # Root cause: `zac_delivery` HTTP 400
 
-**Status:** BLOCKED — cannot complete fix without WordPress/ZAC plugin admin access  
-**Observed:** 2026-11-13 (Europe/Copenhagen)  
+**Status:** BLOCKED — plugin PHP lives only on the WordPress host; cloud agents cannot see `/mnt/webdata/www`  
+**Observed:** 2026-11-13; **reconfirmed** 2026-11-14 (Store API still HTTP 400, no Reepay redirect)  
 **Endpoint:** `POST https://zebiza.com/wp-json/wc/store/v1/checkout`
+
+## Host access (2026-11-14)
+
+| Check | Result |
+|---|---|
+| This agent `runtime` | `managed` (`source=AS_SUBAGENT_FROM_CLOUD`) — **not** on self-hosted worker |
+| `/mnt/webdata/www` | Missing on managed VM |
+| SSH `mail.skoleudstyr.dk:22` (`62.66.144.161`) | Timeout from cloud (HTTP/HTTPS open; no tunnel) |
+| Required worker | `aed9c789-6a5d-5a1c-a633-34c8cb270f63` — displayName `/mnt/webdata/www @ mail.skoleudstyr.dk` |
+| Origin WP API | Reachable (Store API + `zac/v1/*`); plugin **PHP** paths return nginx 404 (not browsable) |
+| Store API retest | Still **400 `zac_delivery`** (DK + `flat_rate:3` + `reepay_checkout`, product `301268`) |
+
+### Confirmed on-host paths (from public plugin README)
+
+| Item | Path |
+|---|---|
+| Webroot | `/home/Northstar/web/zebiza.com/public_html` |
+| ZAC plugin dir | `wp-content/plugins/zac/` (README.md publicly readable; documents AI content queue + `zac/v1`, AI host `10.0.0.10:8893`) |
+| Also check | `/mnt/webdata/www/zebiza.com` (worker mount) if present as alias/bind |
+
+Public readmes also confirm sibling plugins: `woocommerce`, `reepay-checkout-gateway`, `polylang`, `seo-by-rank-math`. CJ webhook surface (`zac/v1/cj/webhook`) lives under the ZAC namespace — delivery confirmation is almost certainly in this plugin tree (or an mu-plugin), but **PHP source is not HTTP-readable**.
+
+**Unblock (pick one):**
+
+1. **Preferred:** relaunch Task/CreateAgent with machine placement onto worker `aed9c789-6a5d-5a1c-a633-34c8cb270f63` (do **not** omit `machine` / private-worker targeting — plain `task_v2` lands on managed cloud again).
+2. Or inject secrets `ZEBIZA_SSH_HOST` / `ZEBIZA_SSH_USER` / `ZEBIZA_SSH_PRIVATE_KEY` (optional `ZEBIZA_SSH_PORT`) so a managed agent can SSH to the host.
+
+Then on the host:
+
+```bash
+ROOT=/home/Northstar/web/zebiza.com/public_html
+# fallback: ROOT=/mnt/webdata/www/zebiza.com
+ls "$ROOT" | head
+grep -R "zac_delivery\|Leveringen kan ikke bekræftes" \
+  "$ROOT/wp-content/plugins" "$ROOT/wp-content/mu-plugins"
+# install logging-only MU-plugin from this repo:
+#   wordpress/mu-plugins/zac-delivery-diagnostics.php
+# → $ROOT/wp-content/mu-plugins/zac-delivery-diagnostics.php
+```
 
 ## Exact error
 
@@ -54,21 +93,21 @@ Plugin PHP is **not** in `NorthstarApS/zebiza.com` (frontend SPA only). Org-wide
 6. Optional: `POST /zebiza/v1/sync-cart` `{items:[…]}` → success  
 7. `POST /checkout` with Reepay → **400 zac_delivery**
 
-## Correct fix location (WP admin)
+## Correct fix location (WP host filesystem)
 
-1. SSH/SFTP or WP file manager → search:
+1. On worker/SSH, open webroot above and search:
    ```bash
    grep -R "zac_delivery" wp-content/plugins wp-content/mu-plugins wp-content/themes
    grep -R "Leveringen kan ikke bekræftes" wp-content
    ```
-2. Open the matching plugin file. Identify the Store API hook, typically near:
+2. Start in `wp-content/plugins/zac/` (confirmed present). Identify the Store API hook, typically near:
    - `woocommerce_store_api_checkout_update_order_from_request`
    - `rest_pre_dispatch` / custom `CheckoutSchema` extension
-   - CJ/dropship “confirm delivery” HTTP client
-3. Check WooCommerce → Status → Logs around the failed attempt (API keys, timeouts, 4xx from CJ).
+   - CJ/dropship “confirm delivery” HTTP client (`zac/v1/cj/webhook` companion)
+3. Check WooCommerce → Status → Logs around the failed attempt (API keys, timeouts, 4xx from CJ). Also check AI/CJ reachability to whatever host the confirm client calls (may differ from `ZAC_AI_BASE_URL`).
 4. Fix the **underlying confirmation failure** (credentials, endpoint, stock, address mapping).  
    **Do not** remove the validation gate to force checkout through.
-5. Optional: install `wordpress/mu-plugins/zac-delivery-diagnostics.php` from this repo to log shipping/payment context (does not disable validation).
+5. Install `wordpress/mu-plugins/zac-delivery-diagnostics.php` from this repo into `wp-content/mu-plugins/` (logging only; no behaviour change).
 6. Re-run Store API reproduction; expect `payment_result.redirect_url` to Reepay.
 
 ## Frontend changes made (this PR)
