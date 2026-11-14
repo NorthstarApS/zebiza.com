@@ -12,6 +12,14 @@
 
 Do **not** attach the apex custom domain to Pages until `/wp-*` is routed to the nginx origin (Worker / Origin Rule). Attaching apex alone would break WooCommerce.
 
+## Apex go-live (active)
+
+Cloudflare Worker `zebiza-edge` routes:
+- `/wp-*` → DNS-only `origin.zebiza.com` (nginx/WordPress)
+- everything else → Pages `zebiza-com.pages.dev`
+
+Deploy worker: `cd workers && npx wrangler deploy`
+
 ## Preview deploy (safe, already working)
 
 ```sh
