@@ -1,0 +1,276 @@
+[
+  {
+    "id": 301233,
+    "name": "Dameparfume Cartier Déclaration Parfum",
+    "slug": "dameparfume-cartier-declaration-parfum",
+    "sku": "M0125955",
+    "brand": "Cartier",
+    "gtin": "",
+    "price": 914.95,
+    "inStock": true,
+    "categories": [
+      "parfume-kvinder"
+    ],
+    "status": "BLOCKED",
+    "score": 73,
+    "reasons": [
+      "Mangler billede",
+      "Mangler GTIN (SKU findes)"
+    ],
+    "url": "https://zebiza.com/da/produkt/dameparfume-cartier-declaration-parfum"
+  },
+  {
+    "id": 300296,
+    "name": "Tandbørstehoved TM Electron",
+    "slug": "tandboerstehoved-tm-electron",
+    "sku": "S6501990",
+    "brand": "TM Electron",
+    "gtin": "8436034264682",
+    "price": 84.95,
+    "inStock": true,
+    "categories": [
+      "barbering-grooming"
+    ],
+    "status": "BLOCKED",
+    "score": 50,
+    "reasons": [
+      "Ikke beauty-relevant / misclassified merchandising"
+    ],
+    "url": "https://zebiza.com/da/produkt/tandboerstehoved-tm-electron"
+  },
+  {
+    "id": 230801,
+    "name": "Nano-ionspray til ansigt og øjne – kompakt forstøver",
+    "slug": "8cm-nebulizer",
+    "sku": "CJMB2638263",
+    "brand": "",
+    "gtin": "",
+    "price": 272.95,
+    "inStock": true,
+    "categories": [
+      "harpleje"
+    ],
+    "status": "BLOCKED",
+    "score": 38,
+    "reasons": [
+      "Ikke beauty-relevant / misclassified merchandising",
+      "Mangler brand",
+      "Mangler GTIN (SKU findes)"
+    ],
+    "url": "https://zebiza.com/da/produkt/8cm-nebulizer"
+  },
+  {
+    "id": 230809,
+    "name": "Hårsteamere til mobil brug, justerbar højde og hjul",
+    "slug": "hair-steamer-for-mobile-use",
+    "sku": "CJZR2602751",
+    "brand": "",
+    "gtin": "",
+    "price": 1872.95,
+    "inStock": true,
+    "categories": [
+      "harpleje"
+    ],
+    "status": "BLOCKED",
+    "score": 38,
+    "reasons": [
+      "Ikke beauty-relevant / misclassified merchandising",
+      "Mangler brand",
+      "Mangler GTIN (SKU findes)"
+    ],
+    "url": "https://zebiza.com/da/produkt/hair-steamer-for-mobile-use"
+  },
+  {
+    "id": 230813,
+    "name": "Justerbar hårvaskemåtte til frisør – sort",
+    "slug": "black-hair-washing-basin",
+    "sku": "CJZR2602749",
+    "brand": "",
+    "gtin": "",
+    "price": 970.95,
+    "inStock": true,
+    "categories": [
+      "harpleje"
+    ],
+    "status": "BLOCKED",
+    "score": 38,
+    "reasons": [
+      "Ikke beauty-relevant / misclassified merchandising",
+      "Mangler brand",
+      "Mangler GTIN (SKU findes)"
+    ],
+    "url": "https://zebiza.com/da/produkt/black-hair-washing-basin"
+  },
+  {
+    "id": 230811,
+    "name": "Professionel hårtølling med 5 skuffer og hjul",
+    "slug": "hairdressing-trolley-plastic-with-wheels",
+    "sku": "CJZR2602750",
+    "brand": "",
+    "gtin": "",
+    "price": 1120.95,
+    "inStock": true,
+    "categories": [
+      "harpleje"
+    ],
+    "status": "BLOCKED",
+    "score": 18,
+    "reasons": [
+      "Ikke beauty-relevant / misclassified merchandising",
+      "Mangler brand",
+      "Mangler GTIN (SKU findes)",
+      "Mistænkelig/dårlig dansk produkttekst"
+    ],
+    "url": "https://zebiza.com/da/produkt/hairdressing-trolley-plastic-with-wheels"
+  },
+  {
+    "id": 230853,
+    "name": "Elektrisk tandbørste – ren og effektiv tandskik",
+    "slug": "electric-toothbrush",
+    "sku": "CJST2532783",
+    "brand": "",
+    "gtin": "",
+    "price": 295.95,
+    "inStock": true,
+    "categories": [
+      "harpleje"
+    ],
+    "status": "BLOCKED",
+    "score": 18,
+    "reasons": [
+      "Ikke beauty-relevant / misclassified merchandising",
+      "Mangler brand",
+      "Mangler GTIN (SKU findes)",
+      "Mistænkelig/dårlig dansk produkttekst"
+    ],
+    "url": "https://zebiza.com/da/produkt/electric-toothbrush"
+  },
+  {
+    "id": 230855,
+    "name": "Vandflosser til tænder – renser mellemrum effektivt",
+    "slug": "water-flosser-clean-teeth",
+    "sku": "CJST2532774",
+    "brand": "",
+    "gtin": "",
+    "price": 524.95,
+    "inStock": true,
+    "categories": [
+      "harpleje"
+    ],
+    "status": "BLOCKED",
+    "score": 38,
+    "reasons": [
+      "Ikke beauty-relevant / misclassified merchandising",
+      "Mangler brand",
+      "Mangler GTIN (SKU findes)"
+    ],
+    "url": "https://zebiza.com/da/produkt/water-flosser-clean-teeth"
+  },
+  {
+    "id": 230857,
+    "name": "Elektrisk tandbørste – ren og effektiv hygiejne",
+    "slug": "electric-toothbrush-2",
+    "sku": "CJST2532921",
+    "brand": "",
+    "gtin": "",
+    "price": 289.95,
+    "inStock": true,
+    "categories": [
+      "harpleje"
+    ],
+    "status": "BLOCKED",
+    "score": 18,
+    "reasons": [
+      "Ikke beauty-relevant / misclassified merchandising",
+      "Mangler brand",
+      "Mangler GTIN (SKU findes)",
+      "Mistænkelig/dårlig dansk produkttekst"
+    ],
+    "url": "https://zebiza.com/da/produkt/electric-toothbrush-2"
+  },
+  {
+    "id": 230859,
+    "name": "V1 Portabel Tandrenser – V1 Portable Water Flosser",
+    "slug": "v1-portable-water-flosser-disinfects-and-cleans-teeth",
+    "sku": "CJST2650510",
+    "brand": "",
+    "gtin": "",
+    "price": 469.95,
+    "inStock": true,
+    "categories": [
+      "harpleje"
+    ],
+    "status": "BLOCKED",
+    "score": 18,
+    "reasons": [
+      "Ikke beauty-relevant / misclassified merchandising",
+      "Mangler brand",
+      "Mangler GTIN (SKU findes)",
+      "Mistænkelig/dårlig dansk produkttekst"
+    ],
+    "url": "https://zebiza.com/da/produkt/v1-portable-water-flosser-disinfects-and-cleans-teeth"
+  },
+  {
+    "id": 230865,
+    "name": "6800 Helhedsansigtsgasmaske med filter – kemisk beskyttelse",
+    "slug": "6800-full-face-gas-mask-15-in-1-chemical-vapor-paint-spray-respirator-with-filter",
+    "sku": "CJMZ2566444",
+    "brand": "",
+    "gtin": "",
+    "price": 444.95,
+    "inStock": true,
+    "categories": [
+      "harpleje"
+    ],
+    "status": "BLOCKED",
+    "score": 38,
+    "reasons": [
+      "Ikke beauty-relevant / misclassified merchandising",
+      "Mangler brand",
+      "Mangler GTIN (SKU findes)"
+    ],
+    "url": "https://zebiza.com/da/produkt/6800-full-face-gas-mask-15-in-1-chemical-vapor-paint-spray-respirator-with-filter"
+  },
+  {
+    "id": 230873,
+    "name": "Foldbar negleservicebord med hjul og skuffer",
+    "slug": "folding-manicure-table-with-wheels-folding-manicure-table-with-wheels",
+    "sku": "CJMJ2580586",
+    "brand": "",
+    "gtin": "",
+    "price": 1294.95,
+    "inStock": true,
+    "categories": [
+      "harpleje"
+    ],
+    "status": "BLOCKED",
+    "score": 38,
+    "reasons": [
+      "Ikke beauty-relevant / misclassified merchandising",
+      "Mangler brand",
+      "Mangler GTIN (SKU findes)"
+    ],
+    "url": "https://zebiza.com/da/produkt/folding-manicure-table-with-wheels-folding-manicure-table-with-wheels"
+  },
+  {
+    "id": 230883,
+    "name": "3.000 gennemsigtige elastikbånd til hjem og kontor",
+    "slug": "3000-transparent-elastic-bands-versatile-for-household-office-and-organization-party-supplies",
+    "sku": "CJHH2973168",
+    "brand": "",
+    "gtin": "",
+    "price": 222.95,
+    "inStock": true,
+    "categories": [
+      "harpleje"
+    ],
+    "status": "BLOCKED",
+    "score": 38,
+    "reasons": [
+      "Ikke beauty-relevant / misclassified merchandising",
+      "Mangler brand",
+      "Mangler GTIN (SKU findes)"
+    ],
+    "url": "https://zebiza.com/da/produkt/3000-transparent-elastic-bands-versatile-for-household-office-and-organization-party-supplies"
+  }
+]

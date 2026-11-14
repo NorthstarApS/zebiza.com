@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-11-14T18:33:43.643Z",
+  "feedUrl": "https://zebiza.com/merchant-feed.xml",
+  "productCount": 204,
+  "sourceProducts": 216,
+  "errors": {
+    "missingTitle": 0,
+    "missingImage": 1,
+    "missingBrand": 18,
+    "missingGtin": 76,
+    "invalidUrl": 0,
+    "duplicateId": 0,
+    "duplicateGtin": 0,
+    "nonBeautySkipped": 12,
+    "outOfStock": 0
+  }
+}

@@ -1,0 +1,7 @@
+# Cloudflare Pages project metadata for Zebiza frontend.
+# Deploy via: npx wrangler pages deploy dist --project-name=zebiza-com
+# Or GitHub Actions (.github/workflows/deploy-cloudflare.yml)
+
+name = "zebiza-com"
+compatibility_date = "2024-11-01"
+pages_build_output_dir = "dist"

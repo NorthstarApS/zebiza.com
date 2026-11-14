@@ -1,4 +1,5 @@
 import type { LanguageCode } from "@/i18n";
+import { getWpApiBase } from "@/lib/site";
 
 /**
  * WordPress content (pages) API — wp/v2.
@@ -8,8 +9,6 @@ import type { LanguageCode } from "@/i18n";
  * Falls back to null (components then use the local i18n copy).
  */
 
-const API_BASE = (import.meta.env.VITE_WP_API_BASE as string | undefined)?.replace(/\/$/, "") ?? "";
-
 export interface WPPage {
   id: number;
   slug: string;
@@ -18,12 +17,20 @@ export interface WPPage {
   excerpt?: { rendered: string };
 }
 
+function pageUrl(path: string, lang: LanguageCode) {
+  const base = getWpApiBase();
+  const url = new URL(
+    `${base}/wp-json/wp/v2${path}`,
+    typeof window !== "undefined" ? window.location.origin : "https://zebiza.com",
+  );
+  url.searchParams.set("lang", lang);
+  return url;
+}
+
 export async function getPageBySlug(slug: string, lang: LanguageCode = "da"): Promise<WPPage | null> {
-  if (!API_BASE) return null;
   try {
-    const url = new URL(`${API_BASE}/wp-json/wp/v2/pages`);
+    const url = pageUrl("/pages", lang);
     url.searchParams.set("slug", slug);
-    url.searchParams.set("lang", lang);
     const res = await fetch(url.toString());
     if (!res.ok) throw new Error(`WP ${res.status}`);
     const data = (await res.json()) as WPPage[];
@@ -35,11 +42,9 @@ export async function getPageBySlug(slug: string, lang: LanguageCode = "da"): Pr
 }
 
 export async function getMenu(location: string, lang: LanguageCode = "da"): Promise<unknown[] | null> {
-  if (!API_BASE) return null;
   try {
-    const url = new URL(`${API_BASE}/wp-json/wp/v2/menu-items`);
+    const url = pageUrl("/menu-items", lang);
     url.searchParams.set("menus", location);
-    url.searchParams.set("lang", lang);
     const res = await fetch(url.toString());
     if (!res.ok) throw new Error(`WP ${res.status}`);
     return (await res.json()) as unknown[];

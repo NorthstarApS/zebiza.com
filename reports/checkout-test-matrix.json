@@ -1,0 +1,79 @@
+{
+  "generatedAt": "2026-11-13T21:40:00Z",
+  "environment": "production Store API https://zebiza.com (frontend PR not deployed)",
+  "tests": [
+    {
+      "id": "product_load",
+      "result": "PASS",
+      "evidence": "GET /wp-json/wc/store/v1/products returns catalog"
+    },
+    {
+      "id": "add_to_cart",
+      "result": "PASS",
+      "evidence": "POST /cart/add-item with nonce+cart-token; items_count>=1"
+    },
+    {
+      "id": "update_customer_address",
+      "result": "PASS",
+      "evidence": "POST /cart/update-customer DK → has_calculated_shipping=true"
+    },
+    {
+      "id": "shipping_rate",
+      "result": "PASS",
+      "evidence": "flat_rate:3 Fragt 59 kr. (4720+1180 minor). free_shipping:2 at ≥999 DKK after discount"
+    },
+    {
+      "id": "select_shipping_persists",
+      "result": "PASS",
+      "evidence": "GET /cart after select still shows flat_rate:3 selected=true and total_shipping=4720"
+    },
+    {
+      "id": "sync_cart",
+      "result": "PASS",
+      "evidence": "POST /zebiza/v1/sync-cart → {success:true,count:N}"
+    },
+    {
+      "id": "payment_gateways_list",
+      "result": "PASS",
+      "evidence": "reepay_checkout, reepay_mobilepay"
+    },
+    {
+      "id": "checkout_reepay_card",
+      "result": "BLOCKED",
+      "code": "zac_delivery",
+      "http": 400,
+      "message": "Leveringen kan ikke bekræftes lige nu. Prøv igen om et øjeblik.",
+      "rootCauseDoc": "reports/zac-delivery-root-cause.md"
+    },
+    {
+      "id": "checkout_reepay_mobilepay",
+      "result": "BLOCKED",
+      "code": "zac_delivery",
+      "http": 400
+    },
+    {
+      "id": "paid_order_verified",
+      "result": "BLOCKED",
+      "reason": "Reepay never reached; no order_id. Not simulated as PASS."
+    },
+    {
+      "id": "ga4_purchase",
+      "result": "NOT_VERIFIED",
+      "note": "Frontend fires purchase only after confirmed payment — blocked upstream"
+    }
+  ],
+  "ownerActionsRequired": [
+    {
+      "owner": "WooCommerce / ZAC plugin admin",
+      "action": "grep wp-content for zac_delivery; fix CJ/delivery confirmation; see reports/zac-delivery-root-cause.md"
+    },
+    {
+      "owner": "Cloudflare / GitHub deployer",
+      "action": "Merge PR #1 and deploy dist/ via Cloudflare Pages (see docs/DEPLOY.md) so SSR + merchant-feed.xml go live"
+    },
+    {
+      "owner": "Reepay admin",
+      "action": "After zac_delivery fix: complete testmode payment and confirm WC order status"
+    }
+  ]
+}

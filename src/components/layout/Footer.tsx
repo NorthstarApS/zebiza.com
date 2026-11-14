@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "@/context/LanguageContext";
 import { mainNav } from "@/lib/navigation";
 import LanguageSwitcher from "./LanguageSwitcher";
-import logo from "@/assets/zebiza_logo.png.asset.json";
+const LOGO_SRC = "/brand/zebiza-logo.webp";
 
 export default function Footer() {
   const { t, localizedPath } = useLanguage();
@@ -11,7 +11,7 @@ export default function Footer() {
     <footer className="mt-4 border-t border-border bg-section">
       <div className="container-z grid grid-cols-2 gap-8 py-12 md:grid-cols-4">
         <div className="col-span-2 md:col-span-1">
-          <img src={logo.url} alt="Zebiza.com" className="mb-3 h-8 w-auto" />
+          <img src={LOGO_SRC} alt="Zebiza.com" width={140} height={36} className="mb-3 h-8 w-auto" />
           <p className="max-w-xs text-sm text-muted-foreground">{t.footer.tagline}</p>
         </div>
 
