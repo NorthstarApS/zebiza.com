@@ -1,72 +1,66 @@
-# Deploy Zebiza frontend (Cloudflare Pages)
+# Deploy Zebiza frontend
 
-This project is **not** deployed via Lovable. Use Cloudflare + GitHub.
+## Production reality (verified 2026-11-14 Europe/Copenhagen)
 
-## Prerequisites
+| Layer | Fact |
+|---|---|
+| DNS / CDN | Cloudflare zone `zebiza.com` (proxied) |
+| Origin | **nginx** on `62.66.144.161` (`mail.skoleudstyr.dk`) |
+| Apex A record | `zebiza.com` → `62.66.144.161` (proxied) |
+| WordPress | Same origin (`/wp-json`, `/wp-content`, `/wp-admin`) |
+| Cloudflare Pages | Project `zebiza-com` used for **preview / CD artifacts**, not yet apex |
 
-1. Domain `zebiza.com` already on Cloudflare DNS (confirmed).
-2. WordPress/WooCommerce origin reachable for `/wp-*` paths.
-3. GitHub repo `NorthstarApS/zebiza.com`.
+Do **not** attach the apex custom domain to Pages until `/wp-*` is routed to the nginx origin (Worker / Origin Rule). Attaching apex alone would break WooCommerce.
 
-## One-time Cloudflare setup
-
-### A. Pages project for the SPA
-
-1. Cloudflare Dashboard → Workers & Pages → Create → Pages → Connect to Git.
-2. Select `NorthstarApS/zebiza.com`, production branch `main`.
-3. Build settings:
-   - **Build command:** `npm run build`
-   - **Build output directory:** `dist`
-   - **Node version:** `20`
-4. Environment variables (optional):
-   - `VITE_SITE_ORIGIN=https://zebiza.com`
-   - `VITE_WP_API_BASE=https://zebiza.com`
-5. After first deploy, attach custom domain `zebiza.com` / `www`.
-
-### B. Keep WordPress on the same hostname
-
-Pages must **not** intercept WP API/admin/media. Configure Cloudflare so these paths hit the WP origin (existing host that already serves `/wp-json` today):
-
-- `/wp-json/*`
-- `/wp-admin/*`
-- `/wp-login.php`
-- `/wp-content/*`
-- `/wp-includes/*`
-- `/xmlrpc.php` (prefer blocked)
-
-Use **Origin Rules**, **Workers routes**, or a **Cloudflare Load Balancer / reverse proxy** already in place. Do not point these paths at the Pages project.
-
-### C. GitHub Actions deploy (optional alternative to CF Git integration)
-
-Repository secrets:
-
-- `CLOUDFLARE_API_TOKEN` — token with Pages Edit
-- `CLOUDFLARE_ACCOUNT_ID` — account id
-
-Workflow: `.github/workflows/deploy-cloudflare.yml` (runs on push to `main`).
-
-## Release checklist
-
-1. Merge PR to `main`.
-2. Wait for Pages deploy (or Actions deploy) to succeed.
-3. Run:
+## Preview deploy (safe, already working)
 
 ```sh
-npm run qa:prod
+npm ci
+npm run build
+npx wrangler pages deploy dist --project-name=zebiza-com
 ```
 
-Expect:
+Requires env:
 
-- `/merchant-feed.xml` → XML (`application/xml` or `text/xml`), not HTML
-- `/da/` → H1 present, no `Lovable` / Linea OG image
-- Unknown path → HTTP 404 (`/404.html`), not SPA 200
+- `CLOUDFLARE_API_TOKEN`
+- `CLOUDFLARE_ACCOUNT_ID`
+
+Latest example: `https://86c99d73.zebiza-com.pages.dev`
+
+## Production cutover options
+
+### A. Preferred — publish `dist/` to nginx origin (reuse existing infra)
+
+On `mail.skoleudstyr.dk` (webroot under `/mnt/webdata/www/…`):
+
+1. Build `dist/` (or pull artifact from CI / Pages).
+2. Sync static files into the Zebiza vhost docroot **without** overwriting WordPress (`wp-admin`, `wp-content`, `wp-includes`, PHP).
+3. Ensure nginx serves:
+   - prerendered HTML under `/da/...`
+   - `/merchant-feed.xml` as XML
+   - real 404 for unknown paths
+   - `/wp-json` → PHP/WordPress
+4. Purge Cloudflare cache for HTML/feed.
+
+### B. Cloudflare Pages as HTML origin + Worker for WP
+
+1. Keep Pages project `zebiza-com`.
+2. Add a Worker / Origin Rule: `/wp-*` → `62.66.144.161`, everything else → Pages.
+3. Only then attach custom domain `zebiza.com`.
+
+## GitHub Actions
+
+`.github/workflows/deploy-cloudflare.yml` deploys to Pages on push to `main` when repository secrets match the names above.
 
 ## Rollback
 
-Cloudflare Pages → Deployments → select previous deployment → Rollback.
+- Pages: Deployments → previous deployment → Rollback (preview / Pages hostname).
+- nginx: restore previous `dist/` from backup / previous rsync.
 
-## Cache invalidation
+## Health checks
 
-- HTML/feed: short cache via `public/_headers` (5 minutes for feed/sitemap).
-- After catalog changes that affect prerender: trigger a new Pages build (push empty commit, workflow_dispatch, or scheduled rebuild).
-- Product price/stock in the live SPA still comes from Store API at runtime; prerendered HTML can lag until rebuild.
+```sh
+npm run qa:prod   # against https://zebiza.com after cutover
+# Preview:
+curl -sI https://<deployment>.zebiza-com.pages.dev/merchant-feed.xml
+```

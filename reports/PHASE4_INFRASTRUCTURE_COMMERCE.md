@@ -4,7 +4,7 @@
 **Branch:** `cursor/beauty-seo-commerce-recovery-4eca`  
 **PR:** https://github.com/NorthstarApS/zebiza.com/pull/1  
 
-**Verdict: NOT PASS for production sales.** Frontend is Lovable-free and deployable via Cloudflare Pages; live site still serves the Nov 7 SPA; `zac_delivery` still blocks Reepay without WordPress plugin access.
+**Verdict: NOT PASS for production sales.** Frontend is Lovable-free; Cloudflare Pages preview is live (`zebiza-com.pages.dev`) with SSR + XML feed; **apex `zebiza.com` still serves the Nov 7 SPA from nginx**; `zac_delivery` still blocks Reepay without WordPress plugin access.
 
 ---
 

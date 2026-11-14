@@ -40,15 +40,19 @@ npm run qa:prod      # HTTP-audit af produktion
 
 ## Deployment (uden tredjeparts app-builders)
 
-Anbefalet: **Cloudflare Pages** knyttet til dette GitHub-repo.
+**Produktion i dag:** Cloudflare proxy → **nginx** på `62.66.144.161` (samme host som WordPress).
 
-1. Opret Pages-projekt med build command `npm run build` og output `dist`.
-2. Tilknyt custom domain `zebiza.com` (eller hold DNS i Cloudflare og peg Pages).
-3. Sørg for at WP-stier (`/wp-json/*`, `/wp-admin/*`, `/wp-content/*`, `/wp-includes/*`) fortsat går til WordPress-origin (Cloudflare Worker/Route eller origin-rules).
-4. GitHub Actions workflow `.github/workflows/deploy-cloudflare.yml` kan deploye ved push til `main` når secrets er sat:
-   - `CLOUDFLARE_API_TOKEN`
-   - `CLOUDFLARE_ACCOUNT_ID`
-   - valgfrit `CLOUDFLARE_PROJECT_NAME` (default `zebiza-com`)
+**CD-artifact / preview:** Cloudflare Pages-projekt `zebiza-com`  
+→ `https://zebiza-com.pages.dev` (SSR + XML feed verificeret).
+
+```sh
+npm run build
+npx wrangler pages deploy dist --project-name=zebiza-com --branch=main
+```
+
+Kræver `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID`.
+
+**Vigtigt:** Tilknyt ikke apex `zebiza.com` til Pages, før `/wp-*` routes til nginx — ellers brydes WooCommerce. Apex-cutover: sync `dist/` til nginx **eller** Worker-split (se `docs/DEPLOY.md`).
 
 ### Rollback
 

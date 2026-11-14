@@ -1,6 +1,6 @@
 # Zebiza.com — production architecture
 
-Verified from live HTTP/DNS on 2026-11-13 (Europe/Copenhagen).
+Verified 2026-11-14 (Europe/Copenhagen).
 
 ## Overview
 
@@ -8,62 +8,51 @@ Verified from live HTTP/DNS on 2026-11-13 (Europe/Copenhagen).
 Browser
   │
   ▼
-Cloudflare (DNS NS: algin/eve.ns.cloudflare.com)
+Cloudflare CDN (zone zebiza.com, Free plan, orange-cloud proxy)
   │
-  ├─ Static frontend (Vite build under /assets/, HTML shells, sitemap, feed)
-  │    Last known publish fingerprint: Last-Modified Sat, 07 Nov 2026 22:27:56 GMT
-  │    Still contains legacy Lovable/Linea meta on live HTML until this PR is deployed
-  │
-  └─ WordPress / WooCommerce (same hostname)
-       /wp-json/*   Store API + zebiza/v1 + zac/v1 + Reepay/Billwerk namespaces
-       /wp-content/uploads/*  product media (e.g. zac-bb3/*)
-       /wp-includes/*         WP core assets
-       /wp-admin/*            admin (auth redirect)
+  └─ Origin nginx @ 62.66.144.161 (mail.skoleudstyr.dk)
+       ├─ Static frontend (Vite `dist/`, `/assets/*`, HTML shells)
+       └─ WordPress / WooCommerce
+            /wp-json/*   Store API + zebiza/v1 + zac/v1 + Reepay
+            /wp-content/uploads/*
+            /wp-includes/*, /wp-admin/*
 ```
 
-## Frontend repo (this repository)
+DNS A records (proxied): `zebiza.com`, `www.zebiza.com` → `62.66.144.161`.
 
-- **Stack:** Vite 5 + React 18 + React Router + Tailwind
-- **Build:** `seo:assets` → `vite build` → `prerender` → `dist/`
-- **Edge config in repo:** `public/_redirects`, `public/_headers`, `public/404.html`, `wrangler.toml`
-- **CI:** `.github/workflows/qa.yml` (typecheck/build/ssr/products)
-- **CD:** `.github/workflows/deploy-cloudflare.yml` (requires GitHub secrets `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`)
+## Independent frontend pipeline (Cloudflare Pages)
 
-## Commerce backends (not in this repo)
+| Item | Value |
+|---|---|
+| Pages project | `zebiza-com` |
+| Production hostname | `https://zebiza-com.pages.dev` |
+| Deploy | `npx wrangler pages deploy dist --project-name=zebiza-com --branch=main` |
+| Secrets | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID` |
 
-| System | Evidence on production | Owned where |
-|---|---|---|
-| WooCommerce Store API | `/wp-json/wc/store/v1/*` | WordPress host |
-| Zebiza helpers | `/wp-json/zebiza/v1/sync-cart`, `payment-gateways` | WP plugin |
-| ZAC / CJ | `/wp-json/zac/v1/*`, checkout error `zac_delivery` | WP plugin (source not in GitHub org search) |
-| Reepay | Gateways `reepay_checkout`, `reepay_mobilepay` | WP + Reepay account |
-| RankMath / MAMI / AdTribes | `/wp-json/rankmath/*`, `mami/v1`, `adtribes/v1` | WP plugins |
+**Apex custom domain is not attached to Pages.** Doing so without routing `/wp-*` to nginx would break WooCommerce.
 
-## Routing rules required at Cloudflare
+Verified on Pages (2026-11-14):
 
-After switching off any legacy app-builder publish pipeline:
+- `/da/` prerender H1 + Zebiza meta (no Lovable)
+- `/merchant-feed.xml` → `application/xml`
+- unknown path → HTTP 404
 
-1. **Pages / static origin** serves `dist/` for HTML, `/assets/*`, `/sitemap.xml`, `/merchant-feed.xml`, `/robots.txt`.
-2. **WordPress origin** continues to receive `/wp-json/*`, `/wp-admin/*`, `/wp-login.php`, `/wp-content/*`, `/wp-includes/*`.
-3. Do not send `/wp-json` to the static Pages project.
+## Frontend repo
 
-## Deployed commit verification
+- Vite 5 + React 18 + prerender (`npm run build`)
+- Edge helpers in repo: `public/_redirects`, `public/_headers`, `public/404.html`
+- CI: `.github/workflows/qa.yml`
+- CD: `.github/workflows/deploy-cloudflare.yml` → Pages
 
-Live SPA cannot expose git SHA by default. After Cloudflare Pages deploy, verify:
+## Commerce backends (WordPress host)
 
-- Response `Last-Modified` / Pages deployment ID
-- `/merchant-feed.xml` `Content-Type: application/xml`
-- Absence of `author=Lovable` / `@lovable_dev` / Linea OG image
-- Presence of prerender H1 on `/da/kategori/hudpleje-ansigt`
+| System | Path / evidence |
+|---|---|
+| Woo Store API | `/wp-json/wc/store/v1/*` |
+| Zebiza helpers | `/wp-json/zebiza/v1/*` |
+| ZAC / CJ | checkout error `zac_delivery` (plugin source not in this repo) |
+| Reepay | `reepay_checkout`, `reepay_mobilepay` |
 
-## Git / PR status (authoritative)
+## Cutover to apex
 
-```
-git log --oneline origin/main..origin/cursor/beauty-seo-commerce-recovery-4eca
-```
-
-Expected Phase 1–3 commits:
-
-1. `451f5be` Recover Zebiza beauty SEO…
-2. `42ea2c0` Phase 2 prerender…
-3. `448417b` Phase 3 prod audit… (+ Phase 4 commit once pushed)
+See `docs/DEPLOY.md`: sync `dist/` onto nginx **or** Worker that sends `/wp-*` to origin and HTML to Pages.
