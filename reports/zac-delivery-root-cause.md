@@ -1,8 +1,20 @@
 # Root cause: `zac_delivery` HTTP 400
 
-**Status:** BLOCKED — cannot complete fix without WordPress/ZAC plugin admin access  
-**Observed:** 2026-11-13 (Europe/Copenhagen)  
+**Status:** BLOCKED — plugin PHP lives only on the WordPress host; cloud agents cannot see `/mnt/webdata/www`  
+**Observed:** 2026-11-13; **reconfirmed** 2026-11-14 (Store API still HTTP 400, no Reepay redirect)  
 **Endpoint:** `POST https://zebiza.com/wp-json/wc/store/v1/checkout`
+
+## Host access (2026-11-14)
+
+| Check | Result |
+|---|---|
+| This agent `runtime` | `managed` (`source=AS_SUBAGENT_FROM_CLOUD`) — **not** on self-hosted worker |
+| `/mnt/webdata/www` | Missing on managed VM |
+| SSH `mail.skoleudstyr.dk:22` | Timeout from cloud |
+| Required worker | `aed9c789-6a5d-5a1c-a633-34c8cb270f63` — displayName `/mnt/webdata/www @ mail.skoleudstyr.dk` |
+| Origin WP API | Reachable (Store API + `zac/v1/*`); plugin PHP paths return nginx 404 (not browsable) |
+
+**Unblock:** relaunch/Task with `privateWorkerId=aed9c789-6a5d-5a1c-a633-34c8cb270f63`, then run the grep/fix steps below on the live webroot.
 
 ## Exact error
 
