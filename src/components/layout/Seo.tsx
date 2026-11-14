@@ -109,7 +109,7 @@ export function organizationJsonLd() {
     "@id": `${SITE_ORIGIN}/#org`,
     name: "Zebiza.com",
     url: SITE_ORIGIN,
-    image: `${SITE_ORIGIN}/wp-content/uploads/2026/07/zebiza_logo_100.webp`,
+    image: `${SITE_ORIGIN}/brand/zebiza-logo.webp`,
     parentOrganization: { "@id": "https://viniko.dk/#org" },
     address: {
       "@type": "PostalAddress",

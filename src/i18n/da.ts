@@ -2,9 +2,9 @@
 export const da = {
   meta: {
     langName: "Dansk",
-    homeTitle: "Zebiza — beautyfavoritter, kendte brands og hverdagsfund",
+    homeTitle: "Hudpleje, makeup og parfume online | Zebiza",
     homeDescription:
-      "Dansk beauty-webshop med hudpleje, makeup, hårpleje, negle, parfume og beauty tools. Fair priser, tryg betaling og levering til Danmark.",
+      "Køb hudpleje, serum, makeup, mascara, hårpleje og parfume online hos Zebiza. Dansk beauty-webshop med fair priser, tryg betaling og levering til Danmark.",
   },
   announcement:
     "Dansk beauty-webshop · Fair priser · Tryg betaling · Levering typisk 3-6 hverdage · 30 dages retur",
@@ -65,9 +65,9 @@ export const da = {
   },
   hero: {
     eyebrow: "Zebiza",
-    headline: "Beautyfavoritter, kendte brands og spændende hverdagsfund",
-    sub: "Hudpleje, makeup, hår, negle, parfume og beauty tools — samlet i én dansk webshop med fair priser.",
-    micro: "Shop beauty med tryg betaling og levering til Danmark.",
+    headline: "Hudpleje, makeup og parfume — fair priser online",
+    sub: "Shop serum, foundation, mascara, hårpleje og dufte i én dansk beauty-webshop. Tryg betaling og levering til hele Danmark.",
+    micro: "Hudpleje tilbud, makeup og parfume med dansk kundeservice.",
     ctaPrimary: "Shop hudpleje",
     ctaSecondary: "Shop makeup",
   },

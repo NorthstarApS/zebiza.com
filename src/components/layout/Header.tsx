@@ -6,8 +6,9 @@ import { useCart } from "@/context/CartContext";
 import { mainNav } from "@/lib/navigation";
 import LanguageSwitcher from "./LanguageSwitcher";
 import SearchSuggest from "./SearchSuggest";
-import logo from "@/assets/zebiza_logo.png.asset.json";
 import { cn } from "@/lib/utils";
+
+const LOGO_SRC = "/brand/zebiza-logo.webp";
 
 export default function Header() {
   const { t, localizedPath } = useLanguage();
@@ -46,7 +47,7 @@ export default function Header() {
         </button>
 
         <Link to={localizedPath("/")} aria-label="Zebiza" className="shrink-0">
-          <img src={logo.url} alt="Zebiza.com" className="h-7 w-auto sm:h-9" />
+          <img src={LOGO_SRC} alt="Zebiza.com" width={140} height={36} className="h-7 w-auto sm:h-9" />
         </Link>
 
         {/* Search (desktop) */}

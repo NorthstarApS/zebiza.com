@@ -35,8 +35,8 @@ export default function Hero() {
         </div>
         <div className="relative min-h-[280px] md:min-h-[420px]">
           <img
-            src="https://zebiza.com/wp-content/uploads/2026/05/5028197981105_S05123239_P00.jpg"
-            alt="Beautyfavoritter hos Zebiza"
+            src="/brand/hero-beauty.webp"
+            alt="Hudpleje og beautyfavoritter hos Zebiza"
             width={1000}
             height={1000}
             className="absolute inset-0 h-full w-full object-cover"

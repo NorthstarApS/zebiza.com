@@ -28,10 +28,10 @@ const NON_BEAUTY =
 
 const CATEGORY_COPY = {
   "hudpleje-ansigt": {
-    h1: "Hudpleje",
-    title: "Hudpleje | Zebiza",
+    h1: "Hudpleje — serum, creme og ansigtsrens",
+    title: "Hudpleje online | Serum & creme | Zebiza",
     description:
-      "Køb ansigtspleje hos Zebiza — serum, creme, rens og masker fra kendte og spændende brands. Dansk webshop, fair priser.",
+      "Køb hudpleje online hos Zebiza — serum til ansigt, creme, ansigtsrens og masker. Fair priser og levering til Danmark.",
     intro: "Find ansigtsrens, serum, creme og masker til din hudtype — samlet ét sted.",
   },
   ansigtsrens: {
@@ -42,14 +42,14 @@ const CATEGORY_COPY = {
   },
   harpleje: {
     h1: "Hårpleje",
-    title: "Hårpleje | Zebiza",
-    description: "Shampoo, balsam, hårkur, farve og styling hos Zebiza. Kendte brands og hverdagsfavoritter.",
+    title: "Hårpleje online | Shampoo & styling | Zebiza",
+    description: "Køb hårpleje online — shampoo, balsam, hårkur, farve og styling hos Zebiza.",
     intro: "Fra shampoo og balsam til farve, styling og redskaber.",
   },
   "kosmetik-ansigt": {
-    h1: "Makeup — ansigt",
-    title: "Makeup — ansigt | Zebiza",
-    description: "Foundation, concealer og ansigtsmakeup hos Zebiza. Kendte brands, fair priser.",
+    h1: "Makeup — foundation og ansigt",
+    title: "Makeup online | Foundation | Zebiza",
+    description: "Køb makeup online hos Zebiza — foundation, concealer og ansigtsmakeup til fair priser.",
     intro: "Foundation og ansigtsmakeup til en jævn base.",
   },
   "beauty-tools": {
@@ -60,14 +60,14 @@ const CATEGORY_COPY = {
   },
   "parfume-dufte": {
     h1: "Parfume & dufte",
-    title: "Parfume & dufte | Zebiza",
-    description: "Dame- og herreparfume hos Zebiza — EDP og EDT fra kendte brands.",
+    title: "Parfume til kvinder & mænd | Zebiza",
+    description: "Køb parfume online — dameparfume og herreparfume (EDP/EDT) hos Zebiza.",
     intro: "Find en duft til dig selv eller som gave.",
   },
   nails: {
     h1: "Neglelak",
-    title: "Neglelak & negle | Zebiza",
-    description: "Neglelak og neglepleje hos Zebiza — farver og basisprodukter.",
+    title: "Neglelak & neglepleje | Zebiza",
+    description: "Køb neglelak og neglepleje online hos Zebiza — farver og basisprodukter.",
     intro: "Neglelak og negleprodukter til farve og finish.",
   },
   "barbering-grooming": {
@@ -225,9 +225,9 @@ async function main() {
   writePage(
     "da/index.html",
     inject(template, {
-      title: "Zebiza — beautyfavoritter, kendte brands og hverdagsfund",
+      title: "Hudpleje, makeup og parfume online | Zebiza",
       description:
-        "Dansk beauty-webshop med hudpleje, makeup, hårpleje, negle, parfume og beauty tools. Fair priser, tryg betaling og levering til Danmark.",
+        "Køb hudpleje, serum, makeup, mascara, hårpleje og parfume online hos Zebiza. Dansk beauty-webshop med fair priser, tryg betaling og levering til Danmark.",
       canonical: `${ORIGIN}/da`,
       jsonLd: [
         {
@@ -236,6 +236,7 @@ async function main() {
           "@id": `${ORIGIN}/#org`,
           name: "Zebiza.com",
           url: ORIGIN,
+          image: `${ORIGIN}/brand/zebiza-logo.webp`,
           address: { "@type": "PostalAddress", addressCountry: "DK" },
           currenciesAccepted: "DKK",
         },
@@ -251,11 +252,11 @@ async function main() {
           },
         },
       ],
-      body: `<header><p><strong>Zebiza</strong></p>${navHtml()}</header>
+      body: `<header><p><img src="/brand/zebiza-logo.webp" alt="Zebiza.com" width="140" height="36" /></p>${navHtml()}</header>
         <main>
-          <h1>Beautyfavoritter, kendte brands og spændende hverdagsfund</h1>
-          <p>Hudpleje, makeup, hår, negle, parfume og beauty tools — samlet i én dansk webshop med fair priser.</p>
-          <p><a href="/da/kategori/hudpleje-ansigt/">Shop hudpleje</a> · <a href="/da/kategori/kosmetik-ansigt/">Shop makeup</a></p>
+          <h1>Hudpleje, makeup og parfume — fair priser online</h1>
+          <p>Shop serum, foundation, mascara, hårpleje og dufte i én dansk beauty-webshop. Tryg betaling og levering til hele Danmark.</p>
+          <p><a href="/da/kategori/hudpleje-ansigt/">Shop hudpleje</a> · <a href="/da/kategori/kosmetik-ansigt/">Shop makeup</a> · <a href="/da/kategori/parfume-dufte/">Shop parfume</a></p>
           <section><h2>Udvalgte produkter</h2><div>${homeProducts.map(productCard).join("")}</div></section>
         </main>
         <footer><p>Dansk ejet webshop · Levering typisk 3-6 hverdage · 30 dages returret</p>

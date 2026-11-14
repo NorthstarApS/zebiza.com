@@ -1,0 +1,8 @@
+name = "zebiza-edge"
+main = "zebiza-edge.js"
+compatibility_date = "2024-11-01"
+
+routes = [
+  { pattern = "zebiza.com/*", zone_name = "zebiza.com" },
+  { pattern = "www.zebiza.com/*", zone_name = "zebiza.com" }
+]
